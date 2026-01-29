@@ -1,13 +1,16 @@
 # TEDxUofW Imprints 2026 Website
 
 ## Quick start
-1) Install
+1) Change directory
+   cd vite-project
+
+2) Install
    npm install
 
-2) Run the site
+3) Run the site
    npm run dev
 
-3) Open
+4) Open
    http://localhost:5173
 
 
