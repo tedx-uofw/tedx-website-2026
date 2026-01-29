@@ -33,7 +33,7 @@ function Header() {
             ))}
           </nav>
           <button
-            className="rounded-full bg-red-600 px-5 py-2 text-sm font-semibold uppercase tracking-wide text-white shadow-sm transition hover:bg-red-700"
+            className="rounded-lg bg-red-600 px-5 py-2 text-sm font-semibold uppercase tracking-wide text-white shadow-sm transition hover:bg-red-700"
             type="button"
           >
             Buy Tickets
@@ -70,7 +70,7 @@ function Header() {
               </NavLink>
             ))}
             <button
-              className="mt-2 rounded-full bg-red-600 px-5 py-2 text-sm font-semibold uppercase tracking-wide text-white shadow-sm transition hover:bg-red-700"
+              className="mt-2 rounded-lg bg-red-600 px-5 py-2 text-sm font-semibold uppercase tracking-wide text-white shadow-sm transition hover:bg-red-700"
               type="button"
             >
               Buy Tickets
