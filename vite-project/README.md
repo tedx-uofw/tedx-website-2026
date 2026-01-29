@@ -1,73 +1,35 @@
-# React + TypeScript + Vite
+# TEDxUofW Imprints 2026 Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Quick start
+1) Install
+   npm install
 
-Currently, two official plugins are available:
+2) Run the site
+   npm run dev
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+3) Open
+   http://localhost:5173
 
-## React Compiler
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+# Reference the Figma here
+https://www.figma.com/design/VwFkVrRDZtMjWtokRgY6EN/IMPRINT-Website?node-id=0-1&t=rD2eTYsDFpy4Mju0-1
 
-## Expanding the ESLint configuration
+## Tasks:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. Jean & Tracy - Landing 
+2. Arvin - Team
+3. Shashu - About
+4. Hannah - Sponsors
+5. Sarah & Taneesha - Speakers
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+# IMPORTANT: 
+1. Worry about mobile responsiveness LATER!
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+2. Get the site looking as close to the figma design as possible first!(Remember you can do this by clicking dev mode (bottom toolbar), clicking on an element, and using its already existing layout & style code)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+3. Use Tailwind CSS by using className prop (its already globally imported!). Please note that Figma by default
+is written in regular HTML/CSS, but you can translate all of that into tailwind (AI helps here!)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Build (optional)
+npm run build
