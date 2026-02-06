@@ -147,21 +147,6 @@ function About() {
               </div>
             ))}
           </div>
-
-          {/* --- IMPRINTS LOGO SECTION --- */}
-          <div className="flex justify-center items-center mt-16 md:mt-24">
-            <div className="relative w-[300px] md:w-[600px] h-auto">
-              {/* This is the container for the "IMPRINTS" text/logo.
-                Since it uses a specific dotted font/texture, it's best to export 
-                that text as a transparent PNG or SVG and place it here.
-             */}
-              <img
-                src="/aboutpage-images/imprint.png"
-                alt="IMPRINTS"
-                className="w-full h-auto object-contain opacity-80"
-              />
-            </div>
-          </div>
         </div>
       </div>
     </>
