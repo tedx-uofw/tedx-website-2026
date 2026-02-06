@@ -4,6 +4,20 @@
   color-scheme: light;
 }
 
-body {
-  margin: 0;
+body,
+html,
+#root {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden; /* Prevents horizontal scrollbar */
+}
+
+#root,
+.App {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100%;
+  max-width: 100%;
 }
