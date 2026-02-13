@@ -5,6 +5,7 @@ import Speakers from "./pages/Speakers";
 import Team from "./pages/Team";
 import Sponsors from "./pages/Sponsors";
 import About from "./pages/About";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/about" element={<About />} />
         </Routes>
       </main>
+      <Footer />
     </div>
   );
 }
