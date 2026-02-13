@@ -5,6 +5,13 @@ function Home() {
       <p className="mt-3 text-base text-neutral-700">
         Landing page content goes here.
       </p>
+      <div
+        className="w-[460px] h-[468px] 
+    bg-[rgba(82,147,215,0.9)] 
+    blur-[400px] 
+    rounded-full
+    rotate-[16deg]"
+      />
     </section>
   );
 }

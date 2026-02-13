@@ -1,45 +1,70 @@
 function About() {
   return (
     <>
+      {/* Grey gradient background layer - extends down */}
       <div
-        className="relative w-screen min-h-screen flex items-center justify-start 
-  bg-[radial-gradient(circle_at_30%_50%,#ffffff_0%,#f4f6f9_60%,#e8ebf2_100%)]
-  max-[900px]:flex-col max-[900px]:justify-center max-[900px]:p-5"
+        className="absolute top-0 left-0 w-screen pointer-events-none z-0"
+        style={{ height: "140vh" }}
       >
-        {/* Noise texture overlay */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,#ffffff_0%,#f4f6f9_60%,#e8ebf2_100%)]" />
+        {/* Noise texture overlay using actual image */}
         <div
-          className="absolute inset-0 opacity-[0.015] pointer-events-none z-10"
+          className="absolute inset-0 opacity-[0.02] pointer-events-none"
           style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
+            backgroundImage: "url(/aboutpage-images/noise-texture.png)",
             backgroundRepeat: "repeat",
+            backgroundSize: "200px 200px",
           }}
         />
-        {/* BACKGROUND DECORATION: Fingerprint */}
+      </div>
+
+      {/* Hero section */}
+      <div className="relative w-screen min-h-screen flex items-center justify-start max-[900px]:flex-col max-[900px]:justify-center max-[900px]:p-5">
+        {/* BACKGROUND DECORATION: Fingerprint - Desktop */}
         <img
           src="/aboutpage-images/full_fingerprint_3.png"
           alt=""
           className="absolute left-[-22vw] top-[45%] -translate-y-1/2 -rotate-19 
-            w-[60%] h-auto opacity-70 mix-blend-screen grayscale pointer-events-none z-0"
+            w-[60%] h-auto opacity-70 mix-blend-screen grayscale pointer-events-none z-0
+            max-[900px]:hidden"
+          style={{
+            maskImage:
+              "linear-gradient(to bottom, transparent 0%, black 10%, black 75%, transparent 100%)",
+            WebkitMaskImage:
+              "linear-gradient(to bottom, transparent 0%, black 10%, black 75%, transparent 100%)",
+          }}
+        />
+
+        {/* BACKGROUND DECORATION: Fingerprint - Mobile (zoomed in, full coverage) */}
+        <img
+          src="/aboutpage-images/full_fingerprint_3.png"
+          alt=""
+          className="hidden max-[900px]:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2
+            w-[300%] h-auto opacity-70 mix-blend-screen grayscale pointer-events-none z-0"
         />
 
         {/* MAIN CONTENT */}
         <div
           className="relative z-20 w-full pl-[8vw] 
-    max-[900px]:px-5 max-[900px]:mb-5"
+            max-[900px]:px-5 max-[900px]:mb-5 max-[900px]:pl-0 max-[900px]:flex max-[900px]:flex-col max-[900px]:items-center"
         >
-          <div className="max-w-137.5">
+          <div className="max-w-137.5 max-[900px]:max-w-full">
             {/* Tag Line */}
             <div
               className="flex items-center gap-2 mb-6 tracking-[0.05em] text-black 
-            font-['Manrope'] text-[32px] font-normal leading-[140%]"
+                font-['Manrope'] text-[32px] font-normal leading-[140%]
+                max-[900px]:justify-center max-[900px]:text-[24px]"
             >
-              <span className="text-[#8fa1b3] text-[32px]">✳</span> TEDxUofW
+              <span className="text-[#8fa1b3] text-[32px] max-[900px]:text-[24px]">
+                ✳
+              </span>{" "}
+              TEDxUofW
             </div>
 
             {/* Hero Text */}
             <h1
               className="text-black font-['Andada_Pro'] text-[44px] font-normal leading-[140%] 
-            w-[160%] max-[900px]:w-full"
+                w-[160%] max-[900px]:w-full max-[900px]:text-[28px] max-[900px]:text-center"
             >
               We bring bold ideas and lived experiences together to spark
               curiosity and inspire meaningful change on campus and beyond.
@@ -47,16 +72,25 @@ function About() {
           </div>
         </div>
 
-        {/* RIGHT IMAGE: The X */}
+        {/* Blue orb SVG behind the X */}
+        <img
+          src="/aboutpage-images/blue-orb.svg"
+          alt=""
+          className="absolute right-[8vw] top-1/2 -translate-y-1/2 w-[500px] h-auto opacity-90 pointer-events-none z-5
+            max-[900px]:hidden"
+        />
+
+        {/* RIGHT IMAGE: The X - Hidden on mobile */}
         <img
           src="/aboutpage-images/x_imprinted_1.svg"
           alt="X Graphic"
           className="absolute right-[-1vw] top-1/2 -translate-y-1/2 h-[90vh] w-auto z-10 pointer-events-none
-          max-[900px]:relative max-[900px]:right-auto max-[900px]:top-auto max-[900px]:translate-y-0 
-          max-[900px]:h-[40vh] max-[900px]:-mr-[20%] max-[900px]:self-end"
+            max-[900px]:hidden"
         />
       </div>
-      <div className="w-full bg-[#F8F9FB] flex justify-center pb-20">
+
+      {/* What is TED section - background removed to show gradient bleeding through */}
+      <div className="w-full flex justify-center pb-20 relative z-10">
         {/* CONTAINER: Matches your requested width (1493px) and padding 
          Responsive: Stacks vertically on mobile, Row on desktop
       */}
@@ -113,6 +147,8 @@ function About() {
           </div>
         </div>
       </div>
+
+      {/* Image gallery section */}
       <div className="w-full bg-[#F8F9FB] flex justify-center pb-24">
         <div className="w-full max-w-[1493px] px-[20px] md:px-[55px] flex flex-col gap-6">
           {/* --- ROW 1: Two Images --- */}
