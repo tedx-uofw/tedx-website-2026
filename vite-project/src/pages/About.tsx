@@ -2,22 +2,30 @@ function About() {
   return (
     <>
       <div
-        className="relative w-screen h-screen max-h-screen flex items-center justify-start overflow-hidden 
-      bg-[radial-gradient(circle_at_30%_50%,#ffffff_0%,#f4f6f9_60%,#e8ebf2_100%)]
-      max-[900px]:flex-col max-[900px]:justify-center max-[900px]:p-5"
+        className="relative w-screen min-h-screen flex items-center justify-start 
+  bg-[radial-gradient(circle_at_30%_50%,#ffffff_0%,#f4f6f9_60%,#e8ebf2_100%)]
+  max-[900px]:flex-col max-[900px]:justify-center max-[900px]:p-5"
       >
+        {/* Noise texture overlay */}
+        <div
+          className="absolute inset-0 opacity-[0.015] pointer-events-none z-10"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
+            backgroundRepeat: "repeat",
+          }}
+        />
         {/* BACKGROUND DECORATION: Fingerprint */}
         <img
           src="/aboutpage-images/full_fingerprint_3.png"
           alt=""
-          className="absolute left-[-18vw] top-1/2 -translate-y-1/2 -rotate-19 
-          w-[60%] h-auto opacity-[0.04] mix-blend-multiply pointer-events-none z-0"
+          className="absolute left-[-22vw] top-[45%] -translate-y-1/2 -rotate-19 
+            w-[60%] h-auto opacity-70 mix-blend-screen grayscale pointer-events-none z-0"
         />
 
         {/* MAIN CONTENT */}
         <div
           className="relative z-20 w-full pl-[8vw] 
-        max-[900px]:px-5 max-[900px]:mb-5"
+    max-[900px]:px-5 max-[900px]:mb-5"
         >
           <div className="max-w-137.5">
             {/* Tag Line */}
