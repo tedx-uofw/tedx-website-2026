@@ -1,13 +1,10 @@
 export default function Footer() {
   return (
     <div className="w-full flex flex-col">
-      {/* --- PART 1: IMPRINTS LOGO SECTION --- */}
+      {/* IMPRINTS LOGO SECTION*/}
       {/* This sits on top of the grey footer with a white/light background */}
       <div className="w-full bg-[#F8F9FB] flex justify-center items-center py-20 md:py-32">
         <div className="relative w-[300px] md:w-[600px] h-auto">
-          {/* PLACEHOLDER FOR "IMPRINTS" LOGO 
-            Replace src with your dotted text image 
-          */}
           <img
             src="/footer-images/imprint.png"
             alt="IMPRINTS"
@@ -16,10 +13,9 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* --- PART 2: GREY FOOTER CONTENT --- */}
+      {/*  GREY FOOTER CONTENT   */}
       <footer className="w-full bg-[#E6E8EB] pt-16 pb-8">
         <div className="w-full max-w-[1493px] mx-auto px-[20px] md:px-[55px] flex flex-col gap-12">
-          {/* Top Columns */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-4">
             {/* COLUMN 1: Brand */}
             <div className="flex flex-col gap-4">
