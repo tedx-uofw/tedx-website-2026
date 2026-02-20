@@ -1,3 +1,5 @@
+import "./Footer.css";
+
 export default function Footer() {
   return (
     <div className="w-full flex flex-col">
@@ -8,7 +10,8 @@ export default function Footer() {
           <img
             src="/footer-images/imprint.png"
             alt="IMPRINTS"
-            className="w-full h-auto object-contain opacity-80"
+            className="footer-logo-animate-scan w-full h-auto object-contain opacity-80"
+            // className="footer-logo-animate-scan w-full max-w-md mx-auto"
           />
         </div>
       </div>
