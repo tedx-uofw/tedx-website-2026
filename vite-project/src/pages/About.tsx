@@ -34,13 +34,13 @@ function About() {
         {/* MAIN CONTENT */}
         <div
           className="relative z-20 w-full pl-[8vw] 
-    max-[900px]:px-5 max-[900px]:mb-5"
+    max-[900px]:px-5 max-[900px]:mb-5 max-[900px]:flex max-[900px]:flex-col max-[900px]:items-center max-[900px]:text-center"
         >
           <div className="max-w-137.5">
             {/* Tag Line */}
             <div
               className="flex items-center gap-2 mb-6 tracking-[0.05em] text-black 
-            font-['Manrope'] text-[32px] font-normal leading-[140%]"
+            font-['Manrope'] text-[32px] font-normal leading-[140%] max-[900px]:justify-center"
             >
               <span className="text-[#8fa1b3] text-[32px]">✳</span> TEDxUofW
             </div>
@@ -57,15 +57,15 @@ function About() {
         </div>
 
         {/* Orb */}
-        <GrainySVG className="absolute rotate-[15.905deg] right-[-17vw] mt-[40%]" />
+        <GrainySVG className="absolute rotate-[15.905deg] right-[-17vw] mt-[40%] max-[900px]:right-[-35vw]" />
 
         {/* RIGHT IMAGE: The X */}
         <img
           src="/aboutpage-images/x_imprinted_1.svg"
           alt="X Graphic"
           className="absolute right-[-1vw] top-1/2 -translate-y-1/2 h-[90vh] w-auto z-10 pointer-events-none
-          max-[900px]:relative max-[900px]:right-auto max-[900px]:top-auto max-[900px]:translate-y-0 
-          max-[900px]:h-[40vh] max-[900px]:-mr-[20%] max-[900px]:self-end"
+          max-[900px]:absolute max-[900px]:right-[-15vw] max-[900px]:top-1/2 max-[900px]:-translate-y-1/2 
+          max-[900px]:h-[60vh] max-[900px]:w-auto max-[900px]:z-0 max-[900px]:opacity-20"
         />
       </div>
       <div className="w-full flex justify-center pb-20">
