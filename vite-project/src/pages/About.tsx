@@ -1,29 +1,46 @@
+import { GrainySVG } from "../components/SVGExports";
+
 function About() {
   return (
     <>
       <div
-        className="relative w-screen h-screen max-h-screen flex items-center justify-start overflow-hidden 
-      bg-[radial-gradient(circle_at_30%_50%,#ffffff_0%,#f4f6f9_60%,#e8ebf2_100%)]
-      max-[900px]:flex-col max-[900px]:justify-center max-[900px]:p-5"
+        className="relative w-screen min-h-screen flex items-center justify-start 
+  max-[900px]:flex-col max-[900px]:justify-center max-[900px]:p-5"
       >
+        {/* Noise texture overlay */}
+        <div
+          className="absolute inset-0 opacity-[0.015] pointer-events-none z-10"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
+            backgroundRepeat: "repeat",
+          }}
+        />
         {/* BACKGROUND DECORATION: Fingerprint */}
         <img
           src="/aboutpage-images/full_fingerprint_3.png"
           alt=""
-          className="absolute left-[-18vw] top-1/2 -translate-y-1/2 -rotate-19 
-          w-[60%] h-auto opacity-[0.04] mix-blend-multiply pointer-events-none z-0"
+          className="absolute left-[-35vw] top-[30%] -translate-y-1/2 -rotate-19 
+            w-[90%] h-auto opacity-5 mix-blend-multiply grayscale pointer-events-none z-0 drop-shadow-[10px_10px_12px_rgba(0,0,0,1)]"
+          style={{
+            // This creates the fade effect:
+            // Center (black) = Visible
+            // Edges (transparent) = Invisible
+            maskImage: "radial-gradient(circle, black 30%, transparent 55%)",
+            WebkitMaskImage:
+              "radial-gradient(circle, black 10%, transparent 70%)",
+          }}
         />
 
         {/* MAIN CONTENT */}
         <div
           className="relative z-20 w-full pl-[8vw] 
-        max-[900px]:px-5 max-[900px]:mb-5"
+    max-[900px]:px-5 max-[900px]:mb-5 max-[900px]:flex max-[900px]:flex-col max-[900px]:items-center max-[900px]:text-center"
         >
           <div className="max-w-137.5">
             {/* Tag Line */}
             <div
               className="flex items-center gap-2 mb-6 tracking-[0.05em] text-black 
-            font-['Manrope'] text-[32px] font-normal leading-[140%]"
+            font-['Manrope'] text-[32px] font-normal leading-[140%] max-[900px]:justify-center"
             >
               <span className="text-[#8fa1b3] text-[32px]">✳</span> TEDxUofW
             </div>
@@ -39,29 +56,36 @@ function About() {
           </div>
         </div>
 
+        {/* Orb */}
+        <GrainySVG className="absolute rotate-[15.905deg] right-[-17vw] mt-[40%] max-[900px]:right-[-35vw]" />
+
         {/* RIGHT IMAGE: The X */}
         <img
           src="/aboutpage-images/x_imprinted_1.svg"
           alt="X Graphic"
           className="absolute right-[-1vw] top-1/2 -translate-y-1/2 h-[90vh] w-auto z-10 pointer-events-none
-          max-[900px]:relative max-[900px]:right-auto max-[900px]:top-auto max-[900px]:translate-y-0 
-          max-[900px]:h-[40vh] max-[900px]:-mr-[20%] max-[900px]:self-end"
+          max-[900px]:absolute max-[900px]:right-[-15vw] max-[900px]:top-1/2 max-[900px]:-translate-y-1/2 
+          max-[900px]:h-[60vh] max-[900px]:w-auto max-[900px]:z-0 max-[900px]:opacity-20"
         />
       </div>
-      <div className="w-full bg-[#F8F9FB] flex justify-center pb-20">
-        {/* CONTAINER: Matches your requested width (1493px) and padding 
-         Responsive: Stacks vertically on mobile, Row on desktop
-      */}
+      <div className="w-full flex justify-center pb-20">
         <div className="flex flex-col w-full max-w-[1493px] px-[20px] md:px-[55px] py-[49px] gap-[60px] md:gap-[100px]">
           {/* --- SECTION 1: What is TED? --- */}
           <div className="flex flex-col md:flex-row justify-between items-start gap-8 md:gap-20">
-            {/* Left: Heading */}
-            <h2 className="text-black font-manrope text-[32px] md:text-[40px] font-medium leading-tight min-w-[300px]">
+            {/* Left: Heading 
+             FIX 2: Changed font-medium -> font-bold
+             FIX 3: Added tracking-tighter (Scrunched look)
+          */}
+            <h2 className="text-black font-manrope text-[32px] md:text-[40px] font-bold tracking-tighter leading-tight min-w-[300px]">
               What is TED?
             </h2>
 
-            {/* Right: Text Content */}
-            <div className="text-black font-manrope text-[16px] md:text-[18px] font-light leading-[160%] max-w-[700px] space-y-6">
+            {/* Right: Text Content 
+             FIX 4: Changed font-light -> font-normal (Bolder)
+             FIX 5: Added tracking-tight (Scrunched look)
+             FIX 6: Adjusted leading to leading-snug (Tighter line height)
+          */}
+            <div className="text-black font-manrope text-[16px] md:text-[18px] font-normal tracking-tight leading-snug max-w-[576px] space-y-6">
               <p>
                 TED is a nonprofit organization devoted to Ideas Worth
                 Spreading. Started as a four-day conference in California 30
@@ -81,13 +105,11 @@ function About() {
 
           {/* --- SECTION 2: We Are TEDxUofWA --- */}
           <div className="flex flex-col md:flex-row justify-between items-start gap-8 md:gap-20">
-            {/* Left: Heading */}
-            <h2 className="text-black font-manrope text-[32px] md:text-[40px] font-medium leading-tight min-w-[300px]">
-              We Are TEDxUofWA
+            <h2 className="text-black font-manrope text-[32px] md:text-[40px] font-bold tracking-tighter leading-tight min-w-[300px]">
+              We Are TEDxUofW
             </h2>
 
-            {/* Right: Text Content */}
-            <div className="text-black font-manrope text-[16px] md:text-[18px] font-light leading-[160%] max-w-[700px] space-y-6">
+            <div className="text-black font-manrope text-[16px] md:text-[18px] font-normal tracking-tight leading-snug max-w-[576px] space-y-6">
               <p>
                 TEDxUofW is established to bring inspirational and informative
                 TED style talks to the University of Washington. Since 2012, our

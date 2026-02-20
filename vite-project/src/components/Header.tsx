@@ -1,18 +1,18 @@
-import { useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const navLinks = [
-  { label: 'Speakers', to: '/speakers' },
-  { label: 'Team', to: '/team' },
-  { label: 'Sponsors', to: '/sponsors' },
-  { label: 'About', to: '/about' },
-]
+  { label: "Speakers", to: "/speakers" },
+  { label: "Team", to: "/team" },
+  { label: "Sponsors", to: "/sponsors" },
+  { label: "About", to: "/about" },
+];
 
 function Header() {
-  const [mobileOpen, setMobileOpen] = useState(false)
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-neutral-200 bg-white/90 backdrop-blur">
+    <header className="sticky top-0 z-50">
       <div className="flex w-full items-center px-4 py-3 md:px-6">
         <NavLink className="text-base font-semibold tracking-wide" to="/">
           Logo
@@ -24,7 +24,7 @@ function Header() {
               <NavLink
                 key={link.label}
                 className={({ isActive }) =>
-                  `transition hover:text-red-600 ${isActive ? 'text-red-600' : ''}`
+                  `transition hover:text-red-600 ${isActive ? "text-red-600" : ""}`
                 }
                 to={link.to}
               >
@@ -62,7 +62,7 @@ function Header() {
               <NavLink
                 key={link.label}
                 className={({ isActive }) =>
-                  `transition hover:text-red-600 ${isActive ? 'text-red-600' : ''}`
+                  `transition hover:text-red-600 ${isActive ? "text-red-600" : ""}`
                 }
                 to={link.to}
               >
@@ -79,7 +79,7 @@ function Header() {
         </div>
       )}
     </header>
-  )
+  );
 }
 
-export default Header
+export default Header;
