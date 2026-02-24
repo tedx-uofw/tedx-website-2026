@@ -2,7 +2,7 @@ function Speakers() {
   const speakers = [
     {
       name: "Cara Hale Alter",
-      role: "Speaker Role",
+      role: "Founder",
       image: "/speakers-images/cara-hale-alter.jpg",
       desc:
         "Cara Hale Alter is the founder of SpeechSkills, a company that offers leadership training around the concept of visible credibility or “the ability to project competence and confidence so that your value is on full display”. Cara’s talk is about how many people suffer from invisible credibility and how learning to demonstrate visible credibility can help people have so much more power in the world.\n\n",
@@ -13,7 +13,7 @@ function Speakers() {
     },
     {
       name: "Melissa Hutchins",
-      role: "Speaker Role",
+      role: "Founder & CEO",
       image: "/speakers-images/melissa-hutchins.jpg",
       desc:
         "Melissa is the founder and CEO of Certifi AI, a big tech company working to protect individuals from AI harms. Melissa’s talk is about the negative societal impact of deepfake AI technology and why it is important that we view AI through a critical lens. She speaks about the intersection between digital identities and each of our abilities to control our own lives.\n\n",
@@ -24,7 +24,7 @@ function Speakers() {
     },
     {
       name: "Michael B Ling",
-      role: "Speaker Role",
+      role: "Digital Speaker",
       image: "/speakers-images/michael-b-ling.jpg",
       desc:
         "Michael is a public speaker, podcast host, and author. Michael’s talk is about the journey of forgiveness. He speaks about how to both apply and receive forgiveness, as well as the ability to live free through forgiveness and how that can empower people.\n\n",
@@ -35,7 +35,7 @@ function Speakers() {
     },
     {
       name: "Vita Kari",
-      role: "Speaker Role",
+      role: "Artist",
       image: "/speakers-images/vita-kari.jpg",
       desc: "Virality as a legitimate collaborative art medium.\n\n",
       link: "https://www.linkedin.com/in/vitakari/",
@@ -45,7 +45,7 @@ function Speakers() {
     },
     {
       name: "Ann Frost",
-      role: "Speaker Role",
+      role: "Associate Teaching Professor",
       image: "/speakers-images/ann-frost.jpg",
       desc:
         "Ann is an Associate Teaching Professor in the Law, Societies, and Justice and Sociology Departments at the University of Washington. Her work primarily revolves around the criminal justice system and she leads a book club inside the prison in Monroe. Ann’s talk is about this book club program that allows for UW students and incarcerated students to interact with each other on a collegial classroom level. She speaks about how different experiences people engage in can impact the lives of themselves and others.\n\n",
@@ -57,7 +57,7 @@ function Speakers() {
     },
     {
       name: "Nandita Gupta",
-      role: "Speaker Role",
+      role: "TEDx Speaker",
       image: "/speakers-images/nandita-gupta.jpg",
       desc:
         "Nandita is a TEDx speaker & has been featured by Business Insider, NASDAQ, Forbes, Times of India, BlogHer, and Ability Summit Panelist, and quoted in Fortune, SDTimes, Livewire, Best Colleges, Zdnet, Yahoo, and many more. She has been a Board member at various non-profits and actively works in the community to create an inclusive space in communities.\n\n",
