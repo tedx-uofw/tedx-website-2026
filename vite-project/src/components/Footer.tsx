@@ -33,12 +33,18 @@ export default function Footer() {
                 Navigate
               </h3>
               <div className="flex flex-col gap-3 text-black font-manrope font-light text-[16px]">
-                <div className="cursor-pointer hover:underline">Speakers</div>
-                <div className="cursor-pointer hover:underline">About</div>
-                <div className="cursor-pointer hover:underline">Sponsors</div>
-                <div className="cursor-pointer hover:underline">
+                <a href="/speakers" className="cursor-pointer hover:underline">
+                  Speakers
+                </a>
+                <a href="/about" className="cursor-pointer hover:underline">
+                  About
+                </a>
+                <a href="/sponsors" className="cursor-pointer hover:underline">
+                  Sponsors
+                </a>
+                <a href="/tickets" className="cursor-pointer hover:underline">
                   Get Tickets
-                </div>
+                </a>
               </div>
             </div>
 
@@ -65,17 +71,28 @@ export default function Footer() {
 
               {/* Social Icons */}
               <div className="flex gap-3">
-                {["instagram", "twitter", "linkedin", "youtube"].map((item) => (
-                  <div
-                    key={item}
-                    className="w-[40px] h-[40px] bg-[#1a1a1a] rounded-full flex items-center justify-center cursor-pointer hover:opacity-80 transition-opacity"
+                {[
+                  {
+                    name: "instagram",
+                    url: "https://www.instagram.com/tedxuofw/",
+                  },
+                  { name: "twitter", url: "https://www.facebook.com/TEDxUofW" },
+                  {
+                    name: "linkedin",
+                    url: "https://linkedin.com/company/tedxatuofw/",
+                  },
+                  { name: "youtube", url: "https://www.tiktok.com/@tedxuofw" },
+                ].map((item) => (
+                  <a
+                    key={item.name}
+                    href={item.url}
+                    className="w-10 h-10 bg-[#1a1a1a] rounded-full flex items-center justify-center cursor-pointer hover:opacity-80 transition-opacity"
                   >
-                    {/* Icon Placeholder (White) */}
                     <img
-                      src={`/footer-images/${item}.png`}
+                      src={`/footer-images/${item.name}.png`}
                       className="w-4 h-4"
                     />
-                  </div>
+                  </a>
                 ))}
               </div>
 

@@ -76,7 +76,7 @@ function About() {
              FIX 2: Changed font-medium -> font-bold
              FIX 3: Added tracking-tighter (Scrunched look)
           */}
-            <h2 className="text-black font-manrope text-[32px] md:text-[40px] font-bold tracking-tighter leading-tight min-w-[300px]">
+            <h2 className="text-black font-['Manrope'] text-[32px] md:text-[40px] font-bold tracking-tighter leading-tight min-w-[300px]">
               What is TED?
             </h2>
 
@@ -85,7 +85,7 @@ function About() {
              FIX 5: Added tracking-tight (Scrunched look)
              FIX 6: Adjusted leading to leading-snug (Tighter line height)
           */}
-            <div className="text-black font-manrope text-[16px] md:text-[18px] font-normal tracking-tight leading-snug max-w-[576px] space-y-6">
+            <div className="text-black font-['Manrope'] text-[16px] md:text-[18px] font-normal tracking-tight leading-snug max-w-[576px] space-y-6">
               <p>
                 TED is a nonprofit organization devoted to Ideas Worth
                 Spreading. Started as a four-day conference in California 30
@@ -103,13 +103,13 @@ function About() {
           {/* --- DIVIDER LINE (Dashed) --- */}
           <div className="w-full border-t border-dashed border-gray-400 opacity-50"></div>
 
-          {/* --- SECTION 2: We Are TEDxUofWA --- */}
+          {/* --- SECTION 2: We Are TEDxUofW --- */}
           <div className="flex flex-col md:flex-row justify-between items-start gap-8 md:gap-20">
-            <h2 className="text-black font-manrope text-[32px] md:text-[40px] font-bold tracking-tighter leading-tight min-w-[300px]">
+            <h2 className="text-black font-['Manrope'] text-[32px] md:text-[40px] font-bold tracking-tighter leading-tight min-w-[300px]">
               We Are TEDxUofW
             </h2>
 
-            <div className="text-black font-manrope text-[16px] md:text-[18px] font-normal tracking-tight leading-snug max-w-[576px] space-y-6">
+            <div className="text-black font-['Manrope'] text-[16px] md:text-[18px] font-normal tracking-tight leading-snug max-w-[576px] space-y-6">
               <p>
                 TEDxUofW is established to bring inspirational and informative
                 TED style talks to the University of Washington. Since 2012, our
