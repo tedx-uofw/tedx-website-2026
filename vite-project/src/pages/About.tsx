@@ -136,7 +136,7 @@ function About() {
             <div className="w-full h-[350px] md:h-[450px] bg-gray-200 overflow-hidden relative">
               {/* Replace src with your image */}
               <img
-                src="/aboutpage-images/Image1.png"
+                src="/aboutpage-images/Image1.jpg"
                 alt="Gallery Top Left"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
               />
@@ -146,7 +146,7 @@ function About() {
             <div className="w-full h-[350px] md:h-[450px] bg-gray-200 overflow-hidden relative">
               {/* Replace src with your image */}
               <img
-                src="/aboutpage-images/Image2.png"
+                src="/aboutpage-images/Image2.jpg"
                 alt="Gallery Top Right"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
               />
