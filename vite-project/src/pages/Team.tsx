@@ -1,3 +1,5 @@
+import { GrainySVG, GrainySVGGray } from "../components/SVGExports";
+
 interface TeamMember {
   name: string;
   role?: string;
@@ -83,38 +85,70 @@ function Team() {
   ];
 
   return (
-    <section className="relative w-screen font-[Manrope] -mx-4 sm:-mx-4 md:-mx-6 lg:-mx-6">
+    <div className="w-screen min-h-screen bg-linear-to-b from-white to-[#F7F9FB]">
       {/* Page Top */}
-      <div className="mb-12">
-        <div className="relative flex flex-col md:flex-row items-center gap-8 md:h-screen px-4">
-          <div className="h-auto md:h-screen flex-1 flex flex-col justify-center relative z-10">
-            <div className="flex items-center gap-3 mb-4">
+      <div
+        className="relative w-screen min-h-screen flex items-center justify-start 
+        max-[900px]:flex-col max-[900px]:justify-center max-[900px]:p-5"
+      >
+        {/* Grainy Texture Effect */}
+        <div
+          className="absolute inset-0 opacity-[0.015] pointer-events-none z-10"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
+            backgroundRepeat: "repeat",
+          }}
+        />
+
+        <div
+          className="relative z-20 w-full pl-[8vw] max-[900px]:px-5 max-[900px]:mb-5
+          max-[900px]:flex max-[900px]:flex-col max-[900px]:items-center max-[900px]:text-center"
+        >
+          <div className="max-w-137.5">
+            <div
+              className="flex items-center gap-2 mb-6 tracking-[0.05em] text-black 
+            font-['Manrope'] text-[32px] font-normal leading-[140%] max-[900px]:justify-center"
+            >
               <img src="/blueStar.svg" alt="*" className="w-5 md:w-6 lg:w-8" />
-              <h1 className="text-3xl leading-12 text-black font-normal">
-                Our Team
-              </h1>
+              TEDxUofW
             </div>
 
-            <p className="text-xl leading-snug sm:text-2xl sm:leading-normal md:text-3xl md:leading-normal lg:text-4xl lg:leading-12 text-black font-[Andada Pro] font-normal text-left">
+            <h1
+              className="text-black font-['Andada_Pro'] text-[44px] font-normal leading-[140%] 
+            w-[160%] max-[900px]:w-full"
+            >
               We bring bold ideas and lived experiences together to spark
               curiosity and inspire meaningful change on campus and beyond.
-            </p>
-          </div>
-
-          <div className="hidden md:flex relative w-full md:w-1/3 items-center justify-end z-10">
-            <img
-              src="/Imprinted.svg"
-              alt="Imprinted"
-              className="w-full h-auto object-cover relative z-10"
-            />
+            </h1>
           </div>
         </div>
+
+        {/* Rotation of Gradient */}
+        <GrainySVG className="absolute rotate-[15.905deg] right-[-17vw] mt-[40%] max-[900px]:right-[-35vw]" />
+
+        <img
+          src="/Imprinted.svg"
+          alt="Imprinted"
+          className="absolute right-[-1vw] top-1/2 -translate-y-1/2 h-[90vh] w-auto z-10 pointer-events-none
+          max-[900px]:absolute max-[900px]:right-[-15vw] max-[900px]:top-1/2 max-[900px]:-translate-y-1/2 
+          max-[900px]:h-[60vh] max-[900px]:w-auto max-[900px]:z-0 max-[900px]:opacity-20"
+        />
       </div>
 
       {/* Team Sections */}
-      <div className="space-y-12 px-4">
-        {teamSections.map((section) => (
-          <div key={section.title}>
+      <div className="relative space-y-12 px-4">
+        {teamSections.map((section, sectionIndex) => (
+          <div key={section.title} className="relative">
+            {/* Grainy Orb between Design and Web Dev on the left */}
+            {sectionIndex === 1 && (
+              <GrainySVGGray className="absolute rotate-[195.905deg] left-[-17vw] top-[80%] max-[900px]:left-[-35vw] z-0 pointer-events-none" />
+            )}
+
+            {/* Grainy Orb in Speaker Selection on the right */}
+            {sectionIndex === 3 && (
+              <GrainySVG className="absolute rotate-[15.905deg] right-[-17vw] top-[50%] max-[900px]:right-[-35vw] z-0 pointer-events-none" />
+            )}
+
             {/* Team Labels */}
             <h2 className="text-2xl font-semibold tracking-tight mb-8">
               {section.title}
@@ -145,7 +179,7 @@ function Team() {
           </div>
         ))}
       </div>
-    </section>
+    </div>
   );
 }
 
