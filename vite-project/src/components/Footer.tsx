@@ -76,12 +76,15 @@ export default function Footer() {
                     name: "instagram",
                     url: "https://www.instagram.com/tedxuofw/",
                   },
-                  { name: "twitter", url: "https://www.facebook.com/TEDxUofW" },
+                  {
+                    name: "facebook",
+                    url: "https://www.facebook.com/TEDxUofW",
+                  },
                   {
                     name: "linkedin",
                     url: "https://linkedin.com/company/tedxatuofw/",
                   },
-                  { name: "youtube", url: "https://www.tiktok.com/@tedxuofw" },
+                  { name: "tiktok", url: "https://www.tiktok.com/@tedxuofw" },
                 ].map((item) => (
                   <a
                     key={item.name}
@@ -90,7 +93,15 @@ export default function Footer() {
                   >
                     <img
                       src={`/footer-images/${item.name}.png`}
-                      className="w-4 h-4"
+                      className={`${
+                        item.name === "facebook"
+                          ? "w-6 h-6 translate-x-[1.3px] translate-y-0.5"
+                          : ""
+                      } ${item.name === "tiktok" ? "w-5 h-5" : ""} ${
+                        item.name === "instagram" || item.name === "linkedin"
+                          ? "w-4 h-4"
+                          : ""
+                      }`}
                     />
                   </a>
                 ))}

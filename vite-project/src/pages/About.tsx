@@ -42,7 +42,8 @@ function About() {
               className="flex items-center gap-2 mb-6 tracking-[0.05em] text-black 
             font-['Manrope'] text-[32px] font-normal leading-[140%] max-[900px]:justify-center"
             >
-              <span className="text-[#8fa1b3] text-[32px]">✳</span> TEDxUofW
+              <img src="/blueStar.svg" alt="*" className="w-5 md:w-6 lg:w-8" />
+              TEDxUofW
             </div>
 
             {/* Hero Text */}
