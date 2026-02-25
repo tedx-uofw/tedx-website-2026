@@ -6,7 +6,7 @@ function Home() {
         Landing page content goes here.
       </p>
     </section>
-  )
+  );
 }
 
-export default Home
+export default Home;
