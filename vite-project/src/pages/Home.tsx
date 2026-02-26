@@ -11,8 +11,16 @@ function Home() {
       <div className="w-full h-[9061px] relative bg-white overflow-hidden">
         <div className="w-[1046.04px] h-[1046.04px] left-[-219.13px] top-[-49.32px] absolute origin-top-left rotate-[9.20deg] bg-[radial-gradient(ellipse_50.00%_50.00%_at_50.00%_50.00%,_#E5EEF9_0%,_white_100%)] rounded-full" />
         <div className="w-[1097.73px] h-[1097.73px] left-[-204.06px] top-[5324.45px] absolute origin-top-left rotate-[0.88deg] bg-[radial-gradient(ellipse_50.00%_50.00%_at_50.00%_50.00%,_#B1D6E8_0%,_white_100%)] rounded-full" />
-        <img className="w-[1156.07px] h-[1445.09px] left-[-536px] top-[5514.50px] absolute origin-top-left rotate-[-27.32deg] opacity-50 bg-blend-screen" src="https://placehold.co/1156x1445" />
         <div className="w-[460.02px] h-[468.74px] left-[1120.45px] top-[531px] absolute origin-top-left rotate-[15.90deg] bg-neutral-400 rounded-full blur-[400px]" />
+        <img
+          src={fingerprintImage}
+          alt=""
+          className="absolute left-[-5vw] top-[80px] w-[800px] h-auto opacity-5 mix-blend-multiply grayscale pointer-events-none z-0 drop-shadow-[10px_10px_12px_rgba(0,0,0,1)]"
+          style={{
+            maskImage: "radial-gradient(circle, black 30%, transparent 55%)",
+            WebkitMaskImage: "radial-gradient(circle, black 10%, transparent 70%)",
+          }}
+        />
         <div className="w-full h-[644px] px-11 pt-20 left-0 top-[8417px] absolute bg-neutral-200 inline-flex flex-col justify-start items-start gap-14">
             <div className="self-stretch h-52 inline-flex flex-col justify-start items-start">
                 <div className="self-stretch self-stretch relative">
@@ -214,7 +222,16 @@ function Home() {
                 </div>
             </div>
         </div>
-        <div className="self-stretch flex flex-col justify-start items-start gap-14">
+        <div className="self-stretch flex flex-col justify-start items-start gap-14 relative">
+            <img
+              src={fingerprintImage}
+              alt=""
+              className="absolute left-[-10vw] top-[0px] w-[55%] h-auto opacity-5 mix-blend-multiply grayscale pointer-events-none z-0 drop-shadow-[10px_10px_12px_rgba(0,0,0,1)]"
+              style={{
+                maskImage: "radial-gradient(circle, black 30%, transparent 55%)",
+                WebkitMaskImage: "radial-gradient(circle, black 30%, transparent 55%)",
+              }}
+            />
             <div className="self-stretch justify-start text-black text-7xl font-semibold font-['Manrope'] leading-[100.80px]">Venue</div>
             <div className="w-full flex flex-col lg:flex-row gap-8 items-stretch">
                 <div className="flex-1 flex flex-col justify-start gap-8">
