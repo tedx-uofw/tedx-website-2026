@@ -4,8 +4,21 @@ import fingerprintImage from '../../public/landing/full fingerprint 3.png'
 import x2 from '../../public/landing/x 2.png'
 import venue from '../../public/landing/venue.jpg'
 import location from '../../public/landing/location.svg'
+import caraHeadshot from '../../public/landing/Cara.png'
+import melissaHeadshot from '../../public/landing/Melissa.png'
+import michaelHeadshot from '../../public/landing/Michael.png'
+import vitaHeadshot from '../../public/landing/Vita.png'
+import annHeadshot from '../../public/landing/Ann.png'
+import nanditaHeadshot from '../../public/landing/Nandita.png'
 
 function Home() {
+  const caraCropPosition = 'center calc(50% + 60px)'
+  const melissaCropPosition = 'center calc(50% + 24px)'
+  const michaelCropPosition = 'center calc(50% + 36px)'
+  const vitaCropPosition = 'center 50%'
+  const annCropPosition = 'center calc(50% + 36px)'
+  const nanditaCropPosition = 'center calc(50% + 84px)'
+
   return (
     <section className="w-full">
       <div className="w-full h-[9061px] relative bg-white overflow-hidden">
@@ -169,21 +182,29 @@ function Home() {
             <div className="self-stretch justify-start text-black text-7xl font-semibold font-['Manrope'] leading-[100.80px]">Conference Schedule</div>
             <div className="self-stretch flex flex-col justify-start items-start gap-24">
                 <div className="self-stretch inline-flex justify-start items-start gap-14 flex-wrap content-start">
-                    <div className="w-80 h-72 bg-black rounded-md" />
+                    <img
+                      className="w-80 h-72 object-cover rounded-md"
+                      style={{ objectPosition: caraCropPosition }}
+                      src={caraHeadshot}
+                      alt="Cara Hale Alter headshot"
+                    />
                     <div className="inline-flex flex-col justify-start items-start gap-7">
-                        <div className="w-80 justify-start text-black text-5xl font-normal font-['Manrope'] leading-[67.20px]">speaker name</div>
+                        <div className="w-80 justify-start text-black text-5xl font-normal font-['Manrope'] leading-[67.20px]">Cara Hale Alter</div>
                         <div className="w-48 justify-start text-black text-3xl font-light font-['Manrope'] leading-10">Speaker Role</div>
                     </div>
-                    <div className="w-[663.89px] justify-start text-gray-600 text-xl font-normal font-['Inter'] leading-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis.</div>
                 </div>
                 <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black"></div>
                 <div className="self-stretch inline-flex justify-start items-start gap-14 flex-wrap content-start">
-                    <div className="w-80 h-72 bg-black rounded-md" />
+                    <img
+                      className="w-80 h-72 object-cover rounded-md"
+                      style={{ objectPosition: melissaCropPosition }}
+                      src={melissaHeadshot}
+                      alt="Melissa Hutchins headshot"
+                    />
                     <div className="inline-flex flex-col justify-start items-start gap-7">
-                        <div className="w-80 justify-start text-black text-5xl font-normal font-['Manrope'] leading-[67.20px]">speaker name</div>
+                        <div className="w-80 justify-start text-black text-5xl font-normal font-['Manrope'] leading-[67.20px]">Melissa Hutchins</div>
                         <div className="w-48 justify-start text-black text-3xl font-light font-['Manrope'] leading-10">Speaker Role</div>
                     </div>
-                    <div className="w-[663.89px] justify-start text-gray-600 text-xl font-normal font-['Inter'] leading-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis.</div>
                 </div>
                 <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black"></div>
                 <div className="self-stretch inline-flex justify-start items-start gap-14">
@@ -195,29 +216,54 @@ function Home() {
                 </div>
                 <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black"></div>
                 <div className="self-stretch flex flex-col md:flex-row gap-8 items-start">
-                    <div className="w-full md:w-80 h-72 bg-black rounded-md flex-shrink-0" />
+                    <img
+                      className="w-full md:w-80 h-72 object-cover rounded-md flex-shrink-0"
+                      style={{ objectPosition: michaelCropPosition }}
+                      src={michaelHeadshot}
+                      alt="Michael B Ling headshot"
+                    />
                     <div className="flex-1 flex flex-col gap-4">
-                        <div className="text-black text-5xl font-normal font-['Manrope'] leading-[67.20px]">speaker name</div>
+                        <div className="text-black text-5xl font-normal font-['Manrope'] leading-[67.20px]">Michael B Ling</div>
                         <div className="text-black text-3xl font-light font-['Manrope'] leading-10">Speaker Role</div>
-                        <div className="text-gray-600 text-xl font-normal font-['Inter'] leading-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis.</div>
                     </div>
                 </div>
                 <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black"></div>
                 <div className="self-stretch flex flex-col md:flex-row gap-8 items-start">
-                    <div className="w-full md:w-80 h-72 bg-black rounded-md flex-shrink-0" />
+                    <img
+                      className="w-full md:w-80 h-72 object-cover rounded-md flex-shrink-0"
+                      style={{ objectPosition: vitaCropPosition }}
+                      src={vitaHeadshot}
+                      alt="Vita Kari headshot"
+                    />
                     <div className="flex-1 flex flex-col gap-4">
-                        <div className="text-black text-5xl font-normal font-['Manrope'] leading-[67.20px]">speaker name</div>
+                        <div className="text-black text-5xl font-normal font-['Manrope'] leading-[67.20px]">Vita Kari</div>
                         <div className="text-black text-3xl font-light font-['Manrope'] leading-10">Speaker Role</div>
-                        <div className="text-gray-600 text-xl font-normal font-['Inter'] leading-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis.</div>
                     </div>
                 </div>
                 <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black"></div>
                 <div className="self-stretch flex flex-col md:flex-row gap-8 items-start">
-                    <div className="w-full md:w-80 h-72 bg-black rounded-md flex-shrink-0" />
+                    <img
+                      className="w-full md:w-80 h-72 object-cover rounded-md flex-shrink-0"
+                      style={{ objectPosition: annCropPosition }}
+                      src={annHeadshot}
+                      alt="Ann Frost headshot"
+                    />
                     <div className="flex-1 flex flex-col gap-4">
-                        <div className="text-black text-5xl font-normal font-['Manrope'] leading-[67.20px]">speaker name</div>
+                        <div className="text-black text-5xl font-normal font-['Manrope'] leading-[67.20px]">Ann Frost</div>
                         <div className="text-black text-3xl font-light font-['Manrope'] leading-10">Speaker Role</div>
-                        <div className="text-gray-600 text-xl font-normal font-['Inter'] leading-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis.</div>
+                    </div>
+                </div>
+                <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black"></div>
+                <div className="self-stretch flex flex-col md:flex-row gap-8 items-start">
+                    <img
+                      className="w-full md:w-80 h-72 object-cover rounded-md flex-shrink-0"
+                      style={{ objectPosition: nanditaCropPosition }}
+                      src={nanditaHeadshot}
+                      alt="Nandita Gupta headshot"
+                    />
+                    <div className="flex-1 flex flex-col gap-4">
+                        <div className="text-black text-5xl font-normal font-['Manrope'] leading-[67.20px]">Nandita Gupta</div>
+                        <div className="text-black text-3xl font-light font-['Manrope'] leading-10">Speaker Role</div>
                     </div>
                 </div>
             </div>
