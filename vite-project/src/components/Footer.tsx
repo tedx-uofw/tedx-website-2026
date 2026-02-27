@@ -2,7 +2,7 @@ import "./Footer.css";
 
 export default function Footer() {
   return (
-    <div className="w-full flex flex-col">
+    <div className="w-full flex flex-col bg-[#F7F9FB]">
       {/* IMPRINTS LOGO SECTION*/}
       {/* This sits on top of the grey footer with a white/light background */}
       <div className="w-full flex justify-center items-center pt-10 pb-20">

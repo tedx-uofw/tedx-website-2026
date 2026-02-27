@@ -8,8 +8,14 @@ type SponsorProps = {
 };
 
 const SponsorCard = ({ name, description, source }: SponsorProps) => (
-  <div className="flex flex-col md:flex-row gap-12 py-16 border-t border-neutral-200">
-     <img src={`/sponsors-images/${source}`} alt={name} className="w-[20%] h-full object-cover md:ml-32" />
+  <div className="flex flex-col md:flex-row gap-12 py-16 border-t border-neutral-200 items-center">
+     <img 
+       src={`/sponsors-images/${source}`} 
+       alt={name} 
+       className="w-[20%] h-auto md:ml-32" 
+       loading="lazy"
+       decoding="async"
+     />
     
     <div className="flex flex-col justify-start items-center text-center md:items-start md:text-left md:ml-auto md:mr-32 md:w-[500px]">
       <h3 className="text-3xl font-bold font-['Manrope'] text-neutral-900 mb-6">{name}</h3>
@@ -47,7 +53,7 @@ const Sponsors = () => {
   return (
     <>
       <div
-          className="relative w-screen min-h-screen flex items-center justify-start
+          className="relative z-10 w-screen min-h-screen flex items-center justify-start
   max-[900px]:flex-col max-[900px]:justify-center max-[900px]:p-5"
       >
         {/* Noise texture overlay */}
@@ -85,7 +91,7 @@ const Sponsors = () => {
         </div>
 
         {/* Orb */}
-        <GrainySVG className="absolute rotate-[15.905deg] right-[-17vw] mt-[40%] max-[900px]:right-[-35vw]" />
+        <GrainySVG className="absolute rotate-[15.905deg] right-[-17vw] mt-[40%] max-[900px]:right-[-35vw] z-20" />
 
         {/* RIGHT IMAGE: The X */}
         <img
@@ -94,9 +100,11 @@ const Sponsors = () => {
             className="absolute right-[-1vw] top-1/2 -translate-y-1/2 h-[90vh] w-auto z-10 pointer-events-none
           max-[900px]:absolute max-[900px]:right-[-15vw] max-[900px]:top-1/2 max-[900px]:-translate-y-1/2
           max-[900px]:h-[60vh] max-[900px]:w-auto max-[900px]:z-0 max-[900px]:opacity-20"
+            loading="lazy"
+            decoding="async"
         />
       </div>
-      <div className="w-full flex justify-center pb-20 relative">
+      <div className="w-full flex justify-center pb-20 relative bg-linear-to-b from-white to-[#F7F9FB]">
         {/* BACKGROUND DECORATION: Fingerprint */}
         <img
             src="/aboutpage-images/full_fingerprint_3.png"
@@ -111,6 +119,8 @@ const Sponsors = () => {
               WebkitMaskImage:
                   "radial-gradient(circle, black 10%, transparent 70%)",
             }}
+            loading="lazy"
+            decoding="async"
         />
 
         <div className="w-[95%] px-6 flex flex-col gap-24 z-10">

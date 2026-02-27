@@ -5,7 +5,7 @@ function About() {
     <>
       <div
         className="relative w-screen min-h-screen flex items-center justify-start 
-  max-[900px]:flex-col max-[900px]:justify-center max-[900px]:p-5"
+  max-[900px]:flex-col max-[900px]:justify-center max-[900px]:p-5 bg-linear-to-b from-white to-[#F7F9FB]"
       >
         {/* Noise texture overlay */}
         <div
