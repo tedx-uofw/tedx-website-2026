@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useCallback, useMemo } from "react";
 import { GrainySVG, GrainySVGGray } from "../components/SVGExports";
 
 interface TeamMember {
@@ -15,68 +15,78 @@ function Team() {
   const [failedImages, setFailedImages] = useState<Set<string>>(new Set());
 
   // Map of team member names to their actual image filenames
-  const imageMap: Record<string, string> = {
-    "alessia-adams": "alessia-adams.jpg",
-    "andrew-lin": "andrew-lin.jpeg",
-    "annissa-tan": "annissa-tan.JPG",
-    "arvin-bansal": "arvin-bansal.jpeg",
-    "arwaad-rahman": "arwaad-rahman.jpg",
-    "ashley-lee": "ashley-lee.jpeg",
-    "avi-rajesh": "avi-rajesh.JPG",
-    "bryan-nie": "bryan-nie.jpg",
-    "cemalcan-uslu": "cemalcan-uslu.jpeg",
-    "cheryl-nguyen": "cheryl-nguyen.jpeg",
-    "daniel-wen": "daniel-wen.jpg",
-    "diya-patel": "diya-patel.jpeg",
-    "hailey-yuan": "hailey-yuan.JPG",
-    "hajeong-hwang": "hajeong-hwang.jpg",
-    "hannah-star-lee": "hannah-star-lee.JPG",
-    "hirsh-garhwal": "hirsh-garhwal.jpg",
-    "jean-choe": "jean-choe.jpeg",
-    "jeffrey-basilio": "jeffrey-basilio.jpg",
-    "kiara-lam": "kiara-lam.jpg",
-    "lillian-tran": "lillian-tran.jpeg",
-    "meher-chadha": "meher-chadha.jpeg",
-    "mia-mcdunnah": "mia-mcdunnah.jpg",
-    "molly-maves": "molly-maves.JPG",
-    "patricia-abby-a.": "patricia-abby-a..jpg",
-    "quang-nguyen": "quang-nguyen.jpeg",
-    "radhika-kamran": "radhika-kamran.JPG",
-    "raina-talwar": "raina-talwar.jpeg",
-    "safiya-warsame": "safiya-warsame.jpeg",
-    "sam-chan": "sam-chan.png",
-    "samaha-morshed": "samaha-morshed.jpeg",
-    "sarah-hanafy": "sarah-hanafy.jpeg",
-    "saya-mehta": "saya-mehta.jpeg",
-    "shashvath-senthilkumar": "shashvath-senthilkumar.JPEG",
-    "shubham-garg": "shubham-garg.jpg",
-    "sidhant-rauniyar": "sidhant-rauniyar.jpeg",
-    "sophia-li": "sophia-li.jpg",
-    "sora-tolley": "sora-tolley.JPG",
-    "srimedha-thummala": "srimedha-thummala.jpeg",
-    "srisha-prasanna": "srisha-prasanna.jpeg",
-    "taneesha-sharmin": "taneesha-sharmin.jpeg",
-    "timothy-hoang": "timothy-hoang.jpg",
-    "tracy-sheng": "tracy-sheng.jpeg",
-    "vatsala-choudhary": "vatsala-choudhary.jpg",
-    "vinh-nguyen": "vinh-nguyen.jpeg",
-    "vivian-lu": "vivian-lu.JPG",
-    "zach-murphy": "zach-murphy.jpeg",
-  };
+  const imageMap: Record<string, string> = useMemo(
+    () => ({
+      "alessia-adams": "alessia-adams.jpg",
+      "andrew-lin": "andrew-lin.jpeg",
+      "annissa-tan": "annissa-tan.JPG",
+      "arvin-bansal": "arvin-bansal.jpeg",
+      "arwaad-rahman": "arwaad-rahman.jpg",
+      "ashley-lee": "ashley-lee.jpeg",
+      "avi-rajesh": "avi-rajesh.JPG",
+      "bryan-nie": "bryan-nie.jpg",
+      "cemalcan-uslu": "cemalcan-uslu.jpeg",
+      "cheryl-nguyen": "cheryl-nguyen.jpeg",
+      "daniel-wen": "daniel-wen.jpg",
+      "diya-patel": "diya-patel.jpeg",
+      "hailey-yuan": "hailey-yuan.JPG",
+      "hajeong-hwang": "hajeong-hwang.jpg",
+      "hannah-star-lee": "hannah-star-lee.JPG",
+      "hirsh-garhwal": "hirsh-garhwal.jpg",
+      "jean-choe": "jean-choe.jpeg",
+      "jeffrey-basilio": "jeffrey-basilio.jpg",
+      "kiara-lam": "kiara-lam.jpg",
+      "lillian-tran": "lillian-tran.jpeg",
+      "meher-chadha": "meher-chadha.jpeg",
+      "mia-mcdunnah": "mia-mcdunnah.jpg",
+      "molly-maves": "molly-maves.JPG",
+      "patricia-abby-a.": "patricia-abby-a..jpg",
+      "quang-nguyen": "quang-nguyen.jpeg",
+      "radhika-kamran": "radhika-kamran.JPG",
+      "raina-talwar": "raina-talwar.jpeg",
+      "safiya-warsame": "safiya-warsame.jpeg",
+      "sam-chan": "sam-chan.png",
+      "samaha-morshed": "samaha-morshed.jpeg",
+      "sarah-hanafy": "sarah-hanafy.jpeg",
+      "saya-mehta": "saya-mehta.jpeg",
+      "shashvath-senthilkumar": "shashvath-senthilkumar.JPEG",
+      "shubham-garg": "shubham-garg.jpg",
+      "sidhant-rauniyar": "sidhant-rauniyar.jpeg",
+      "sophia-li": "sophia-li.jpg",
+      "sora-tolley": "sora-tolley.JPG",
+      "srimedha-thummala": "srimedha-thummala.jpeg",
+      "srisha-prasanna": "srisha-prasanna.jpeg",
+      "taneesha-sharmin": "taneesha-sharmin.jpeg",
+      "timothy-hoang": "timothy-hoang.jpg",
+      "tracy-sheng": "tracy-sheng.jpeg",
+      "vatsala-choudhary": "vatsala-choudhary.jpg",
+      "vinh-nguyen": "vinh-nguyen.jpeg",
+      "vivian-lu": "vivian-lu.JPG",
+      "zach-murphy": "zach-murphy.jpeg",
+    }),
+    [],
+  );
 
-  const getTeamImagePath = (name: string): string => {
-    const key = name.toLowerCase().replace(/\s+/g, '-');
-    return `/team-images/${imageMap[key] || `${key}.jpg`}`;
-  };
-
-  const handleImageError = (name: string) => {
+  const handleImageError = useCallback((name: string) => {
     setFailedImages((prev) => new Set(prev).add(name));
-  };
+  }, []);
+
+  const getTeamImagePath = useCallback(
+    (name: string): string => {
+      const key = name.toLowerCase().replace(/\s+/g, "-");
+      return `/team-images/${imageMap[key] || `${key}.jpg`}`;
+    },
+    [imageMap],
+  );
 
   const teamSections: TeamSection[] = [
     {
       title: "Co-President",
-      members: [{ name: "Diya Patel" }, { name: "Hirsh Garhwal" }, { name: "Shubham Garg" }],
+      members: [
+        { name: "Diya Patel" },
+        { name: "Hirsh Garhwal" },
+        { name: "Shubham Garg" },
+      ],
     },
     {
       title: "Design",
@@ -165,8 +175,7 @@ function Team() {
         <div
           className="absolute inset-0 opacity-[0.015] pointer-events-none z-10"
           style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
-            backgroundRepeat: "repeat",
+            backgroundColor: "rgba(0,0,0,0.002)",
           }}
         />
 
@@ -220,7 +229,7 @@ function Team() {
             )}
 
             {/* Team Labels */}
-            <h2 className="text-2xl font-semibold tracking-tight mb-8">
+            <h2 className="text-2xl font-semibold tracking-tight mb-8 pl-2.5">
               {section.title}
             </h2>
 
@@ -231,10 +240,11 @@ function Team() {
                   {failedImages.has(member.name) ? (
                     <div className="w-36 h-36 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-full bg-gray-300 mb-4 shrink-0" />
                   ) : (
-                    <img 
+                    <img
                       src={getTeamImagePath(member.name)}
                       alt={member.name}
                       onError={() => handleImageError(member.name)}
+                      loading="lazy"
                       className="w-36 h-36 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-full object-cover mb-4 shrink-0"
                     />
                   )}
