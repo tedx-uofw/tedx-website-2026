@@ -42,7 +42,8 @@ function About() {
               className="flex items-center gap-2 mb-6 tracking-[0.05em] text-black 
             font-['Manrope'] text-[32px] font-normal leading-[140%] max-[900px]:justify-center"
             >
-              <span className="text-[#8fa1b3] text-[32px]">✳</span> TEDxUofW
+              <img src="/blueStar.svg" alt="*" className="w-5 md:w-6 lg:w-8" />
+              TEDxUofW
             </div>
 
             {/* Hero Text */}
@@ -127,7 +128,7 @@ function About() {
           </div>
         </div>
       </div>
-      <div className="w-full bg-[#F8F9FB] flex justify-center pb-24">
+      <div className="w-full flex justify-center pb-24">
         <div className="w-full max-w-[1493px] px-[20px] md:px-[55px] flex flex-col gap-6">
           {/* --- ROW 1: Two Images --- */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
@@ -135,7 +136,7 @@ function About() {
             <div className="w-full h-[350px] md:h-[450px] bg-gray-200 overflow-hidden relative">
               {/* Replace src with your image */}
               <img
-                src="/aboutpage-images/Image1.png"
+                src="/aboutpage-images/Image1.jpg"
                 alt="Gallery Top Left"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
               />
@@ -145,7 +146,7 @@ function About() {
             <div className="w-full h-[350px] md:h-[450px] bg-gray-200 overflow-hidden relative">
               {/* Replace src with your image */}
               <img
-                src="/aboutpage-images/Image2.png"
+                src="/aboutpage-images/Image2.jpg"
                 alt="Gallery Top Right"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
               />

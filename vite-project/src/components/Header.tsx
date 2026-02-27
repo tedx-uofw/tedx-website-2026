@@ -15,7 +15,7 @@ function Header() {
     <header className="sticky top-0 z-50">
       <div className="flex w-full items-center px-4 py-3 md:px-6">
         <NavLink className="text-base font-semibold tracking-wide" to="/">
-          Logo
+          <img src="/footer-images/tedx_logo.png" className="w-30" />
         </NavLink>
 
         <div className="ml-auto hidden items-center gap-8 text-sm font-medium md:flex">
@@ -24,7 +24,7 @@ function Header() {
               <NavLink
                 key={link.label}
                 className={({ isActive }) =>
-                  `transition hover:text-red-600 ${isActive ? "text-red-600" : ""}`
+                  `transition font-['Inter'] hover:text-red-600 ${isActive ? "text-red-600" : ""}`
                 }
                 to={link.to}
               >
@@ -33,10 +33,10 @@ function Header() {
             ))}
           </nav>
           <button
-            className="rounded-lg bg-red-600 px-5 py-2 text-sm font-semibold uppercase tracking-wide text-white shadow-sm transition hover:bg-red-700"
+            className="rounded-lg bg-black px-5 py-2 text-sm font-semibold tracking-wide text-white shadow-sm transition hover:bg-red-700 font-['Manrope']"
             type="button"
           >
-            Buy Tickets
+            Get Tickets
           </button>
         </div>
 
@@ -62,7 +62,7 @@ function Header() {
               <NavLink
                 key={link.label}
                 className={({ isActive }) =>
-                  `transition hover:text-red-600 ${isActive ? "text-red-600" : ""}`
+                  `transition font-['Inter'] hover:text-red-600 ${isActive ? "text-red-600" : ""}`
                 }
                 to={link.to}
               >
@@ -70,10 +70,10 @@ function Header() {
               </NavLink>
             ))}
             <button
-              className="mt-2 rounded-lg bg-red-600 px-5 py-2 text-sm font-semibold uppercase tracking-wide text-white shadow-sm transition hover:bg-red-700"
+              className="mt-2 rounded-lg bg-black px-5 py-2 text-sm font-semibold tracking-wide text-white shadow-sm transition hover:bg-red-700 font-['Manrope']"
               type="button"
             >
-              Buy Tickets
+              Get Tickets
             </button>
           </nav>
         </div>
