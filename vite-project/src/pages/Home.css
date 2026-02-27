@@ -1,0 +1,71 @@
+/* Home.tsx specific styles and colors */
+/* Custom color variables for Home.tsx only */
+
+:root {
+  /* Primary colors */
+  --home-black: #000000;
+  --home-black-dark: #231F20;
+  --home-black-navy: #101727;
+  --home-white: #FFFFFF;
+  
+  /* Accent colors */
+  --home-green: #0ACF83;
+  --home-cyan: #1ABCFE;
+  --home-purple: #A259FF;
+  --home-red: #F24E1E;
+  --home-red-coral: #FF7262;
+  
+  /* Gray scale */
+  --home-gray-dark: #495565;
+  --home-gray-medium: #979797;
+  --home-gray-light: #D9D9D9;
+  --home-gray-lighter: #E2E2E2;
+  --home-gray-lightest: #EAEAEA;
+  --home-gray-pale: #EBEEF0;
+}
+
+/* Figma Design System - Typography Styles for Home.tsx */
+/* 
+  These Tailwind classes are used throughout Home.tsx:
+  
+  Navigation Links (Header):
+  - Speakers, About, Sponsors: text-black text-xl font-medium font-inter
+  - Get Tickets button: text-white text-base font-medium font-manrope
+  
+  Footer:
+  - Section headers (Navigate, Event, Connect): text-stone-800 text-xl font-medium font-inter leading-7
+  - Footer links: text-stone-800 text-base font-normal font-manrope leading-6
+  - Email: text-stone-800 text-base font-normal font-manrope leading-6
+  - Copyright: text-stone-800 text-base font-normal font-manrope leading-6
+  
+  Hero Section:
+  - Main description: text-black text-2xl font-normal font-manrope leading-8
+  - Get Tickets button: text-white text-2xl font-medium font-manrope
+  - Learn More button: text-black text-2xl font-medium font-manrope
+  
+  About Section:
+  - Heading: text-black text-5xl font-semibold font-manrope leading-[72.61px]
+  - Description: text-gray-600 text-xl font-normal font-inter leading-8
+  
+  Conference Schedule:
+  - Section title: text-black text-7xl font-semibold font-manrope leading-[100.80px]
+  - Speaker name: text-black text-5xl font-normal font-manrope leading-[67.20px]
+  - Speaker role: text-black text-3xl font-light font-manrope leading-10
+  - Description: text-gray-600 text-xl font-normal font-inter leading-8
+  
+  Venue Section:
+  - Section title: text-black text-7xl font-semibold font-manrope leading-[100.80px]
+  - Location heading: text-gray-900 text-4xl font-bold font-manrope leading-[53.16px]
+  - Address lines: text-gray-600 text-xl font-normal font-manrope leading-10
+  - View on Map: text-black text-3xl font-normal font-manrope leading-10
+  
+  Sponsors Section:
+  - Section title: text-black text-7xl font-semibold font-manrope leading-[100.80px]
+  - Company names: text-black text-4xl font-normal font-manrope leading-[56px]
+*/
+
+/* Remove any borders/outlines from images */
+img {
+  border: none;
+  outline: none;
+}
