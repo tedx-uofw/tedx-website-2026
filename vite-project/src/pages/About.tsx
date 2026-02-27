@@ -128,7 +128,7 @@ function About() {
           </div>
         </div>
       </div>
-      <div className="w-full bg-[#F8F9FB] flex justify-center pb-24">
+      <div className="w-full flex justify-center pb-24">
         <div className="w-full max-w-[1493px] px-[20px] md:px-[55px] flex flex-col gap-6">
           {/* --- ROW 1: Two Images --- */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">

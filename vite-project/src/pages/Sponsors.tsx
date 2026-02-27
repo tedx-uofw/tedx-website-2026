@@ -4,16 +4,16 @@ import {GrainySVG} from "../components/SVGExports.tsx";
 type SponsorProps = {
   name: string;
   description: string;
+  source?: string;
 };
 
-const SponsorCard = ({ name, description }: SponsorProps) => (
+const SponsorCard = ({ name, description, source }: SponsorProps) => (
   <div className="flex flex-col md:flex-row gap-12 py-16 border-t border-neutral-200">
-    {/* Image Placeholder */}
-    <div className="w-full md:w-[500px] shrink-0 bg-black rounded-sm aspect-video shadow-sm" />
+     <img src={`/sponsors-images/${source}`} alt={name} className="w-[20%] h-full object-cover md:ml-32" />
     
-    <div className="flex flex-col justify-start items-center text-center md:items-start md:text-left md:ml-auto md:mr-24">
-      <h3 className="text-3xl font-['Manrope'] font-bold text-neutral-900 mb-6">{name}</h3>
-      <p className="text-neutral-600 leading-relaxed text-base max-w-sm font-['Manrope']">
+    <div className="flex flex-col justify-start items-center text-center md:items-start md:text-left md:ml-auto md:mr-32 md:w-[500px]">
+      <h3 className="text-3xl font-bold font-['Manrope'] text-neutral-900 mb-6">{name}</h3>
+      <p className="text-neutral-600 leading-relaxed text-base font-['Manrope']">
         {description}
       </p>
     </div>
@@ -27,16 +27,19 @@ const Sponsors = () => {
     {
       title: "Innovator",
       sponsors: [
-        { name: "Company Name", description: lorem },
-        { name: "Company Name", description: lorem }
+        { name: "Davis Law Group", description: lorem, source: "dlg.png" },
+        { name: "Associated Students of UW", description: "The University of Washington is committed to providing access, equal opportunity and reasonable accommodation in its services, programs, activities, education and employment for individuals with disabilities. To request disability accommodation contact the Disability Services Office at least ten days in advance at: 206.543.6450/V, 206.543.6452/TTY, 206.685.7264 (FAX), or e-mail at dso@u.washington.edu.", source: "asuw.png" },
+          { name: "University Marketing & Communications (UMAC)", description: "University Marketing & Communications (UMAC) is the University of Washington’s central branding, marketing and communications office. Based within University Advancement, UMAC brings together talented staff from across a range of marketing and communications disciplines in support of the UW’s highest priorities. At the center of our work is the Boundless brand, reflecting the optimistic spirit and extensive positive impact of the University on our students’ lives and on communities near and far.", source: "umac.png" }
       ]
     },
     {
       title: "Thinker",
       sponsors: [
-        { name: "Company Name", description: lorem },
-        { name: "Company Name", description: lorem },
-        { name: "Company Name", description: lorem }
+        { name: "Bombay Express", description: lorem, source: "bombay.png" },
+        { name: "Lune Cafe", description: lorem, source: "lune.png" },
+          { name: "Celsius", description: lorem, source: "celsius.png" },
+          { name: "Seattle Bouldering Project", description: lorem, source: "bouldering project.png" },
+          { name: "Neko Cat Cafe", description: lorem, source: "neko.png" },
       ]
     }
   ];
@@ -113,7 +116,7 @@ const Sponsors = () => {
         <div className="w-[95%] px-6 flex flex-col gap-24 z-10">
           {tiers.map((tier, idx) => (
             <div key={idx} className="w-full">
-              <h2 className="text-4xl font-bold md:text-5xl font-['Manrope'] mb-12 text-black">
+              <h2 className="text-4xl font-bold md:text-5xl font-['Manrope'] mb-12 text-black pl-[4vw]">
                 {tier.title}
               </h2>
               <div className="flex flex-col">
@@ -121,7 +124,8 @@ const Sponsors = () => {
                   <SponsorCard 
                     key={sIdx} 
                     name={sponsor.name} 
-                    description={sponsor.description} 
+                    description={sponsor.description}
+                    source={sponsor.source}
                   />
                 ))}
               </div>

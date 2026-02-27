@@ -3,7 +3,7 @@ export default function Footer() {
     <div className="w-full flex flex-col">
       {/* IMPRINTS LOGO SECTION*/}
       {/* This sits on top of the grey footer with a white/light background */}
-      <div className="w-full flex justify-center items-center py-20 md:py-32">
+      <div className="w-full flex justify-center items-center pt-10 pb-20">
         <div className="relative w-[300px] md:w-[600px] h-auto">
           <img
             src="/footer-images/imprint.png"
@@ -15,7 +15,7 @@ export default function Footer() {
 
       {/*  GREY FOOTER CONTENT   */}
       <footer className="w-full bg-[#E6E8EB] pt-16 pb-8">
-        <div className="w-full max-w-[1493px] mx-auto px-[20px] md:px-[55px] flex flex-col gap-12">
+        <div className="w-full max-w-[1493px] mx-auto px-[20px] md:px-[55px] flex flex-col gap-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-4">
             {/* COLUMN 1: Brand */}
             <div className="flex flex-col gap-4">
@@ -54,12 +54,12 @@ export default function Footer() {
                 Event
               </h3>
               <div className="flex flex-col gap-3 text-black font-manrope font-light text-[16px]">
-                <div className="cursor-pointer hover:underline">
+                <a href="/#conference-schedule" className="cursor-pointer hover:underline">
                   Conference Schedule
-                </div>
-                <div className="cursor-pointer hover:underline">
+                </a>
+                <a href="/#venue" className="cursor-pointer hover:underline">
                   Venue Information
-                </div>
+                </a>
               </div>
             </div>
 
@@ -110,9 +110,9 @@ export default function Footer() {
               {/* Email */}
               <div className="flex items-center gap-2 mt-2 cursor-pointer hover:opacity-70">
                 <img src="/footer-images/mail.png" className="w-4 h-4" />
-                <span className="text-black font-manrope font-light text-[16px]">
+                <a href="mailto:info@tedx.com" className="text-black font-manrope font-light text-[16px]">
                   info@tedx.com
-                </span>
+                </a>
               </div>
             </div>
           </div>
@@ -123,7 +123,10 @@ export default function Footer() {
           {/* Copyright */}
           <div className="w-full">
             <p className="text-[#666] font-manrope font-light text-[14px]">
-              © 2026 TEDx. This independent TEDx event is operated under license
+              ©TEDxUofW 2026. | Imprints
+            </p>
+            <p className="text-[#666] font-manrope font-light text-[14px]">
+              This independent TEDx event is operated under license
               from TED.
             </p>
           </div>

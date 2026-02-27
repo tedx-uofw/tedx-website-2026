@@ -79,7 +79,7 @@ function Home() {
             </div>
         </div>
             <div className="w-full flex flex-col justify-start items-start gap-10">
-            <div className="self-stretch justify-start text-black text-7xl font-semibold font-['Manrope'] leading-[100.80px]">Conference Schedule</div>
+            <div id="conference-schedule" className="self-stretch justify-start text-black text-7xl font-semibold font-['Manrope'] leading-[100.80px]">Conference Schedule</div>
             <div className="self-stretch flex flex-col justify-start items-start gap-24">
                 <div className="self-stretch inline-flex justify-start items-start gap-14 flex-wrap content-start">
                     <a
@@ -220,7 +220,7 @@ function Home() {
                 WebkitMaskImage: "radial-gradient(circle, black 30%, transparent 55%)",
               }}
             />
-            <div className="self-stretch justify-start text-black text-7xl font-semibold font-['Manrope'] leading-[100.80px]">Venue</div>
+            <div id="venue" className="self-stretch justify-start text-black text-7xl font-semibold font-['Manrope'] leading-[100.80px]">Venue</div>
             <div className="w-full flex flex-col lg:flex-row gap-8 items-stretch">
                 <div className="flex-1 flex flex-col justify-start gap-8">
                     <div className="flex items-start gap-4">
