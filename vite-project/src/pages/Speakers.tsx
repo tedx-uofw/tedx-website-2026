@@ -69,18 +69,11 @@ function Speakers() {
   ];
 
   return (
-    <div className="relative bg-white overflow-hidden">
-      {/* ===== Background blobs / art (kept visually the same, but responsive container) ===== */}
+    <div className="relative w-full bg-white overflow-hidden">
       <div className="pointer-events-none absolute left-[-312.8px] top-[2665.77px] h-[1234.17px] w-[1234.17px] origin-top-left rotate-[0.88deg] rounded-full bg-[radial-gradient(ellipse_50.00%_50.00%_at_50.00%_50.00%,_rgba(177.30,_214.40,_231.60,_0.80)_0%,_rgba(255,_255,_255,_0.80)_100%)]" />
       <div className="pointer-events-none absolute left-[1120.45px] top-[531px] h-[468.74px] w-[460.02px] origin-top-left rotate-[15.9deg] rounded-full bg-blue-400/90 blur-[400px]" />
       <div className="pointer-events-none absolute left-[128px] top-[2916px] h-[468.74px] w-[460.02px] origin-top-left rotate-[15.9deg] rounded-full bg-blue-400/90 blur-[400px]" />
       <div className="pointer-events-none absolute left-[938.58px] top-[2442.45px] h-[758.48px] w-[1187.17px] origin-top-left rotate-[164.1deg] rounded-full bg-neutral-600/5 blur-[321.69px]" />
-
-      <img
-        className="pointer-events-none absolute left-[800px] top-[200px] h-[1500px] w-[2000px] opacity-30 [background-blend-mode:luminosity]"
-        src="/speakers-images/saturatedblue.svg"
-        alt=""
-      />
 
       {/* fingerprint left */}
       <img
@@ -104,26 +97,46 @@ function Speakers() {
         }}
       />
 
-      {/* X imprinted image (kept) */}
+      {/* ✅ FULL-WIDTH X GRAPHIC (touches viewport edge, not the padded container) */}
       <img
-        className="pointer-events-none absolute left-[50px] top-[159px] h-[791px] w-[730px]"
+        className="absolute left-0 top-[159px] w-[730px] h-[791px] max-w-none"
         src="/speakers-images/x imprinted 1.svg"
         alt=""
       />
 
-      {/* ===== Content wrapper ===== */}
-      {/* Keeps your 1512-wide “Figma feel” on desktop, but becomes fluid on smaller screens */}
       <div className="relative mx-auto w-full max-w-[1512px] px-6 sm:px-10">
-        {/* Header block (same content/placement feel; responsive) */}
+        <div
+          className="
+            pointer-events-none
+            absolute
+            left-[1600px]
+            top-[700px]
+            -translate-x-1/2
+            -translate-y-1/2
+            h-[900px]
+            w-[900px]
+            rounded-full
+            bg-[radial-gradient(circle_at_center,_rgba(177,214,232,0.85)_0%,_rgba(177,214,232,0.35)_35%,_rgba(255,255,255,0)_70%)]
+            blur-[30px]
+            opacity-90
+          "
+        />
+
+        {/* Desktop header */}
         <div
           className="
             absolute left-[690px] top-[641px]
             hidden lg:flex
+            z-10
             w-[767px] flex-col items-end gap-5
           "
         >
           <div className="inline-flex items-center justify-end gap-2">
-            <img src="/speakers-images/blue-icon.svg" alt="blue icon" className="h-9 w-9" />
+            <img
+              src="/speakers-images/blue-icon.svg"
+              alt="blue icon"
+              className="h-9 w-9"
+            />
             <div className="font-['Manrope'] text-3xl font-normal leading-10 text-black">
               TEDxUofW
             </div>
@@ -136,7 +149,11 @@ function Speakers() {
         {/* Mobile/Tablet header (same text, just flows normally) */}
         <div className="pt-24 lg:hidden">
           <div className="flex items-center gap-2">
-            <img src="/speakers-images/blue-icon.svg" alt="blue icon" className="h-9 w-9" />
+            <img
+              src="/speakers-images/blue-icon.svg"
+              alt="blue icon"
+              className="h-9 w-9"
+            />
             <div className="font-['Manrope'] text-2xl font-normal leading-8 text-black sm:text-3xl sm:leading-10">
               TEDxUofW
             </div>
@@ -146,19 +163,11 @@ function Speakers() {
           </div>
         </div>
 
-        {/* Speakers list area */}
-        {/* On desktop, this matches your original left:56 top:1086 feel; on smaller screens it flows */}
         <div className="pb-24 pt-[1086px] lg:pt-[1086px]">
           <div className="mx-auto w-full max-w-[1400px]">
             <div className="flex flex-col gap-24">
               {speakers.map((s, idx) => (
                 <div key={s.name} className="w-full">
-                  {/* Row */}
-                  {/* EXACT intent preserved:
-                      - left = image
-                      - middle = name/role/link stacked
-                      - right = description column (NOT under image on desktop)
-                  */}
                   <div
                     className="
                       flex flex-col gap-8
@@ -168,11 +177,12 @@ function Speakers() {
                     {/* Left group: Image + Info column */}
                     <div className="flex flex-col gap-6 lg:flex-row lg:gap-[75px]">
                       <img
-                        className={`h-72 w-72 rounded-md object-cover ${s.imgClass || ""}`}
+                        className={`h-72 w-72 rounded-md object-cover ${
+                          s.imgClass || ""
+                        }`}
                         src={s.image}
                         alt={s.name}
                       />
-
                       <div className="flex w-full max-w-[320px] flex-col items-start gap-6">
                         <div className="whitespace-nowrap font-['Manrope'] text-4xl font-semibold leading-[1.15] text-black lg:text-5xl lg:leading-[67.20px]">
                           {s.name}
@@ -180,8 +190,12 @@ function Speakers() {
                         <div className="w-full font-['Manrope'] text-2xl font-light leading-9 text-black lg:text-3xl lg:leading-10">
                           {s.role}
                         </div>
-
-                        <a href={s.link} target="_blank" rel="noopener noreferrer" className="inline-flex">
+                        <a
+                          href={s.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex"
+                        >
                           <img
                             className={`${s.linkSize ?? "w-12 h-12"} rounded-md`}
                             src={s.linkIcon}
@@ -192,9 +206,6 @@ function Speakers() {
                     </div>
 
                     {/* Right description column */}
-                    {/* On desktop: fixed width and sits FAR RIGHT like Figma.
-                        On mobile: becomes its own block below (responsive necessity).
-                    */}
                     <div className="lg:ml-auto lg:pt-[7px]">
                       <div className="w-full text-left font-['Manrope'] text-lg font-normal leading-7 text-gray-600 sm:text-xl lg:w-[569.99px]">
                         {s.desc}
@@ -202,7 +213,7 @@ function Speakers() {
                     </div>
                   </div>
 
-                  {/* Divider (same as your outline line) */}
+                  {/* Divider (same as outline line) */}
                   {idx !== speakers.length - 1 && (
                     <div className="mt-24 h-0 w-full max-w-[1436px] outline outline-1 outline-offset-[-0.5px] outline-black" />
                   )}
@@ -213,7 +224,6 @@ function Speakers() {
         </div>
       </div>
 
-      {/* Keep overall “page height” feel without hard-locking it */}
       <div className="h-[1px]" />
     </div>
   );
