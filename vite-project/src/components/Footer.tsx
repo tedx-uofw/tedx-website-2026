@@ -3,7 +3,7 @@ export default function Footer() {
     <div className="w-full flex flex-col">
       {/* IMPRINTS LOGO SECTION*/}
       {/* This sits on top of the grey footer with a white/light background */}
-      <div className="w-full bg-[#F8F9FB] flex justify-center items-center py-20 md:py-32">
+      <div className="w-full flex justify-center items-center py-20 md:py-32">
         <div className="relative w-[300px] md:w-[600px] h-auto">
           <img
             src="/footer-images/imprint.png"
