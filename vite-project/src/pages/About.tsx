@@ -5,7 +5,7 @@ function About() {
     <>
       <div
         className="relative w-screen min-h-screen flex items-center justify-start 
-  max-[900px]:flex-col max-[900px]:justify-center max-[900px]:p-5 bg-linear-to-b from-white to-[#F7F9FB]"
+  max-[900px]:flex-col max-[900px]:justify-center max-[900px]:p-5"
       >
         {/* Noise texture overlay */}
         <div
@@ -128,7 +128,7 @@ function About() {
           </div>
         </div>
       </div>
-      <div className="w-full flex justify-center pb-24">
+      <div className="w-full flex justify-center pb-24 bg-linear-to-b from-white to-[#F7F9FB]">
         <div className="w-full max-w-[1493px] px-[20px] md:px-[55px] flex flex-col gap-6">
           {/* --- ROW 1: Two Images --- */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
