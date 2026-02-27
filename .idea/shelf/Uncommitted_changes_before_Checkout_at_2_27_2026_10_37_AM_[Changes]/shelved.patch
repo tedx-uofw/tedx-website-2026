@@ -1,0 +1,119 @@
+Index: .idea/modules.xml
+===================================================================
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+deleted file mode 100644
+--- a/.idea/modules.xml	(revision 06a86e77d175bc059869d5f9fd49e69e942b986d)
++++ /dev/null	(revision 06a86e77d175bc059869d5f9fd49e69e942b986d)
+@@ -1,8 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="ProjectModuleManager">
+-    <modules>
+-      <module fileurl="file://$PROJECT_DIR$/.idea/tedx-website-2026.iml" filepath="$PROJECT_DIR$/.idea/tedx-website-2026.iml" />
+-    </modules>
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/tedx-website-2026.iml
+===================================================================
+diff --git a/.idea/tedx-website-2026.iml b/.idea/tedx-website-2026.iml
+deleted file mode 100644
+--- a/.idea/tedx-website-2026.iml	(revision 06a86e77d175bc059869d5f9fd49e69e942b986d)
++++ /dev/null	(revision 06a86e77d175bc059869d5f9fd49e69e942b986d)
+@@ -1,8 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<module type="WEB_MODULE" version="4">
+-  <component name="NewModuleRootManager">
+-    <content url="file://$MODULE_DIR$" />
+-    <orderEntry type="inheritedJdk" />
+-    <orderEntry type="sourceFolder" forTests="false" />
+-  </component>
+-</module>
+\ No newline at end of file
+Index: .idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/compiler.xml b/.idea/compiler.xml
+deleted file mode 100644
+--- a/.idea/compiler.xml	(revision 06a86e77d175bc059869d5f9fd49e69e942b986d)
++++ /dev/null	(revision 06a86e77d175bc059869d5f9fd49e69e942b986d)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="TypeScriptCompiler">
+-    <option name="useServicePoweredTypesWasEnabledByExperiment" value="true" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/inspectionProfiles/Project_Default.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/inspectionProfiles/Project_Default.xml b/.idea/inspectionProfiles/Project_Default.xml
+deleted file mode 100644
+--- a/.idea/inspectionProfiles/Project_Default.xml	(revision 06a86e77d175bc059869d5f9fd49e69e942b986d)
++++ /dev/null	(revision 06a86e77d175bc059869d5f9fd49e69e942b986d)
+@@ -1,6 +0,0 @@
+-<component name="InspectionProjectProfileManager">
+-  <profile version="1.0">
+-    <option name="myName" value="Project Default" />
+-    <inspection_tool class="Eslint" enabled="true" level="WARNING" enabled_by_default="true" />
+-  </profile>
+-</component>
+\ No newline at end of file
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+deleted file mode 100644
+--- a/.idea/vcs.xml	(revision 06a86e77d175bc059869d5f9fd49e69e942b986d)
++++ /dev/null	(revision 06a86e77d175bc059869d5f9fd49e69e942b986d)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="VcsDirectoryMappings">
+-    <mapping directory="" vcs="Git" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/.gitignore
+===================================================================
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+deleted file mode 100644
+--- a/.idea/.gitignore	(revision 06a86e77d175bc059869d5f9fd49e69e942b986d)
++++ /dev/null	(revision 06a86e77d175bc059869d5f9fd49e69e942b986d)
+@@ -1,10 +0,0 @@
+-# Default ignored files
+-/shelf/
+-/workspace.xml
+-# Ignored default folder with query files
+-/queries/
+-# Datasource local storage ignored files
+-/dataSources/
+-/dataSources.local.xml
+-# Editor-based HTTP Client requests
+-/httpRequests/
+Index: vite-project/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># Logs\r\nlogs\r\n*.log\r\nnpm-debug.log*\r\nyarn-debug.log*\r\nyarn-error.log*\r\npnpm-debug.log*\r\nlerna-debug.log*\r\n\r\nnode_modules\r\ndist\r\ndist-ssr\r\n*.local\r\n\r\n# Editor directories and files\r\n.vscode/*\r\n!.vscode/extensions.json\r\n.idea/*\r\n.DS_Store\r\n*.suo\r\n*.ntvs*\r\n*.njsproj\r\n*.sln\r\n*.sw?\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/vite-project/.gitignore b/vite-project/.gitignore
+--- a/vite-project/.gitignore	(revision 06a86e77d175bc059869d5f9fd49e69e942b986d)
++++ b/vite-project/.gitignore	(date 1772213756464)
+@@ -15,7 +15,7 @@
+ # Editor directories and files
+ .vscode/*
+ !.vscode/extensions.json
+-.idea/*
++idea/*
+ .DS_Store
+ *.suo
+ *.ntvs*
