@@ -12,7 +12,6 @@
   "dependencies": {
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "react-lazy-load-image-component": "^1.6.3",
     "react-router-dom": "^7.13.0"
   },
   "devDependencies": {
@@ -22,7 +21,6 @@
     "@types/node": "^24.10.1",
     "@types/react": "^19.2.5",
     "@types/react-dom": "^19.2.3",
-    "@types/react-lazy-load-image-component": "^1.6.5",
     "@vitejs/plugin-react-swc": "^4.2.2",
     "autoprefixer": "^10.4.23",
     "eslint": "^9.39.1",
