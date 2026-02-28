@@ -1,9 +1,11 @@
+import {GrainySVG} from "../components/SVGExports.tsx";
+
 function Speakers() {
   const speakers = [
     {
       name: "Cara Hale Alter",
       role: "Founder",
-      image: "/speakers-images/cara-hale-alter.jpg",
+      image: "/speakers-images/cara-hale-alter.webp",
       desc:
         "Cara Hale Alter is the founder of SpeechSkills, a company that offers leadership training around the concept of visible credibility or “the ability to project competence and confidence so that your value is on full display”. Cara’s talk is about how many people suffer from invisible credibility and how learning to demonstrate visible credibility can help people have so much more power in the world.\n\n",
       link: "https://www.linkedin.com/in/carahalealter/",
@@ -14,7 +16,7 @@ function Speakers() {
     {
       name: "Melissa Hutchins",
       role: "Founder & CEO",
-      image: "/speakers-images/melissa-hutchins.jpg",
+      image: "/speakers-images/melissa-hutchins.webp",
       desc:
         "Melissa is the founder and CEO of Certifi AI, a big tech company working to protect individuals from AI harms. Melissa’s talk is about the negative societal impact of deepfake AI technology and why it is important that we view AI through a critical lens. She speaks about the intersection between digital identities and each of our abilities to control our own lives.\n\n",
       link: "https://linkedin.com/in/melissa-hutchins",
@@ -25,7 +27,7 @@ function Speakers() {
     {
       name: "Michael B Ling",
       role: "Digital Speaker",
-      image: "/speakers-images/michael-b-ling.jpg",
+      image: "/speakers-images/michael-b-ling.webp",
       desc:
         "Michael is a public speaker, podcast host, and author. Michael’s talk is about the journey of forgiveness. He speaks about how to both apply and receive forgiveness, as well as the ability to live free through forgiveness and how that can empower people.\n\n",
       link: "https://www.linkedin.com/in/michael-ling-1079a3391/",
@@ -36,7 +38,7 @@ function Speakers() {
     {
       name: "Vita Kari",
       role: "Artist",
-      image: "/speakers-images/vita-kari.jpg",
+      image: "/speakers-images/vita-kari.webp",
       desc: "Virality as a legitimate collaborative art medium.\n\n",
       link: "https://www.linkedin.com/in/vitakari/",
       linkIcon: "/speakers-images/linkedin-logo.png",
@@ -46,7 +48,7 @@ function Speakers() {
     {
       name: "Ann Frost",
       role: "Associate Teaching Professor",
-      image: "/speakers-images/ann-frost.jpg",
+      image: "/speakers-images/ann-frost.webp",
       desc:
         "Ann is an Associate Teaching Professor in the Law, Societies, and Justice and Sociology Departments at the University of Washington. Her work primarily revolves around the criminal justice system and she leads a book club inside the prison in Monroe. Ann’s talk is about this book club program that allows for UW students and incarcerated students to interact with each other on a collegial classroom level. She speaks about how different experiences people engage in can impact the lives of themselves and others.\n\n",
       link: "https://lsj.washington.edu/people/ann-frost",
@@ -58,7 +60,7 @@ function Speakers() {
     {
       name: "Nandita Gupta",
       role: "TEDx Speaker",
-      image: "/speakers-images/nandita-gupta.jpg",
+      image: "/speakers-images/nandita-gupta.webp",
       desc:
         "Nandita is a TEDx speaker & has been featured by Business Insider, NASDAQ, Forbes, Times of India, BlogHer, and Ability Summit Panelist, and quoted in Fortune, SDTimes, Livewire, Best Colleges, Zdnet, Yahoo, and many more. She has been a Board member at various non-profits and actively works in the community to create an inclusive space in communities.\n\n",
       link: "https://www.linkedin.com/in/nandita-gupta/",
@@ -70,16 +72,77 @@ function Speakers() {
 
   return (
     <div className="relative w-full bg-white overflow-hidden">
-      <div className="pointer-events-none absolute left-[-312.8px] top-[2665.77px] h-[1234.17px] w-[1234.17px] origin-top-left rotate-[0.88deg] rounded-full bg-[radial-gradient(ellipse_50.00%_50.00%_at_50.00%_50.00%,_rgba(177.30,_214.40,_231.60,_0.80)_0%,_rgba(255,_255,_255,_0.80)_100%)]" />
-      <div className="pointer-events-none absolute left-[1120.45px] top-[531px] h-[468.74px] w-[460.02px] origin-top-left rotate-[15.9deg] rounded-full bg-blue-400/90 blur-[400px]" />
-      <div className="pointer-events-none absolute left-[128px] top-[2916px] h-[468.74px] w-[460.02px] origin-top-left rotate-[15.9deg] rounded-full bg-blue-400/90 blur-[400px]" />
-      <div className="pointer-events-none absolute left-[938.58px] top-[2442.45px] h-[758.48px] w-[1187.17px] origin-top-left rotate-[164.1deg] rounded-full bg-neutral-600/5 blur-[321.69px]" />
+      <div
+          className="relative z-10 w-screen min-h-screen flex items-center justify-start
+  max-[900px]:flex-col max-[900px]:justify-center max-[900px]:p-5"
+      >
+        {/* Noise texture overlay */}
+        <div
+            className="absolute inset-0 opacity-[0.015] pointer-events-none z-10"
+            style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
+              backgroundRepeat: "repeat",
+            }}
+        />
+        {/* BACKGROUND DECORATION: Fingerprint */}
+        <img
+            src="/aboutpage-images/full_fingerprint_3.png"
+            alt=""
+            className="absolute left-[-35vw] top-[30%] -translate-y-1/2 -rotate-19
+            w-[90%] h-auto opacity-5 mix-blend-multiply grayscale pointer-events-none z-0 drop-shadow-[10px_10px_12px_rgba(0,0,0,1)]"
+            style={{
+              // This creates the fade effect:
+              // Center (black) = Visible
+              // Edges (transparent) = Invisible
+              maskImage: "radial-gradient(circle, black 30%, transparent 55%)",
+              WebkitMaskImage:
+                  "radial-gradient(circle, black 10%, transparent 70%)",
+            }}
+        />
+
+        {/* MAIN CONTENT */}
+        <div
+            className="relative z-20 w-full pl-[8vw]
+    max-[900px]:px-5 max-[900px]:mb-5 max-[900px]:flex max-[900px]:flex-col max-[900px]:items-center max-[900px]:text-center"
+        >
+          <div className="max-w-137.5">
+            {/* Tag Line */}
+            <div
+                className="flex items-center gap-2 mb-6 tracking-[0.05em] text-black
+            font-['Manrope'] text-[32px] font-normal leading-[140%] max-[900px]:justify-center"
+            >
+              <img src="/blueStar.svg" alt="*" className="w-5 md:w-6 lg:w-8" />
+              TEDxUofW
+            </div>
+
+            {/* Hero Text */}
+            <h1
+                className="text-black font-['Andada_Pro'] text-[44px] font-normal leading-[140%]
+            w-[160%] max-[900px]:w-full"
+            >
+              Meet our 6 speakers
+            </h1>
+          </div>
+        </div>
+
+        {/* Orb */}
+        <GrainySVG className="absolute rotate-[15.905deg] right-[-17vw] mt-[40%] max-[900px]:right-[-35vw] z-10" />
+
+        {/* RIGHT IMAGE: The X */}
+        <img
+            src="/aboutpage-images/x_imprinted_1.svg"
+            alt="X Graphic"
+            className="absolute right-[-1vw] top-1/2 -translate-y-1/2 h-[90vh] w-auto z-10 pointer-events-none
+          max-[900px]:absolute max-[900px]:right-[-15vw] max-[900px]:top-1/2 max-[900px]:-translate-y-1/2
+          max-[900px]:h-[60vh] max-[900px]:w-auto max-[900px]:z-0 max-[900px]:opacity-20"
+        />
+      </div>
 
       {/* fingerprint left */}
       <img
         src="/speakers-images/fingerprint.png"
         alt=""
-        className="pointer-events-none absolute left-[-25vw] top-[80%] z-0 h-auto w-[90%] -translate-y-1/2 -rotate-19 opacity-5 mix-blend-multiply grayscale drop-shadow-[10px_10px_12px_rgba(0,0,0,1)]"
+        className="pointer-events-none absolute left-[-25vw] top-[80%] z-0 h-auto w-[90%] -translate-y-1/2 -rotate-19 opacity-5 mix-blend-multiply grayscale drop-shadow-[10px_10px_12px_rgba(0,0,0,1)] z-10"
         style={{
           maskImage: "radial-gradient(circle, black 30%, transparent 55%)",
           WebkitMaskImage: "radial-gradient(circle, black 10%, transparent 70%)",
@@ -90,80 +153,18 @@ function Speakers() {
       <img
         src="/speakers-images/fingerprint.png"
         alt=""
-        className="pointer-events-none absolute right-[-24vw] top-[40%] z-0 h-auto w-[90%] -translate-y-1/2 -rotate-19 opacity-[0.02] mix-blend-multiply grayscale drop-shadow-[10px_10px_12px_rgba(0,0,0,1)]"
+        className="pointer-events-none absolute right-[-24vw] top-[40%] z-0 h-auto w-[70%] -translate-y-1/2 -rotate-19 opacity-[0.02] mix-blend-multiply grayscale drop-shadow-[10px_10px_12px_rgba(0,0,0,1)] z-10"
         style={{
           maskImage: "radial-gradient(circle, black 30%, transparent 55%)",
           WebkitMaskImage: "radial-gradient(circle, black 10%, transparent 70%)",
         }}
       />
 
-      {/* ✅ FULL-WIDTH X GRAPHIC (touches viewport edge, not the padded container) */}
-      <img
-        className="absolute left-0 top-[159px] w-[730px] h-[791px] max-w-none"
-        src="/speakers-images/x imprinted 1.svg"
-        alt=""
-      />
 
-      <div className="relative mx-auto w-full max-w-[1512px] px-6 sm:px-10">
-        <div
-          className="
-            pointer-events-none
-            absolute
-            left-[1600px]
-            top-[700px]
-            -translate-x-1/2
-            -translate-y-1/2
-            h-[900px]
-            w-[900px]
-            rounded-full
-            bg-[radial-gradient(circle_at_center,_rgba(177,214,232,0.85)_0%,_rgba(177,214,232,0.35)_35%,_rgba(255,255,255,0)_70%)]
-            blur-[30px]
-            opacity-90
-          "
-        />
+      <div className="relative mx-auto w-full px-6 sm:px-10 bg-linear-to-b from-white to-[#F7F9FB]">
 
         {/* Desktop header */}
-        <div
-          className="
-            absolute left-[690px] top-[641px]
-            hidden lg:flex
-            z-10
-            w-[767px] flex-col items-end gap-5
-          "
-        >
-          <div className="inline-flex items-center justify-end gap-2">
-            <img
-              src="/speakers-images/blue-icon.svg"
-              alt="blue icon"
-              className="h-9 w-9"
-            />
-            <div className="font-['Manrope'] text-3xl font-normal leading-10 text-black">
-              TEDxUofW
-            </div>
-          </div>
-          <div className="font-['Andada_Pro'] text-5xl font-normal leading-[67.20px] text-black">
-            Meet our 6 speakers
-          </div>
-        </div>
-
-        {/* Mobile/Tablet header (same text, just flows normally) */}
-        <div className="pt-24 lg:hidden">
-          <div className="flex items-center gap-2">
-            <img
-              src="/speakers-images/blue-icon.svg"
-              alt="blue icon"
-              className="h-9 w-9"
-            />
-            <div className="font-['Manrope'] text-2xl font-normal leading-8 text-black sm:text-3xl sm:leading-10">
-              TEDxUofW
-            </div>
-          </div>
-          <div className="mt-4 font-['Andada_Pro'] text-4xl font-normal leading-tight text-black sm:text-5xl sm:leading-[67.20px]">
-            Meet our 6 speakers
-          </div>
-        </div>
-
-        <div className="pb-24 pt-[1086px] lg:pt-[1086px]">
+        <div className="pt-20">
           <div className="mx-auto w-full max-w-[1400px]">
             <div className="flex flex-col gap-24">
               {speakers.map((s, idx) => (
@@ -172,10 +173,11 @@ function Speakers() {
                     className="
                       flex flex-col gap-8
                       lg:flex-row lg:items-start lg:gap-0
+                      items-center
                     "
                   >
                     {/* Left group: Image + Info column */}
-                    <div className="flex flex-col gap-6 lg:flex-row lg:gap-[75px]">
+                    <div className="flex flex-col gap-6 lg:flex-row lg:gap-[75px] items-center lg:items-start">
                       <img
                         className={`h-72 w-72 rounded-md object-cover ${
                           s.imgClass || ""
@@ -183,7 +185,7 @@ function Speakers() {
                         src={s.image}
                         alt={s.name}
                       />
-                      <div className="flex w-full max-w-[320px] flex-col items-start gap-6">
+                      <div className="flex w-full max-w-[320px] flex-col items-center lg:items-start gap-6 text-center lg:text-left">
                         <div className="whitespace-nowrap font-['Manrope'] text-4xl font-semibold leading-[1.15] text-black lg:text-5xl lg:leading-[67.20px]">
                           {s.name}
                         </div>
@@ -206,8 +208,8 @@ function Speakers() {
                     </div>
 
                     {/* Right description column */}
-                    <div className="lg:ml-auto lg:pt-[7px]">
-                      <div className="w-full text-left font-['Manrope'] text-lg font-normal leading-7 text-gray-600 sm:text-xl lg:w-[569.99px]">
+                    <div className="lg:ml-auto lg:pt-[7px] w-full lg:w-auto flex justify-center lg:block">
+                      <div className="w-full text-center lg:text-left font-['Manrope'] text-lg font-normal leading-7 text-gray-600 sm:text-xl lg:w-[569.99px]">
                         {s.desc}
                       </div>
                     </div>
@@ -223,8 +225,6 @@ function Speakers() {
           </div>
         </div>
       </div>
-
-      <div className="h-[1px]" />
     </div>
   );
 }
