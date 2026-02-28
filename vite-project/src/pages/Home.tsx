@@ -239,7 +239,7 @@ function Home() {
                         { name: "Celsius", source: "celsius.webp" },
                     ].map((sponsor) => (
                         <div key={sponsor.name} className="flex flex-col items-center gap-6">
-                            <div className="w-full max-w-[340px] aspect-square bg-gray-900 rounded-3xl flex items-center justify-center max-md:max-w-[280px]">
+                            <div className="w-full max-w-[340px] aspect-square bg-[#D6E4F0] rounded-3xl flex items-center justify-center max-md:max-w-[280px]">
                                 <img
                                     className="w-40 h-40 md:w-48 md:h-48 object-contain"
                                     src={`/sponsors-images/${sponsor.source}`}
