@@ -1,5 +1,3 @@
-import {GrainySVG} from "../components/SVGExports.tsx";
-
 function Speakers() {
   const speakers = [
     {
@@ -126,7 +124,7 @@ function Speakers() {
         </div>
 
         {/* Orb */}
-        <GrainySVG className="absolute rotate-[15.905deg] right-[-17vw] mt-[40%] max-[900px]:right-[-35vw] z-10" />
+        <img src="/imprints-images/saturatedblue.webp" alt="design" className="absolute rotate-[15.905deg] right-[-17vw] mt-[40%] max-[900px]:right-[-30vw]" />
 
         {/* RIGHT IMAGE: The X */}
         <img

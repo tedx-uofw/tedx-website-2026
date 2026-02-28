@@ -1,5 +1,3 @@
-import { GrainySVG } from "../components/SVGExports";
-
 function About() {
   return (
     <>
@@ -58,7 +56,7 @@ function About() {
         </div>
 
         {/* Orb */}
-        <GrainySVG className="absolute rotate-[15.905deg] right-[-17vw] mt-[40%] max-[900px]:right-[-35vw]" />
+        <img src="/imprints-images/saturatedblue.webp" alt="design" className="absolute rotate-[15.905deg] right-[-17vw] mt-[40%] max-[900px]:right-[-30vw]" />
 
         {/* RIGHT IMAGE: The X */}
         <img
@@ -128,7 +126,7 @@ function About() {
           </div>
         </div>
       </div>
-      <div className="w-full flex justify-center pb-24 bg-linear-to-b from-white to-[#F7F9FB]">
+      <div className="w-full flex justify-center bg-linear-to-b from-white to-[#F7F9FB]">
         <div className="w-full max-w-[1493px] px-[20px] md:px-[55px] flex flex-col gap-6">
           {/* --- ROW 1: Two Images --- */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">

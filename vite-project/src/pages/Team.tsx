@@ -1,4 +1,3 @@
-import { GrainySVG, GrainySVGGray } from "../components/SVGExports";
 import { kebabCase } from "lodash"
 
 interface TeamMember {
@@ -136,7 +135,7 @@ function Team() {
         </div>
 
         {/* Rotation of Gradient */}
-        <GrainySVG className="absolute rotate-[15.905deg] right-[-17vw] mt-[40%] max-[900px]:right-[-35vw]" />
+        <img src="/imprints-images/saturatedblue.webp" alt="design" className="absolute rotate-[15.905deg] right-[-17vw] mt-[40%] max-[900px]:right-[-30vw] z-10" />
 
         <img
           src="/imprints-images/x_imprinted_1.svg"
@@ -153,12 +152,13 @@ function Team() {
           <div key={section.title} className="relative">
             {/* Grainy Orb between Design and Web Dev on the left */}
             {sectionIndex === 1 && (
-              <GrainySVGGray className="absolute rotate-[195.905deg] left-[-17vw] top-[80%] max-[900px]:left-[-35vw] z-0 pointer-events-none" />
+                <img src="/imprints-images/saturatedblue.webp" alt="design" className="absolute rotate-[195.905deg] left-[-17vw] top-[80%] max-[900px]:left-[-35vw] z-0 pointer-events-none" />
             )}
 
             {/* Grainy Orb in Speaker Selection on the right */}
             {sectionIndex === 3 && (
-              <GrainySVG className="absolute rotate-[15.905deg] right-[-17vw] top-[50%] max-[900px]:right-[-35vw] z-0 pointer-events-none" />
+              <img src="/imprints-images/saturatedblue.webp" alt="design" className="absolute rotate-[15.905deg] right-[-17vw] top-[50%] max-[900px]:right-[-35vw] z-0 pointer-events-none" />
+
             )}
 
             {/* Team Labels */}
