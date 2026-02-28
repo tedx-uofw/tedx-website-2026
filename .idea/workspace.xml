@@ -4,15 +4,96 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddae1876-7459-49d4-86a9-164361d82f3c" name="Changes" comment="update gitignore">
+    <list default="true" id="ddae1876-7459-49d4-86a9-164361d82f3c" name="Changes" comment="Optimize Speakers page for mobile and less lag">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite-project/public/speakers-images/ann-frost.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite-project/public/speakers-images/cara-hale-alter.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite-project/public/speakers-images/melissa-hutchins.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite-project/public/speakers-images/michael-b-ling.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite-project/public/speakers-images/nandita-gupta.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite-project/public/speakers-images/vita-kari.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/Imprinted.svg" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/imprints-images/x_imprinted_1.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/aboutpage-images/Image1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/aboutpage-images/Image2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/aboutpage-images/Image3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/aboutpage-images/Image4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/aboutpage-images/Image5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/aboutpage-images/full_fingerprint_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/aboutpage-images/x_imprinted_1.svg" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/favicon.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/blueStar.svg" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/imprints-images/blueStar.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/footer-images/facebook.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/footer-images/imprint.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/footer-images/instagram.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/footer-images/linkedin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/footer-images/mail.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/footer-images/tedx_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/footer-images/tiktok.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/landing/Ann.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/landing/Cara.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/landing/Melissa.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/landing/Michael.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/landing/Nandita.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/landing/Vita.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/landing/full fingerprint 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/landing/imprinted 1.svg" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/imprints-images/imprinted_1.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/landing/venue.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/landing/x 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/speakers-images/Ellipse 6.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/speakers-images/blue-icon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/speakers-images/fingerprint.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/speakers-images/link-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/speakers-images/linkedin-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/speakers-images/saturatedblue.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/speakers-images/x imprinted 1.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/speakers/ann-frost.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/speakers/cara-hale-alter.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/speakers/link-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/speakers/linkedin-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/speakers/melissa-hutchins.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/speakers/michael-b-ling.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/speakers/nandita-gupta.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/speakers/vita-kari.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/sponsors-images/asuw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/sponsors-images/bombay.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/sponsors-images/bouldering project.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/sponsors-images/celsius.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/sponsors-images/dlg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/sponsors-images/lune.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/sponsors-images/neko.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/sponsors-images/umac.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/andrew-lin.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/arvin-bansal.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/aryan-sharma.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/ashley-lee.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/cemalcan-uslu.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/cheryl-nguyen.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/diya-patel.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/jean-choe.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/lillian-tran.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/meher-chadha.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/mia-mc-dunnah.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/patricia-abby-a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/quang-nguyen.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/raina-talwar.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/safiya-warsame.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/sam-chan.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/samaha-morshed.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/sarah-hanafy.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/saya-mehta.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/shashvath-senthilkumar.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/sidhant-rauniyar.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/srimedha-thummala.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/srisha-prasanna.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/taneesha-sharmin.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/tracy-sheng.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/vinh-nguyen.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/zach-murphy.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/vite.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/src/assets/blueicon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/src/assets/react.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/src/assets/saturatedblue.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/src/assets/ximprinted.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/src/components/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/src/components/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/src/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/src/components/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/src/pages/About.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/src/pages/About.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/src/pages/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/src/pages/Home.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vite-project/src/pages/Speakers.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/src/pages/Speakers.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/src/pages/Sponsors.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/src/pages/Sponsors.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vite-project/src/pages/Team.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/src/pages/Team.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,27 +120,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;speakers-page-changes&quot;,
-    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Shashvath S\\Documents\\dev\\tedx-website-2026\\vite-project\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "git-widget-placeholder": "main",
+    "javascript.preferred.runtime.type.id": "node",
+    "last_opened_file_path": "C:/Users/Shashvath S/Documents/dev/tedx-website-2026/vite-project/public",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "settings.javascript.prettier",
+    "ts.external.directory.path": "C:\\Users\\Shashvath S\\Documents\\dev\\tedx-website-2026\\vite-project\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Shashvath S\Documents\dev\tedx-website-2026\vite-project\public" />
+      <recent name="C:\Users\Shashvath S\Documents\dev\tedx-website-2026\vite-project\public\landing" />
+      <recent name="C:\Users\Shashvath S\Documents\dev\tedx-website-2026\vite-project\public\imprints-images" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Shashvath S\Documents\dev\tedx-website-2026\vite-project\public\imprints-images" />
+      <recent name="C:\Users\Shashvath S\Documents\dev\tedx-website-2026\vite-project\public\speakers" />
       <recent name="C:\Users\Shashvath S\Documents\dev\tedx-website-2026\vite-project" />
     </key>
   </component>
@@ -88,7 +177,8 @@
       <workItem from="1772213647473" duration="134000" />
       <workItem from="1772217359045" duration="176000" />
       <workItem from="1772235156532" duration="1636000" />
-      <workItem from="1772238031301" duration="2072000" />
+      <workItem from="1772238031301" duration="2249000" />
+      <workItem from="1772240730298" duration="4318000" />
     </task>
     <task id="LOCAL-00001" summary="Update Footer Bg and fix sponsors page">
       <option name="closed" value="true" />
@@ -146,7 +236,15 @@
       <option name="project" value="LOCAL" />
       <updated>1772213623305</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Optimize Speakers page for mobile and less lag">
+      <option name="closed" value="true" />
+      <created>1772240535474</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1772240535474</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,6 +258,7 @@
     <MESSAGE value="Change all team images to webp for optimized loading" />
     <MESSAGE value="Fix bg in About Page" />
     <MESSAGE value="update gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="update gitignore" />
+    <MESSAGE value="Optimize Speakers page for mobile and less lag" />
+    <option name="LAST_COMMIT_MESSAGE" value="Optimize Speakers page for mobile and less lag" />
   </component>
 </project>

@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="w-full flex justify-center items-center pt-30 pb-20">
         <div className="relative w-[300px] md:w-[600px] h-auto">
           <img
-            src="/footer-images/imprint.png"
+            src="/footer-images/imprint.webp"
             alt="IMPRINTS"
             className="footer-logo-animate-scan w-full h-auto object-contain opacity-80"
             // className="footer-logo-animate-scan w-full max-w-md mx-auto"
@@ -23,7 +23,7 @@ export default function Footer() {
             {/* COLUMN 1: Brand */}
             <div className="flex flex-col gap-4">
               <div className="w-[200px] h-[50px] flex items-center">
-                <img src="/footer-images/tedx_logo.png" className="w-38" />
+                <img src="/imprints-images/tedx_logo.webp" className="w-38" />
               </div>
               <p className="text-black font-manrope font-light text-[16px]">
                 Ideas worth spreading
@@ -95,7 +95,7 @@ export default function Footer() {
                     className="w-10 h-10 bg-[#1a1a1a] rounded-full flex items-center justify-center cursor-pointer hover:opacity-80 transition-opacity"
                   >
                     <img
-                      src={`/footer-images/${item.name}.png`}
+                      src={`/footer-images/${item.name}.webp`}
                       className={`${
                         item.name === "facebook"
                           ? "w-6 h-6 translate-x-[1.3px] translate-y-0.5"
@@ -112,7 +112,7 @@ export default function Footer() {
 
               {/* Email */}
               <div className="flex items-center gap-2 mt-2 cursor-pointer hover:opacity-70">
-                <img src="/footer-images/mail.png" className="w-4 h-4" />
+                <img src="/footer-images/mail.webp" className="w-4 h-4" />
                 <a href="mailto:info@tedx.com" className="text-black font-manrope font-light text-[16px]">
                   info@tedx.com
                 </a>

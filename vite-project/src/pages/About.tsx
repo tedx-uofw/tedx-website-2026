@@ -17,7 +17,7 @@ function About() {
         />
         {/* BACKGROUND DECORATION: Fingerprint */}
         <img
-          src="/aboutpage-images/full_fingerprint_3.png"
+          src="/imprints-images/full_fingerprint_3.webp"
           alt=""
           className="absolute left-[-35vw] top-[30%] -translate-y-1/2 -rotate-19 
             w-[90%] h-auto opacity-5 mix-blend-multiply grayscale pointer-events-none z-0 drop-shadow-[10px_10px_12px_rgba(0,0,0,1)]"
@@ -42,7 +42,7 @@ function About() {
               className="flex items-center gap-2 mb-6 tracking-[0.05em] text-black 
             font-['Manrope'] text-[32px] font-normal leading-[140%] max-[900px]:justify-center"
             >
-              <img src="/blueStar.svg" alt="*" className="w-5 md:w-6 lg:w-8" />
+              <img src="/imprints-images/blueStar.svg" alt="*" className="w-5 md:w-6 lg:w-8" />
               TEDxUofW
             </div>
 
@@ -62,7 +62,7 @@ function About() {
 
         {/* RIGHT IMAGE: The X */}
         <img
-          src="/aboutpage-images/x_imprinted_1.svg"
+          src="/imprints-images/x_imprinted_1.svg"
           alt="X Graphic"
           className="absolute right-[-1vw] top-1/2 -translate-y-1/2 h-[90vh] w-auto z-10 pointer-events-none
           max-[900px]:absolute max-[900px]:right-[-15vw] max-[900px]:top-1/2 max-[900px]:-translate-y-1/2 
@@ -136,7 +136,7 @@ function About() {
             <div className="w-full h-[350px] md:h-[450px] bg-gray-200 overflow-hidden relative">
               {/* Replace src with your image */}
               <img
-                src="/aboutpage-images/Image1.jpg"
+                src="/aboutpage-images/Image1.webp"
                 alt="Gallery Top Left"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
               />
@@ -146,7 +146,7 @@ function About() {
             <div className="w-full h-[350px] md:h-[450px] bg-gray-200 overflow-hidden relative">
               {/* Replace src with your image */}
               <img
-                src="/aboutpage-images/Image2.jpg"
+                src="/aboutpage-images/Image2.webp"
                 alt="Gallery Top Right"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
               />
@@ -163,7 +163,7 @@ function About() {
               >
                 {/* Replace src with your image */}
                 <img
-                  src={`/aboutpage-images/Image${index + 2}.jpg`}
+                  src={`/aboutpage-images/Image${index + 2}.webp`}
                   alt={`Gallery Bottom ${index}`}
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 />

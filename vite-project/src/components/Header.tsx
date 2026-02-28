@@ -12,10 +12,10 @@ function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50">
+    <header className="sticky top-0 z-50 ">
       <div className="flex w-full items-center px-4 py-3 md:px-6">
         <NavLink className="text-base font-semibold tracking-wide" to="/">
-          <img src="/footer-images/tedx_logo.png" className="w-30" />
+          <img alt="TedxUofW Logo" src="/imprints-images/tedx_logo.webp" className="w-30" />
         </NavLink>
 
         <div className="ml-auto hidden items-center gap-8 text-sm font-medium md:flex">

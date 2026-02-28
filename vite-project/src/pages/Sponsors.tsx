@@ -33,19 +33,19 @@ const Sponsors = () => {
     {
       title: "Innovator",
       sponsors: [
-        { name: "Davis Law Group", description: lorem, source: "dlg.png" },
-        { name: "Associated Students of UW", description: "The University of Washington is committed to providing access, equal opportunity and reasonable accommodation in its services, programs, activities, education and employment for individuals with disabilities. To request disability accommodation contact the Disability Services Office at least ten days in advance at: 206.543.6450/V, 206.543.6452/TTY, 206.685.7264 (FAX), or e-mail at dso@u.washington.edu.", source: "asuw.png" },
-          { name: "University Marketing & Communications (UMAC)", description: "University Marketing & Communications (UMAC) is the University of Washington’s central branding, marketing and communications office. Based within University Advancement, UMAC brings together talented staff from across a range of marketing and communications disciplines in support of the UW’s highest priorities. At the center of our work is the Boundless brand, reflecting the optimistic spirit and extensive positive impact of the University on our students’ lives and on communities near and far.", source: "umac.png" }
+        { name: "Davis Law Group", description: lorem, source: "dlg.webp" },
+        { name: "Associated Students of UW", description: "The University of Washington is committed to providing access, equal opportunity and reasonable accommodation in its services, programs, activities, education and employment for individuals with disabilities. To request disability accommodation contact the Disability Services Office at least ten days in advance at: 206.543.6450/V, 206.543.6452/TTY, 206.685.7264 (FAX), or e-mail at dso@u.washington.edu.", source: "asuw.webp" },
+          { name: "University Marketing & Communications (UMAC)", description: "University Marketing & Communications (UMAC) is the University of Washington’s central branding, marketing and communications office. Based within University Advancement, UMAC brings together talented staff from across a range of marketing and communications disciplines in support of the UW’s highest priorities. At the center of our work is the Boundless brand, reflecting the optimistic spirit and extensive positive impact of the University on our students’ lives and on communities near and far.", source: "umac.webp" }
       ]
     },
     {
       title: "Thinker",
       sponsors: [
-        { name: "Bombay Express", description: lorem, source: "bombay.png" },
-        { name: "Lune Cafe", description: lorem, source: "lune.png" },
-          { name: "Celsius", description: lorem, source: "celsius.png" },
-          { name: "Seattle Bouldering Project", description: lorem, source: "bouldering project.png" },
-          { name: "Neko Cat Cafe", description: lorem, source: "neko.png" },
+        { name: "Bombay Express", description: lorem, source: "bombay.webp" },
+        { name: "Lune Cafe", description: lorem, source: "lune.webp" },
+          { name: "Celsius", description: lorem, source: "celsius.webp" },
+          { name: "Seattle Bouldering Project", description: lorem, source: "bouldering project.webp" },
+          { name: "Neko Cat Cafe", description: lorem, source: "neko.webp" },
       ]
     }
   ];
@@ -76,7 +76,7 @@ const Sponsors = () => {
                 className="flex items-center gap-2 mb-6 tracking-[0.05em] text-black
             font-['Manrope'] text-[32px] font-normal leading-[140%] max-[900px]:justify-center"
             >
-              <img src="/blueStar.svg" alt="*" className="w-5 md:w-6 lg:w-8" />
+              <img src="/imprints-images/blueStar.svg" alt="*" className="w-5 md:w-6 lg:w-8" />
               Our Sponsors
             </div>
 
@@ -95,7 +95,7 @@ const Sponsors = () => {
 
         {/* RIGHT IMAGE: The X */}
         <img
-            src="/aboutpage-images/x_imprinted_1.svg"
+            src="/imprints-images/x_imprinted_1.svg"
             alt="X Graphic"
             className="absolute right-[-1vw] top-1/2 -translate-y-1/2 h-[90vh] w-auto z-10 pointer-events-none
           max-[900px]:absolute max-[900px]:right-[-15vw] max-[900px]:top-1/2 max-[900px]:-translate-y-1/2
@@ -107,7 +107,7 @@ const Sponsors = () => {
       <div className="w-full flex justify-center pb-20 relative bg-linear-to-b from-white to-[#F7F9FB]">
         {/* BACKGROUND DECORATION: Fingerprint */}
         <img
-            src="/aboutpage-images/full_fingerprint_3.png"
+            src="/aboutpage-images/full_fingerprint_3.webp"
             alt=""
             className="absolute left-[-35vw] top-[30%] -translate-y-1/2 -rotate-19
             w-[90%] h-auto opacity-5 mix-blend-multiply grayscale pointer-events-none z-0 drop-shadow-[10px_10px_12px_rgba(0,0,0,1)]"

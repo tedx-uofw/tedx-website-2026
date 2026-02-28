@@ -122,7 +122,7 @@ function Team() {
               className="flex items-center gap-2 mb-6 tracking-[0.05em] text-black 
             font-['Manrope'] text-[32px] font-normal leading-[140%] max-[900px]:justify-center"
             >
-              <img src="/blueStar.svg" alt="*" className="w-5 md:w-6 lg:w-8" />
+              <img src="/imprints-images/blueStar.svg" alt="*" className="w-5 md:w-6 lg:w-8" />
               TEDxUofW
             </div>
 
@@ -139,7 +139,7 @@ function Team() {
         <GrainySVG className="absolute rotate-[15.905deg] right-[-17vw] mt-[40%] max-[900px]:right-[-35vw]" />
 
         <img
-          src="/Imprinted.svg"
+          src="/imprints-images/x_imprinted_1.svg"
           alt="Imprinted"
           className="absolute right-[-1vw] top-1/2 -translate-y-1/2 h-[90vh] w-auto z-10 pointer-events-none
           max-[900px]:absolute max-[900px]:right-[-15vw] max-[900px]:top-1/2 max-[900px]:-translate-y-1/2 

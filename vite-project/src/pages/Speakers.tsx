@@ -5,54 +5,54 @@ function Speakers() {
     {
       name: "Cara Hale Alter",
       role: "Founder",
-      image: "/speakers-images/cara-hale-alter.webp",
+      image: "/speakers/cara-hale-alter.webp",
       desc:
         "Cara Hale Alter is the founder of SpeechSkills, a company that offers leadership training around the concept of visible credibility or “the ability to project competence and confidence so that your value is on full display”. Cara’s talk is about how many people suffer from invisible credibility and how learning to demonstrate visible credibility can help people have so much more power in the world.\n\n",
       link: "https://www.linkedin.com/in/carahalealter/",
-      linkIcon: "/speakers-images/linkedin-logo.png",
+      linkIcon: "/speakers/linkedin-logo.webp",
       linkAlt: "LinkedIn",
       imgClass: "object-top",
     },
     {
       name: "Melissa Hutchins",
       role: "Founder & CEO",
-      image: "/speakers-images/melissa-hutchins.webp",
+      image: "/speakers/melissa-hutchins.webp",
       desc:
         "Melissa is the founder and CEO of Certifi AI, a big tech company working to protect individuals from AI harms. Melissa’s talk is about the negative societal impact of deepfake AI technology and why it is important that we view AI through a critical lens. She speaks about the intersection between digital identities and each of our abilities to control our own lives.\n\n",
       link: "https://linkedin.com/in/melissa-hutchins",
-      linkIcon: "/speakers-images/linkedin-logo.png",
+      linkIcon: "/speakers/linkedin-logo.webp",
       linkAlt: "LinkedIn",
       imgClass: "object-top",
     },
     {
       name: "Michael B Ling",
       role: "Digital Speaker",
-      image: "/speakers-images/michael-b-ling.webp",
+      image: "/speakers/michael-b-ling.webp",
       desc:
         "Michael is a public speaker, podcast host, and author. Michael’s talk is about the journey of forgiveness. He speaks about how to both apply and receive forgiveness, as well as the ability to live free through forgiveness and how that can empower people.\n\n",
       link: "https://www.linkedin.com/in/michael-ling-1079a3391/",
-      linkIcon: "/speakers-images/linkedin-logo.png",
+      linkIcon: "/speakers/linkedin-logo.webp",
       linkAlt: "LinkedIn",
       imgClass: "object-top",
     },
     {
       name: "Vita Kari",
       role: "Artist",
-      image: "/speakers-images/vita-kari.webp",
+      image: "/speakers/vita-kari.webp",
       desc: "Virality as a legitimate collaborative art medium.\n\n",
       link: "https://www.linkedin.com/in/vitakari/",
-      linkIcon: "/speakers-images/linkedin-logo.png",
+      linkIcon: "/speakers/linkedin-logo.webp",
       linkAlt: "LinkedIn",
       imgClass: "",
     },
     {
       name: "Ann Frost",
       role: "Associate Teaching Professor",
-      image: "/speakers-images/ann-frost.webp",
+      image: "/speakers/ann-frost.webp",
       desc:
         "Ann is an Associate Teaching Professor in the Law, Societies, and Justice and Sociology Departments at the University of Washington. Her work primarily revolves around the criminal justice system and she leads a book club inside the prison in Monroe. Ann’s talk is about this book club program that allows for UW students and incarcerated students to interact with each other on a collegial classroom level. She speaks about how different experiences people engage in can impact the lives of themselves and others.\n\n",
       link: "https://lsj.washington.edu/people/ann-frost",
-      linkIcon: "/speakers-images/link-icon.png",
+      linkIcon: "/speakers/link-icon.webp",
       linkAlt: "Website",
       imgClass: "object-top object-left",
       linkSize: "w-7 h-7",
@@ -60,18 +60,18 @@ function Speakers() {
     {
       name: "Nandita Gupta",
       role: "TEDx Speaker",
-      image: "/speakers-images/nandita-gupta.webp",
+      image: "/speakers/nandita-gupta.webp",
       desc:
         "Nandita is a TEDx speaker & has been featured by Business Insider, NASDAQ, Forbes, Times of India, BlogHer, and Ability Summit Panelist, and quoted in Fortune, SDTimes, Livewire, Best Colleges, Zdnet, Yahoo, and many more. She has been a Board member at various non-profits and actively works in the community to create an inclusive space in communities.\n\n",
       link: "https://www.linkedin.com/in/nandita-gupta/",
-      linkIcon: "/speakers-images/linkedin-logo.png",
+      linkIcon: "/speakers/linkedin-logo.webp",
       linkAlt: "LinkedIn",
       imgClass: "object-top",
     },
   ];
 
   return (
-    <div className="relative w-full bg-white overflow-hidden">
+    <div className="relative">
       <div
           className="relative z-10 w-screen min-h-screen flex items-center justify-start
   max-[900px]:flex-col max-[900px]:justify-center max-[900px]:p-5"
@@ -86,7 +86,7 @@ function Speakers() {
         />
         {/* BACKGROUND DECORATION: Fingerprint */}
         <img
-            src="/aboutpage-images/full_fingerprint_3.png"
+            src="/imprints-images/full_fingerprint_3.webp"
             alt=""
             className="absolute left-[-35vw] top-[30%] -translate-y-1/2 -rotate-19
             w-[90%] h-auto opacity-5 mix-blend-multiply grayscale pointer-events-none z-0 drop-shadow-[10px_10px_12px_rgba(0,0,0,1)]"
@@ -111,7 +111,7 @@ function Speakers() {
                 className="flex items-center gap-2 mb-6 tracking-[0.05em] text-black
             font-['Manrope'] text-[32px] font-normal leading-[140%] max-[900px]:justify-center"
             >
-              <img src="/blueStar.svg" alt="*" className="w-5 md:w-6 lg:w-8" />
+              <img src="/imprints-images/blueStar.svg" alt="*" className="w-5 md:w-6 lg:w-8" />
               TEDxUofW
             </div>
 
@@ -130,7 +130,7 @@ function Speakers() {
 
         {/* RIGHT IMAGE: The X */}
         <img
-            src="/aboutpage-images/x_imprinted_1.svg"
+            src="/imprints-images/x_imprinted_1.svg"
             alt="X Graphic"
             className="absolute right-[-1vw] top-1/2 -translate-y-1/2 h-[90vh] w-auto z-10 pointer-events-none
           max-[900px]:absolute max-[900px]:right-[-15vw] max-[900px]:top-1/2 max-[900px]:-translate-y-1/2
@@ -140,7 +140,7 @@ function Speakers() {
 
       {/* fingerprint left */}
       <img
-        src="/speakers-images/fingerprint.png"
+        src="/imprints-images/full_fingerprint_3.webp"
         alt=""
         className="pointer-events-none absolute left-[-25vw] top-[80%] z-0 h-auto w-[90%] -translate-y-1/2 -rotate-19 opacity-5 mix-blend-multiply grayscale drop-shadow-[10px_10px_12px_rgba(0,0,0,1)] z-10"
         style={{
@@ -151,7 +151,7 @@ function Speakers() {
 
       {/* fingerprint right */}
       <img
-        src="/speakers-images/fingerprint.png"
+        src="/imprints-images/full_fingerprint_3.webp"
         alt=""
         className="pointer-events-none absolute right-[-24vw] top-[40%] z-0 h-auto w-[70%] -translate-y-1/2 -rotate-19 opacity-[0.02] mix-blend-multiply grayscale drop-shadow-[10px_10px_12px_rgba(0,0,0,1)] z-10"
         style={{
