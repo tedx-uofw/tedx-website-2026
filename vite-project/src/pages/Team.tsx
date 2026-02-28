@@ -196,8 +196,7 @@ function Team() {
               className="text-black font-['Andada_Pro'] text-[44px] font-normal leading-[140%] 
             w-[160%] max-[900px]:w-full"
             >
-              We bring bold ideas and lived experiences together to spark
-              curiosity and inspire meaningful change on campus and beyond.
+              Meet the team behind the conference
             </h1>
           </div>
         </div>
