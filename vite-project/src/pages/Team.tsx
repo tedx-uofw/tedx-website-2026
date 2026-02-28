@@ -1,5 +1,5 @@
-import { useState, useCallback, useMemo } from "react";
 import { GrainySVG, GrainySVGGray } from "../components/SVGExports";
+import { kebabCase } from "lodash"
 
 interface TeamMember {
   name: string;
@@ -12,72 +12,6 @@ interface TeamSection {
 }
 
 function Team() {
-  const [failedImages, setFailedImages] = useState<Set<string>>(new Set());
-
-  // Map of team member names to their actual image filenames
-  const imageMap: Record<string, string> = useMemo(
-    () => ({
-      "alessia-adams": "alessia-adams.jpg",
-      "andrew-lin": "andrew-lin.jpeg",
-      "annissa-tan": "annissa-tan.JPG",
-      "arvin-bansal": "arvin-bansal.jpeg",
-      "arwaad-rahman": "arwaad-rahman.jpg",
-      "ashley-lee": "ashley-lee.jpeg",
-      "avi-rajesh": "avi-rajesh.JPG",
-      "bryan-nie": "bryan-nie.jpg",
-      "cemalcan-uslu": "cemalcan-uslu.jpeg",
-      "cheryl-nguyen": "cheryl-nguyen.jpeg",
-      "daniel-wen": "daniel-wen.jpg",
-      "diya-patel": "diya-patel.jpeg",
-      "hailey-yuan": "hailey-yuan.JPG",
-      "hajeong-hwang": "hajeong-hwang.jpg",
-      "hannah-star-lee": "hannah-star-lee.JPG",
-      "hirsh-garhwal": "hirsh-garhwal.jpg",
-      "jean-choe": "jean-choe.jpeg",
-      "jeffrey-basilio": "jeffrey-basilio.jpg",
-      "kiara-lam": "kiara-lam.jpg",
-      "lillian-tran": "lillian-tran.jpeg",
-      "meher-chadha": "meher-chadha.jpeg",
-      "mia-mcdunnah": "mia-mcdunnah.jpg",
-      "molly-maves": "molly-maves.JPG",
-      "patricia-abby-a.": "patricia-abby-a..jpg",
-      "quang-nguyen": "quang-nguyen.jpeg",
-      "radhika-kamran": "radhika-kamran.JPG",
-      "raina-talwar": "raina-talwar.jpeg",
-      "safiya-warsame": "safiya-warsame.jpeg",
-      "sam-chan": "sam-chan.png",
-      "samaha-morshed": "samaha-morshed.jpeg",
-      "sarah-hanafy": "sarah-hanafy.jpeg",
-      "saya-mehta": "saya-mehta.jpeg",
-      "shashvath-senthilkumar": "shashvath-senthilkumar.JPEG",
-      "shubham-garg": "shubham-garg.jpg",
-      "sidhant-rauniyar": "sidhant-rauniyar.jpeg",
-      "sophia-li": "sophia-li.jpg",
-      "sora-tolley": "sora-tolley.JPG",
-      "srimedha-thummala": "srimedha-thummala.jpeg",
-      "srisha-prasanna": "srisha-prasanna.jpeg",
-      "taneesha-sharmin": "taneesha-sharmin.jpeg",
-      "timothy-hoang": "timothy-hoang.jpg",
-      "tracy-sheng": "tracy-sheng.jpeg",
-      "vatsala-choudhary": "vatsala-choudhary.jpg",
-      "vinh-nguyen": "vinh-nguyen.jpeg",
-      "vivian-lu": "vivian-lu.JPG",
-      "zach-murphy": "zach-murphy.jpeg",
-    }),
-    [],
-  );
-
-  const handleImageError = useCallback((name: string) => {
-    setFailedImages((prev) => new Set(prev).add(name));
-  }, []);
-
-  const getTeamImagePath = useCallback(
-    (name: string): string => {
-      const key = name.toLowerCase().replace(/\s+/g, "-");
-      return `/team-images/${imageMap[key] || `${key}.jpg`}`;
-    },
-    [imageMap],
-  );
 
   const teamSections: TeamSection[] = [
     {
@@ -165,7 +99,7 @@ function Team() {
   ];
 
   return (
-    <div className="w-screen min-h-screen bg-linear-to-b from-white to-[#F7F9FB]">
+    <div className="w-screen min-h-screen">
       {/* Page Top */}
       <div
         className="relative w-screen min-h-screen flex items-center justify-start 
@@ -214,7 +148,7 @@ function Team() {
       </div>
 
       {/* Team Sections */}
-      <div className="relative space-y-12 px-4">
+      <div className="relative space-y-12 px-4 bg-linear-to-b from-white to-[#F7F9FB]">
         {teamSections.map((section, sectionIndex) => (
           <div key={section.title} className="relative">
             {/* Grainy Orb between Design and Web Dev on the left */}
@@ -234,19 +168,14 @@ function Team() {
 
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {section.members.map((member, index) => (
-                <div key={index} className="flex flex-col items-center">
-                  {/* Team Member Picture - shows image or gray circle fallback */}
-                  {failedImages.has(member.name) ? (
-                    <div className="w-36 h-36 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-full bg-gray-300 mb-4 shrink-0" />
-                  ) : (
+                <div key={index} className="flex flex-col items-center" style={{ contentVisibility: 'auto', containIntrinsicSize: '0 500px' }}>
                     <img
-                      src={getTeamImagePath(member.name)}
+                      src={`/team-images/${kebabCase(member.name)}.webp`}
                       alt={member.name}
-                      onError={() => handleImageError(member.name)}
                       loading="lazy"
-                      className="w-36 h-36 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-full object-cover mb-4 shrink-0"
+                      decoding="async"
+                      className="w-36 h-36 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-full object-cover mb-4 shrink-0 will-change-transform"
                     />
-                  )}
 
                   {/* Name Label */}
                   <p className="text-sm font-medium text-center">
