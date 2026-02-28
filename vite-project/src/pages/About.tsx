@@ -49,7 +49,7 @@ function About() {
               className="text-black font-['Andada_Pro'] text-[44px] font-normal leading-[140%] 
             w-[160%] max-[900px]:w-full"
             >
-              We bring bold ideas and lived experiences together to spark
+              We bring bold ideas and lived experiences to spark
               curiosity and inspire meaningful change on campus and beyond.
             </h1>
           </div>

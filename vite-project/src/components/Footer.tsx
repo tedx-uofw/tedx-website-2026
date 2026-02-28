@@ -5,7 +5,7 @@ export default function Footer() {
     <div className="w-full flex flex-col bg-[#F7F9FB]">
       {/* IMPRINTS LOGO SECTION*/}
       {/* This sits on top of the grey footer with a white/light background */}
-      <div className="w-full flex justify-center items-center pt-30 pb-20">
+      <div className="w-full flex justify-center items-center pt-30 pb-30">
         <div className="relative w-[300px] md:w-[600px] h-auto">
           <img
             src="/footer-images/imprint.webp"

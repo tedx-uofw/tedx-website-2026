@@ -98,17 +98,17 @@ function Team() {
   ];
 
   return (
-    <div className="w-full min-h-screen overflow-x-hidden">
-      {/* Page Top */}
+    <div className = "" >
       <div
-        className="relative w-full min-h-screen flex items-center justify-start 
-        max-[900px]:flex-col max-[900px]:justify-center max-[900px]:p-5"
+        className="relative w-screen min-h-screen flex items-center justify-start 
+  max-[900px]:flex-col max-[900px]:justify-center max-[900px]:p-5 "
       >
-        {/* Grainy Texture Effect */}
+        {/* Noise texture overlay */}
         <div
           className="absolute inset-0 opacity-[0.015] pointer-events-none z-10"
           style={{
-            backgroundColor: "rgba(0,0,0,0.002)",
+            backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
+            backgroundRepeat: "repeat",
           }}
         />
         {/* BACKGROUND DECORATION: Fingerprint */}
@@ -118,6 +118,9 @@ function Team() {
           className="absolute left-[-35vw] top-[30%] -translate-y-1/2 -rotate-19 
             w-[90%] h-auto opacity-5 mix-blend-multiply grayscale pointer-events-none z-0 drop-shadow-[10px_10px_12px_rgba(0,0,0,1)]"
           style={{
+            // This creates the fade effect:
+            // Center (black) = Visible
+            // Edges (transparent) = Invisible
             maskImage: "radial-gradient(circle, black 30%, transparent 55%)",
             WebkitMaskImage:
               "radial-gradient(circle, black 10%, transparent 70%)",
@@ -159,7 +162,7 @@ function Team() {
       </div>
 
       {/* Team Sections */}
-      <div className="relative space-y-12 px-4 bg-linear-to-b from-white to-[#F7F9FB]">
+      <div className="relative space-y-12 px-[63px] max-[900px]:px-5 max-w-[1493px] mx-auto py-16 md:py-20">
         {teamSections.map((section, sectionIndex) => (
           <div key={section.title} className="relative">
             {/* Grainy Orb between Design and Web Dev on the left */}

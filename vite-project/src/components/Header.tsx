@@ -14,8 +14,12 @@ function Header() {
   return (
     <header className="sticky top-0 z-50 bg-transparent backdrop-blur-[2px]">
       <div className="flex w-full items-center px-4 py-3 md:px-6">
-        <NavLink className="text-base font-semibold tracking-wide" to="/">
-          <img alt="TedxUofW Logo" src="/imprints-images/tedx_logo.webp" className="w-36 md:w-40" />
+        <NavLink className="text-base font-semibold tracking-wide transition-opacity duration-300 ease-out hover:opacity-60" to="/">
+          <img
+            alt="TedxUofW Logo"
+            src="/imprints-images/tedx_logo.webp"
+            className="w-36 md:w-40"
+          />
         </NavLink>
 
         <div className="ml-auto hidden items-center gap-8 text-sm font-medium md:flex">
@@ -41,7 +45,7 @@ function Header() {
         </div>
 
         <button
-          className="ml-auto inline-flex items-center justify-center rounded-md border border-neutral-300 p-2 text-neutral-700 transition hover:bg-neutral-100 md:hidden"
+          className="ml-auto inline-flex items-center justify-center rounded-md p-2 text-neutral-700 transition hover:bg-neutral-100 md:hidden"
           type="button"
           onClick={() => setMobileOpen((open) => !open)}
           aria-expanded={mobileOpen}
