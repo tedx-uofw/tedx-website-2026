@@ -1,4 +1,4 @@
-import { useState } from "react";
+import {useEffect, useState} from "react";
 import { NavLink } from "react-router-dom";
 
 const navLinks = [
@@ -10,9 +10,29 @@ const navLinks = [
 
 function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [prevScrollPos, setPrevScrollPos] = useState(0)
+  const [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (mobileOpen) {
+        setVisible(true)
+        return
+      }
+
+      const currentScrollPos = window.scrollY
+      const isScrollingUp = prevScrollPos > currentScrollPos
+
+      setVisible(isScrollingUp || currentScrollPos < 10)
+      setPrevScrollPos(currentScrollPos)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [prevScrollPos, mobileOpen])
 
   return (
-    <header className="sticky top-0 z-50 bg-transparent backdrop-blur-[2px]">
+      <header className={`fixed top-0 left-0 right-0 z-50 font-['Manrope' transition-transform duration-300 backdrop-blur-md ${visible ? 'translate-y-0' : '-translate-y-full'}`}>
       <div className="flex w-full items-center px-4 py-3 md:px-6">
         <NavLink className="text-base font-semibold tracking-wide transition-opacity duration-300 ease-out hover:opacity-60" to="/">
           <img
