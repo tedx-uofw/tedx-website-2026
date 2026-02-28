@@ -61,6 +61,20 @@ const Sponsors = () => {
               backgroundRepeat: "repeat",
             }}
         />
+        {/* BACKGROUND DECORATION: Fingerprint */}
+        <img
+            src="/imprints-images/full_fingerprint_3.webp"
+            alt=""
+            className="absolute left-[-35vw] top-[30%] -translate-y-1/2 -rotate-19
+            w-[90%] h-auto opacity-5 mix-blend-multiply grayscale pointer-events-none z-0 drop-shadow-[10px_10px_12px_rgba(0,0,0,1)]"
+            style={{
+              maskImage: "radial-gradient(circle, black 30%, transparent 55%)",
+              WebkitMaskImage:
+                  "radial-gradient(circle, black 10%, transparent 70%)",
+            }}
+            loading="lazy"
+            decoding="async"
+        />
         
         {/* MAIN CONTENT */}
         <div
@@ -102,24 +116,6 @@ const Sponsors = () => {
         />
       </div>
       <div className="w-full flex justify-center pb-20 relative bg-linear-to-b from-white to-[#F7F9FB]">
-        {/* BACKGROUND DECORATION: Fingerprint */}
-        <img
-            src="/aboutpage-images/full_fingerprint_3.webp"
-            alt=""
-            className="absolute left-[-35vw] top-[30%] -translate-y-1/2 -rotate-19
-            w-[90%] h-auto opacity-5 mix-blend-multiply grayscale pointer-events-none z-0 drop-shadow-[10px_10px_12px_rgba(0,0,0,1)]"
-            style={{
-              // This creates the fade effect:
-              // Center (black) = Visible
-              // Edges (transparent) = Invisible
-              maskImage: "radial-gradient(circle, black 30%, transparent 55%)",
-              WebkitMaskImage:
-                  "radial-gradient(circle, black 10%, transparent 70%)",
-            }}
-            loading="lazy"
-            decoding="async"
-        />
-
         <div className="w-[95%] px-6 flex flex-col gap-24 z-10">
           {tiers.map((tier, idx) => (
             <div key={idx} className="w-full">

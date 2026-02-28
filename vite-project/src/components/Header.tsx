@@ -12,10 +12,10 @@ function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 ">
+    <header className="sticky top-0 z-50 bg-transparent backdrop-blur-[2px]">
       <div className="flex w-full items-center px-4 py-3 md:px-6">
         <NavLink className="text-base font-semibold tracking-wide" to="/">
-          <img alt="TedxUofW Logo" src="/imprints-images/tedx_logo.webp" className="w-30" />
+          <img alt="TedxUofW Logo" src="/imprints-images/tedx_logo.webp" className="w-36 md:w-40" />
         </NavLink>
 
         <div className="ml-auto hidden items-center gap-8 text-sm font-medium md:flex">
@@ -24,7 +24,7 @@ function Header() {
               <NavLink
                 key={link.label}
                 className={({ isActive }) =>
-                  `transition font-['Inter'] hover:text-red-600 ${isActive ? "text-red-600" : ""}`
+                  `transition-colors duration-300 ease-out font-['Inter'] hover:text-red-600 ${isActive ? "text-red-600" : ""}`
                 }
                 to={link.to}
               >
@@ -33,7 +33,7 @@ function Header() {
             ))}
           </nav>
           <button
-            className="rounded-lg bg-black px-5 py-2 text-sm font-semibold tracking-wide text-white shadow-sm transition hover:bg-red-700 font-['Manrope']"
+            className="rounded bg-black px-5 py-2 text-sm font-semibold tracking-wide text-white shadow-sm transition-colors duration-300 ease-out hover:bg-red-700 font-['Manrope']"
             type="button"
           >
             Get Tickets
@@ -55,29 +55,35 @@ function Header() {
         </button>
       </div>
 
-      {mobileOpen && (
-        <div className="border-t border-neutral-200 bg-white px-4 py-4 md:hidden">
+      <div
+        className={`md:hidden overflow-hidden border-t border-neutral-200 bg-white transition-[max-height,opacity] duration-500 ease-out ${
+          mobileOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="px-4 py-4">
           <nav className="flex flex-col gap-4 text-sm font-medium">
             {navLinks.map((link) => (
               <NavLink
                 key={link.label}
                 className={({ isActive }) =>
-                  `transition font-['Inter'] hover:text-red-600 ${isActive ? "text-red-600" : ""}`
+                  `transition-colors duration-300 ease-out font-['Inter'] hover:text-red-600 ${isActive ? "text-red-600" : ""}`
                 }
                 to={link.to}
+                onClick={() => setMobileOpen(false)}
               >
                 {link.label}
               </NavLink>
             ))}
             <button
-              className="mt-2 rounded-lg bg-black px-5 py-2 text-sm font-semibold tracking-wide text-white shadow-sm transition hover:bg-red-700 font-['Manrope']"
+              className="mt-2 rounded bg-black px-5 py-2 text-sm font-semibold tracking-wide text-white shadow-sm transition-colors duration-300 ease-out hover:bg-red-700 font-['Manrope']"
               type="button"
+              onClick={() => setMobileOpen(false)}
             >
               Get Tickets
             </button>
           </nav>
         </div>
-      )}
+      </div>
     </header>
   );
 }

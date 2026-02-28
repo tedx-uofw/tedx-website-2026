@@ -33,7 +33,7 @@ function Team() {
       ],
     },
     {
-      title: "Web Dev",
+      title: "Web Development",
       members: [
         { name: "Timothy Hoang", role: "Director" },
         { name: "Shashvath Senthilkumar", role: "Director" },
@@ -98,10 +98,10 @@ function Team() {
   ];
 
   return (
-    <div className="w-screen min-h-screen">
+    <div className="w-full min-h-screen overflow-x-hidden">
       {/* Page Top */}
       <div
-        className="relative w-screen min-h-screen flex items-center justify-start 
+        className="relative w-full min-h-screen flex items-center justify-start 
         max-[900px]:flex-col max-[900px]:justify-center max-[900px]:p-5"
       >
         {/* Grainy Texture Effect */}
@@ -109,6 +109,18 @@ function Team() {
           className="absolute inset-0 opacity-[0.015] pointer-events-none z-10"
           style={{
             backgroundColor: "rgba(0,0,0,0.002)",
+          }}
+        />
+        {/* BACKGROUND DECORATION: Fingerprint */}
+        <img
+          src="/imprints-images/full_fingerprint_3.webp"
+          alt=""
+          className="absolute left-[-35vw] top-[30%] -translate-y-1/2 -rotate-19 
+            w-[90%] h-auto opacity-5 mix-blend-multiply grayscale pointer-events-none z-0 drop-shadow-[10px_10px_12px_rgba(0,0,0,1)]"
+          style={{
+            maskImage: "radial-gradient(circle, black 30%, transparent 55%)",
+            WebkitMaskImage:
+              "radial-gradient(circle, black 10%, transparent 70%)",
           }}
         />
 
@@ -162,20 +174,31 @@ function Team() {
             )}
 
             {/* Team Labels */}
-            <h2 className="text-2xl font-semibold tracking-tight mb-8 pl-2.5">
+            <h2 className="text-2xl font-semibold tracking-tight mb-8 pl-[6vw]">
               {section.title}
             </h2>
 
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {section.members.map((member, index) => (
                 <div key={index} className="flex flex-col items-center" style={{ contentVisibility: 'auto', containIntrinsicSize: '0 500px' }}>
+                  <div className="mb-4 h-36 w-36 md:h-40 md:w-40 lg:h-48 lg:w-48 rounded-full overflow-hidden shrink-0">
                     <img
                       src={`/team-images/${kebabCase(member.name)}.webp`}
                       alt={member.name}
                       loading="lazy"
                       decoding="async"
-                      className="w-36 h-36 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-full object-cover mb-4 shrink-0 will-change-transform"
+                      className="h-full w-full object-cover will-change-transform"
+                      style={{
+                        objectPosition:
+                          member.name === "Bryan Nie"
+                            ? "center calc(50% + 18px)"
+                            : member.name === "Timothy Hoang"
+                            ? "center calc(50% - 10px)"
+                            : "center",
+                        transform: member.name === "Timothy Hoang" ? "scale(1.1)" : undefined,
+                      }}
                     />
+                  </div>
 
                   {/* Name Label */}
                   <p className="text-sm font-medium text-center">
