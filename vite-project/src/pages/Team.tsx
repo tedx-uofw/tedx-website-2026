@@ -1,4 +1,5 @@
 import { kebabCase } from "lodash"
+import {useMemo} from "react";
 
 interface TeamMember {
   name: string;
@@ -97,6 +98,68 @@ function Team() {
     },
   ];
 
+  const memoizedTeamGrid = useMemo(() => {
+    return (
+        teamSections.map((section) => (
+              <div key={section.title} className="relative">
+                {/* Grainy Orb between Design and Web Dev on the left*/}
+                {/*{sectionIndex === 1 && (*/}
+                {/*    <img src="/imprints-images/saturatedblue.webp" alt="design" className="absolute rotate-[195.905deg] left-[-17vw] top-[80%] max-[900px]:left-[-35vw] z-0 pointer-events-none" />*/}
+                {/*)}*/}
+
+                {/*/!* Grainy Orb in Speaker Selection on the right *!/*/}
+                {/*{sectionIndex === 3 && (*/}
+                {/*  <img src="/imprints-images/saturatedblue.webp" alt="design" className="absolute rotate-[15.905deg] right-[-17vw] top-[50%] max-[900px]:right-[-35vw] z-0 pointer-events-none" />*/}
+
+                {/*)}*/}
+
+                {/* Team Labels */}
+                <h2 className="text-2xl font-semibold tracking-tight mb-8 pl-[6vw]">
+                  {section.title}
+                </h2>
+
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                  {section.members.map((member, index) => (
+                      <div key={index} className="flex flex-col items-center">
+                        <div className="mb-4 h-36 w-36 md:h-40 md:w-40 lg:h-48 lg:w-48 rounded-full overflow-hidden shrink-0">
+                          <img
+                              src={`/team-images/${kebabCase(member.name)}.webp`}
+                              alt={member.name}
+                              loading="eager"
+                              className="h-full w-full object-cover"
+                              style={{
+                                objectPosition:
+                                    member.name === "Bryan Nie"
+                                        ? "center calc(50% + 18px)"
+                                        : member.name === "Timothy Hoang"
+                                            ? "center calc(50% - 10px)"
+                                            : "center",
+                                transform: member.name === "Timothy Hoang" ? "scale(1.1)" : undefined,
+                              }}
+                          />
+                        </div>
+
+                        {/* Name Label */}
+                        <p className="text-sm font-medium text-center">
+                          {member.name}
+                        </p>
+
+                        {/* Director Role Label */}
+                        {member.role && (
+                            <div className="mt-2 px-4 py-2 bg-gray-100 rounded-full shadow-sm">
+                              <p className="text-xs text-neutral-600 text-center font-medium">
+                                {member.role}
+                              </p>
+                            </div>
+                        )}
+                      </div>
+                  ))}
+                </div>
+              </div>
+          ))
+    )
+  }, [])
+
   return (
     <div>
       <div
@@ -163,63 +226,7 @@ function Team() {
 
       {/* Team Sections */}
       <div className="relative space-y-12 px-[63px] max-[900px]:px-5 max-w-[1493px] mx-auto py-16 md:py-20">
-        {teamSections.map((section) => (
-          <div key={section.title} className="relative">
-            {/* Grainy Orb between Design and Web Dev on the left*/}
-            {/*{sectionIndex === 1 && (*/}
-            {/*    <img src="/imprints-images/saturatedblue.webp" alt="design" className="absolute rotate-[195.905deg] left-[-17vw] top-[80%] max-[900px]:left-[-35vw] z-0 pointer-events-none" />*/}
-            {/*)}*/}
-
-            {/*/!* Grainy Orb in Speaker Selection on the right *!/*/}
-            {/*{sectionIndex === 3 && (*/}
-            {/*  <img src="/imprints-images/saturatedblue.webp" alt="design" className="absolute rotate-[15.905deg] right-[-17vw] top-[50%] max-[900px]:right-[-35vw] z-0 pointer-events-none" />*/}
-
-            {/*)}*/}
-
-            {/* Team Labels */}
-            <h2 className="text-2xl font-semibold tracking-tight mb-8 pl-[6vw]">
-              {section.title}
-            </h2>
-
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-              {section.members.map((member, index) => (
-                <div key={index} className="flex flex-col items-center">
-                  <div className="mb-4 h-36 w-36 md:h-40 md:w-40 lg:h-48 lg:w-48 rounded-full overflow-hidden shrink-0">
-                    <img
-                      src={`/team-images/${kebabCase(member.name)}.webp`}
-                      alt={member.name}
-                      loading="eager"
-                      className="h-full w-full object-cover"
-                      style={{
-                        objectPosition:
-                          member.name === "Bryan Nie"
-                            ? "center calc(50% + 18px)"
-                            : member.name === "Timothy Hoang"
-                            ? "center calc(50% - 10px)"
-                            : "center",
-                        transform: member.name === "Timothy Hoang" ? "scale(1.1)" : undefined,
-                      }}
-                    />
-                  </div>
-
-                  {/* Name Label */}
-                  <p className="text-sm font-medium text-center">
-                    {member.name}
-                  </p>
-
-                  {/* Director Role Label */}
-                  {member.role && (
-                    <div className="mt-2 px-4 py-2 bg-gray-100 rounded-full shadow-sm">
-                      <p className="text-xs text-neutral-600 text-center font-medium">
-                        {member.role}
-                      </p>
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        ))}
+        {memoizedTeamGrid}
       </div>
     </div>
   );
