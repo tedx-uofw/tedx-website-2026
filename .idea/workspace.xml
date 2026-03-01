@@ -5,15 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ddae1876-7459-49d4-86a9-164361d82f3c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/vite-project/public/favicon.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite-project/public/sponsors-images/asuw.webp" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/sponsors-images/asuw.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite-project/public/sponsors-images/bombay.webp" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/sponsors-images/bombay.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite-project/public/sponsors-images/bouldering project.webp" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/sponsors-images/bouldering project.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite-project/public/sponsors-images/celsius.webp" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/sponsors-images/celsius.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite-project/public/sponsors-images/lune.webp" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/sponsors-images/lune.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite-project/public/sponsors-images/umac.webp" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/sponsors-images/umac.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite-project/src/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/src/components/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite-project/src/pages/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/src/pages/Home.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/favicon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/src/components/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/src/components/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/src/pages/Team.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/src/pages/Team.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,24 +45,24 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "git-widget-placeholder": "main",
     "javascript.preferred.runtime.type.id": "node",
-    "last_opened_file_path": "C:/Users/Shashvath S/Documents/dev/tedx-website-2026/vite-project/public/sponsors-images",
+    "last_opened_file_path": "C:/Users/Shashvath S/Documents/dev/tedx-website-2026/vite-project/public",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.javascript.prettier",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
     "ts.external.directory.path": "C:\\Users\\Shashvath S\\Documents\\dev\\tedx-website-2026\\vite-project\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Shashvath S\Documents\dev\tedx-website-2026\vite-project\public" />
       <recent name="C:\Users\Shashvath S\Documents\dev\tedx-website-2026\vite-project\public\sponsors-images" />
       <recent name="C:\Users\Shashvath S\Documents\dev\tedx-website-2026\vite-project\public\footer-images" />
       <recent name="C:\Users\Shashvath S\Documents\dev\tedx-website-2026\vite-project\public\team-images" />
       <recent name="C:\Users\Shashvath S\Documents\dev\tedx-website-2026\vite-project\public\imprints-images" />
-      <recent name="C:\Users\Shashvath S\Documents\dev\tedx-website-2026\vite-project\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Shashvath S\Documents\dev\tedx-website-2026\vite-project\public\imprints-images" />
@@ -104,6 +101,12 @@
       <workItem from="1772254822396" duration="1759000" />
       <workItem from="1772257888444" duration="222000" />
       <workItem from="1772302909611" duration="5040000" />
+      <workItem from="1772308865149" duration="57000" />
+      <workItem from="1772309409951" duration="8000" />
+      <workItem from="1772310920681" duration="619000" />
+      <workItem from="1772311557741" duration="14000" />
+      <workItem from="1772322656725" duration="1740000" />
+      <workItem from="1772389170297" duration="2729000" />
     </task>
     <task id="LOCAL-00001" summary="Update Footer Bg and fix sponsors page">
       <option name="closed" value="true" />
