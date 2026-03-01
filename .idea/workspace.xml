@@ -5,11 +5,56 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ddae1876-7459-49d4-86a9-164361d82f3c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/vite-project/public/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vite-project/src/pages/Team2.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite-project/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite-project/public/favicon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite-project/src/components/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/src/components/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/alessia-adams.webp" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/team-images/alessia-adams.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/andrew-lin.webp" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/team-images/andrew-lin.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/annissa-tan.webp" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/team-images/annissa-tan.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/arvin-bansal.webp" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/team-images/arvin-bansal.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/arwaad-rahman.webp" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/team-images/arwaad-rahman.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/aryan-sharma.webp" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/team-images/aryan-sharma.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/ashley-lee.webp" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/team-images/ashley-lee.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/avi-rajesh.webp" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/team-images/avi-rajesh.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/bryan-nie.webp" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/team-images/bryan-nie.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/cemalcan-uslu.webp" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/team-images/cemalcan-uslu.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/cheryl-nguyen.webp" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/team-images/cheryl-nguyen.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/daniel-wen.webp" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/team-images/daniel-wen.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/diya-patel.webp" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/team-images/diya-patel.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/hailey-yuan.webp" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/team-images/hailey-yuan.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/hajeong-hwang.webp" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/team-images/hajeong-hwang.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/hannah-star-lee.webp" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/team-images/hannah-star-lee.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/hirsh-garhwal.webp" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/team-images/hirsh-garhwal.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/jean-choe.webp" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/team-images/jean-choe.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/jeffrey-basilio.webp" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/team-images/jeffrey-basilio.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/kiara-lam.webp" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/team-images/kiara-lam.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/lillian-tran.webp" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/team-images/lillian-tran.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/meher-chadha.webp" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/team-images/meher-chadha.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/mia-mc-dunnah.webp" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/team-images/mia-mc-dunnah.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/molly-maves.webp" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/team-images/molly-maves.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/patricia-abby-a.webp" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/team-images/patricia-abby-a.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/quang-nguyen.webp" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/team-images/quang-nguyen.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/radhika-kamran.webp" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/team-images/radhika-kamran.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/raina-talwar.webp" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/team-images/raina-talwar.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/safiya-warsame.webp" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/team-images/safiya-warsame.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/sam-chan.webp" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/team-images/sam-chan.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/samaha-morshed.webp" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/team-images/samaha-morshed.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/sarah-hanafy.webp" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/team-images/sarah-hanafy.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/saya-mehta.webp" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/team-images/saya-mehta.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/shashvath-senthilkumar.webp" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/team-images/shashvath-senthilkumar.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/shubham-garg.webp" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/team-images/shubham-garg.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/sidhant-rauniyar.webp" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/team-images/sidhant-rauniyar.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/sophia-li.webp" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/team-images/sophia-li.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/sora-tolley.webp" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/team-images/sora-tolley.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/srimedha-thummala.webp" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/team-images/srimedha-thummala.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/srisha-prasanna.webp" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/team-images/srisha-prasanna.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/taneesha-sharmin.webp" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/team-images/taneesha-sharmin.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/timothy-hoang.webp" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/team-images/timothy-hoang.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/tracy-sheng.webp" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/team-images/tracy-sheng.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/vatsala-choudhary.webp" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/team-images/vatsala-choudhary.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/vinh-nguyen.webp" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/team-images/vinh-nguyen.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/vivian-lu.webp" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/team-images/vivian-lu.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/team-images/zach-murphy.webp" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/team-images/zach-murphy.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vite-project/src/pages/Team.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/src/pages/Team.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,7 +90,7 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "git-widget-placeholder": "main",
     "javascript.preferred.runtime.type.id": "node",
-    "last_opened_file_path": "C:/Users/Shashvath S/Documents/dev/tedx-website-2026/vite-project/public",
+    "last_opened_file_path": "C:/Users/Shashvath S/Documents/dev/tedx-website-2026/vite-project/src/pages",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -58,11 +103,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Shashvath S\Documents\dev\tedx-website-2026\vite-project\src\pages" />
       <recent name="C:\Users\Shashvath S\Documents\dev\tedx-website-2026\vite-project\public" />
       <recent name="C:\Users\Shashvath S\Documents\dev\tedx-website-2026\vite-project\public\sponsors-images" />
       <recent name="C:\Users\Shashvath S\Documents\dev\tedx-website-2026\vite-project\public\footer-images" />
       <recent name="C:\Users\Shashvath S\Documents\dev\tedx-website-2026\vite-project\public\team-images" />
-      <recent name="C:\Users\Shashvath S\Documents\dev\tedx-website-2026\vite-project\public\imprints-images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Shashvath S\Documents\dev\tedx-website-2026\vite-project\public\imprints-images" />
@@ -107,6 +152,7 @@
       <workItem from="1772311557741" duration="14000" />
       <workItem from="1772322656725" duration="1740000" />
       <workItem from="1772389170297" duration="2729000" />
+      <workItem from="1772392081702" duration="914000" />
     </task>
     <task id="LOCAL-00001" summary="Update Footer Bg and fix sponsors page">
       <option name="closed" value="true" />

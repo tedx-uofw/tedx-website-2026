@@ -8,6 +8,7 @@ import Team from "./pages/Team";
 import Sponsors from "./pages/Sponsors";
 import About from "./pages/About";
 import Footer from "./components/Footer";
+import Team2 from "./pages/Team2.tsx"
 
 function App() {
   useEffect(() => {
@@ -39,6 +40,7 @@ function App() {
           <Route path="/team" element={<Team />} />
           <Route path="/sponsors" element={<Sponsors />} />
           <Route path="/about" element={<About />} />
+          <Route path="/team2" element={<Team2 />} />
         </Routes>
       </main>
       <Footer />

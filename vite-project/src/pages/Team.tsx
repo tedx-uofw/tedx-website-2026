@@ -112,20 +112,20 @@ function Team() {
         {/*  }}*/}
         {/*/>*/}
         {/* BACKGROUND DECORATION: Fingerprint */}
-        <img
-          src="/imprints-images/full_fingerprint_3.webp"
-          alt=""
-          className="absolute left-[-35vw] top-[30%] -translate-y-1/2 -rotate-19
-            w-[90%] h-auto opacity-5 mix-blend-multiply grayscale pointer-events-none z-0 drop-shadow-[10px_10px_12px_rgba(0,0,0,1)]"
-          style={{
-            // This creates the fade effect:
-            // Center (black) = Visible
-            // Edges (transparent) = Invisible
-            maskImage: "radial-gradient(circle, black 30%, transparent 55%)",
-            WebkitMaskImage:
-              "radial-gradient(circle, black 10%, transparent 70%)",
-          }}
-        />
+        {/*<img*/}
+        {/*  src="/imprints-images/full_fingerprint_3.webp"*/}
+        {/*  alt=""*/}
+        {/*  className="absolute left-[-35vw] top-[30%] -translate-y-1/2 -rotate-19*/}
+        {/*    w-[90%] h-auto opacity-5 mix-blend-multiply grayscale pointer-events-none z-0 drop-shadow-[10px_10px_12px_rgba(0,0,0,1)]"*/}
+        {/*  style={{*/}
+        {/*    // This creates the fade effect:*/}
+        {/*    // Center (black) = Visible*/}
+        {/*    // Edges (transparent) = Invisible*/}
+        {/*    maskImage: "radial-gradient(circle, black 30%, transparent 55%)",*/}
+        {/*    WebkitMaskImage:*/}
+        {/*      "radial-gradient(circle, black 10%, transparent 70%)",*/}
+        {/*  }}*/}
+        {/*/>*/}
 
         <div
           className="relative z-20 w-full pl-[8vw] max-[900px]:px-5 max-[900px]:mb-5
