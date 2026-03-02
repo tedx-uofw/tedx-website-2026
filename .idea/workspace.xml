@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ddae1876-7459-49d4-86a9-164361d82f3c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite-project/public/sponsors-images/bombay.webp" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/sponsors-images/bombay.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite-project/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/src/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/src/components/Header.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vite-project/src/pages/Team.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/src/pages/Team.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite-project/src/pages/Team2.tsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,6 +108,7 @@
       <workItem from="1772394235016" duration="330000" />
       <workItem from="1772399256895" duration="833000" />
       <workItem from="1772401429275" duration="79000" />
+      <workItem from="1772475827207" duration="2556000" />
     </task>
     <task id="LOCAL-00001" summary="Update Footer Bg and fix sponsors page">
       <option name="closed" value="true" />

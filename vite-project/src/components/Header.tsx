@@ -129,7 +129,7 @@ const Navbar = () => {
             <div className="pb-10 flex flex-col gap-6">
               {/* Get Tickets button */}
               <button
-                  className="inline-block bg-black text-white px-8 py-3 rounded text-lg transition-colors hover:opacity-80 transition-opacity font-['Manrope'] font-semibold w-fit"
+                  className="rounded bg-black px-5 py-2 text-sm font-semibold tracking-wide text-white shadow-sm transition-colors duration-300 ease-out hover:bg-red-700 font-['Manrope'] w-fit"
                   type="button"
                   onClick={() => setMobileOpen(false)}
               >
