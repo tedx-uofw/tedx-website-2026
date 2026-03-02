@@ -11,107 +11,110 @@ interface TeamSection {
 }
 
 // Inline kebabCase to eliminate lodash dependency
-const kebabCase = (str: string): string => 
-  str.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '');
+const kebabCase = (str: string): string =>
+  str
+    .toLowerCase()
+    .replace(/\s+/g, "-")
+    .replace(/[^\w-]/g, "");
 
 // Team data constant - moved outside component to prevent recreating on each render
 const TEAM_SECTIONS: TeamSection[] = [
-    {
-      title: "Co-President",
-      members: [
-        { name: "Diya Patel" },
-        { name: "Hirsh Garhwal" },
-        { name: "Shubham Garg" },
-      ],
-    },
-    {
-      title: "Design",
-      members: [
-        { name: "Vivian Lu", role: "Director" },
-        { name: "Avi Rajesh", role: "Director" },
-        { name: "Vinh Nguyen" },
-        { name: "Hajeong Hwang" },
-        { name: "Bryan Nie" },
-        { name: "Ashley Lee" },
-      ],
-    },
-    {
-      title: "Web Development",
-      members: [
-        { name: "Timothy Hoang", role: "Director" },
-        { name: "Shashvath Senthilkumar", role: "Director" },
-        { name: "Hannah Star Lee" },
-        { name: "Tracy Sheng" },
-        { name: "Sarah Hanafy" },
-        { name: "Taneesha Sharmin" },
-        { name: "Arvin Bansal" },
-        { name: "Jean Choe" },
-      ],
-    },
-    {
-      title: "Speaker Selection",
-      members: [
-        { name: "Radhika Kamran", role: "Director" },
-        { name: "Sidhant Rauniyar", role: "Director" },
-        { name: "Annissa Tan", role: "Director" },
-        { name: "Arwaad Rahman" },
-        { name: "Molly Maves" },
-        { name: "Srisha Prasanna" },
-        { name: "Cemalcan Uslu" },
-        { name: "Srimedha Thummala" },
-        { name: "Quang Nguyen" },
-        { name: "Safiya Warsame" },
-      ],
-    },
-    {
-      title: "Logistics",
-      members: [
-        { name: "Hailey Yuan", role: "Director" },
-        { name: "Mia McDunnah", role: "Director" },
-        { name: "Jeffrey Basilio" },
-        { name: "Sam Chan" },
-        { name: "Patricia Abby A." },
-        { name: "Aryan Sharma" },
-        { name: "Saya Mehta" },
-      ],
-    },
-    {
-      title: "Marketing",
-      members: [
-        { name: "Vatsala Choudhary", role: "Director" },
-        { name: "Meher Chadha", role: "Director" },
-        { name: "Raina Talwar" },
-        { name: "Sophia Li" },
-        { name: "Kiara Lam" },
-        { name: "Alessia Adams" },
-        { name: "Cheryl Nguyen" },
-      ],
-    },
-    {
-      title: "Finance",
-      members: [
-        { name: "Lillian Tran", role: "Director" },
-        { name: "Sora Tolley", role: "Director" },
-        { name: "Daniel Wen" },
-        { name: "Zach Murphy" },
-        { name: "Samaha Morshed" },
-        { name: "Andrew Lin" },
-      ],
-    },
-  ];
+  {
+    title: "Co-President",
+    members: [
+      { name: "Diya Patel" },
+      { name: "Hirsh Garhwal" },
+      { name: "Shubham Garg" },
+    ],
+  },
+  {
+    title: "Design",
+    members: [
+      { name: "Vivian Lu", role: "Director" },
+      { name: "Avi Rajesh", role: "Director" },
+      { name: "Vinh Nguyen" },
+      { name: "Hajeong Hwang" },
+      { name: "Bryan Nie" },
+      { name: "Ashley Lee" },
+    ],
+  },
+  {
+    title: "Web Development",
+    members: [
+      { name: "Timothy Hoang", role: "Director" },
+      { name: "Shashvath Senthilkumar", role: "Director" },
+      { name: "Hannah Star Lee" },
+      { name: "Tracy Sheng" },
+      { name: "Sarah Hanafy" },
+      { name: "Taneesha Sharmin" },
+      { name: "Arvin Bansal" },
+      { name: "Jean Choe" },
+    ],
+  },
+  {
+    title: "Speaker Selection",
+    members: [
+      { name: "Radhika Kamran", role: "Director" },
+      { name: "Sidhant Rauniyar", role: "Director" },
+      { name: "Annissa Tan", role: "Director" },
+      { name: "Arwaad Rahman" },
+      { name: "Molly Maves" },
+      { name: "Srisha Prasanna" },
+      { name: "Cemalcan Uslu" },
+      { name: "Srimedha Thummala" },
+      { name: "Quang Nguyen" },
+      { name: "Safiya Warsame" },
+    ],
+  },
+  {
+    title: "Logistics",
+    members: [
+      { name: "Hailey Yuan", role: "Director" },
+      { name: "Mia McDunnah", role: "Director" },
+      { name: "Jeffrey Basilio" },
+      { name: "Sam Chan" },
+      { name: "Patricia Abby A." },
+      { name: "Aryan Sharma" },
+      { name: "Saya Mehta" },
+    ],
+  },
+  {
+    title: "Marketing",
+    members: [
+      { name: "Vatsala Choudhary", role: "Director" },
+      { name: "Meher Chadha", role: "Director" },
+      { name: "Raina Talwar" },
+      { name: "Sophia Li" },
+      { name: "Kiara Lam" },
+      { name: "Alessia Adams" },
+      { name: "Cheryl Nguyen" },
+    ],
+  },
+  {
+    title: "Finance",
+    members: [
+      { name: "Lillian Tran", role: "Director" },
+      { name: "Sora Tolley", role: "Director" },
+      { name: "Daniel Wen" },
+      { name: "Zach Murphy" },
+      { name: "Samaha Morshed" },
+      { name: "Andrew Lin" },
+    ],
+  },
+];
 
 // Memoized team member card component
 const TeamMemberCard = memo(({ member }: { member: TeamMember }) => {
   // Pre-calculate styles outside of render to avoid recreating on each render
   const isTimothyHoang = member.name === "Timothy Hoang";
   const isBryanNie = member.name === "Bryan Nie";
-  
+
   const objectPosition = isBryanNie
     ? "center calc(50% + 18px)"
     : isTimothyHoang
       ? "center calc(50% - 10px)"
       : "center";
-  
+
   const imgStyle = {
     objectPosition,
     transform: isTimothyHoang ? "scale(1.1)" : undefined,
@@ -119,9 +122,9 @@ const TeamMemberCard = memo(({ member }: { member: TeamMember }) => {
 
   return (
     <div className="flex flex-col items-center transform-gpu">
-      <div 
-        className="mb-4 h-36 w-36 md:h-40 md:w-40 lg:h-48 lg:w-48 rounded-full overflow-hidden shrink-0 will-change-contents" 
-        style={{ contain: 'size layout paint' }}
+      <div
+        className="mb-4 h-36 w-36 md:h-40 md:w-40 lg:h-48 lg:w-48 rounded-full overflow-hidden shrink-0 will-change-contents"
+        style={{ contain: "size layout paint" }}
       >
         <img
           src={`/team-images/${kebabCase(member.name)}.webp`}
@@ -136,9 +139,7 @@ const TeamMemberCard = memo(({ member }: { member: TeamMember }) => {
       </div>
 
       {/* Name Label */}
-      <p className="text-sm font-medium text-center">
-        {member.name}
-      </p>
+      <p className="text-sm font-medium text-center">{member.name}</p>
 
       {/* Director Role Label */}
       {member.role && (
@@ -152,17 +153,17 @@ const TeamMemberCard = memo(({ member }: { member: TeamMember }) => {
   );
 });
 
-TeamMemberCard.displayName = 'TeamMemberCard';
+TeamMemberCard.displayName = "TeamMemberCard";
 
 function Team() {
   const [selectedSectionIndex, setSelectedSectionIndex] = useState(0);
   const selectedSection = TEAM_SECTIONS[selectedSectionIndex];
 
   const teamGridContent = (
-    <div 
+    <div
       className="relative transform-gpu"
       style={{
-        contain: "layout style paint"
+        contain: "layout style paint",
       }}
     >
       {/* Dropdown Selector */}
@@ -183,7 +184,10 @@ function Team() {
         {selectedSection.title}
       </h2>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" style={{ contain: "layout" }}>
+      <div
+        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+        style={{ contain: "layout" }}
+      >
         {selectedSection.members.map((member) => (
           <TeamMemberCard key={member.name} member={member} />
         ))}
@@ -230,7 +234,11 @@ function Team() {
               className="flex items-center gap-2 mb-6 tracking-[0.05em] text-black
             font-['Manrope'] text-[32px] font-normal leading-[140%] max-[900px]:justify-center"
             >
-              <img src="/imprints-images/blueStar.svg" alt="*" className="w-5 md:w-6 lg:w-8" />
+              <img
+                src="/imprints-images/blueStar.svg"
+                alt="*"
+                className="w-5 md:w-6 lg:w-8"
+              />
               TEDxUofW
             </div>
 
@@ -244,7 +252,11 @@ function Team() {
         </div>
 
         {/* Rotation of Gradient */}
-        <img src="/imprints-images/saturatedblue.webp" alt="design" className="absolute rotate-[15.905deg] right-[-17vw] mt-[40%] max-[900px]:right-[-30vw] z-10" />
+        <img
+          src="/imprints-images/saturatedblue.webp"
+          alt="design"
+          className="absolute rotate-[15.905deg] right-[-17vw] mt-[40%] max-[900px]:right-[-30vw] z-10"
+        />
 
         <img
           src="/imprints-images/x_imprinted_1.svg"
@@ -256,7 +268,7 @@ function Team() {
       </div>
 
       {/* Team Sections */}
-      <div 
+      <div
         className="relative px-[63px] max-[900px]:px-5 max-w-[1493px] mx-auto py-16 md:py-20 transform-gpu"
         style={{ contain: "layout style" }}
       >
