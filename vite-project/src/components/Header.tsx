@@ -2,7 +2,6 @@ import { NavLink } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 const navLinks = [
-  { label: 'Home', to: '/' },
   { label: 'Speakers', to: '/speakers' },
   { label: 'Team', to: '/team' },
   { label: 'Sponsors', to: '/sponsors' },

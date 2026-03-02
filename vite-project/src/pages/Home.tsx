@@ -1,5 +1,4 @@
 import './Home.css'
-import { useNavigate } from 'react-router-dom'
 import heroImage from '/imprints-images/imprinted_1.svg'
 import fingerprintImage from '/imprints-images/full_fingerprint_3.webp'
 import x2 from '/imprints-images/x_2.webp'
@@ -13,7 +12,6 @@ import annHeadshot from '/speakers/ann-frost.webp'
 import nanditaHeadshot from '/speakers/nandita-gupta.webp'
 
 function Home() {
-  const navigate = useNavigate()
   const caraCropPosition = 'center calc(50% + 30px)'
   const melissaCropPosition = 'center calc(50% + 24px)'
   const michaelCropPosition = 'center calc(50% + 36px)'
@@ -72,10 +70,9 @@ function Home() {
                             </button>
                             <button
                                 className="w-48 h-20 bg-gray-200/80 rounded border border-black/10 shadow-[0_6px_16px_rgba(0,0,0,0.14)] text-black text-2xl font-medium font-['Manrope'] transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_30px_rgba(0,0,0,0.2)] active:translate-y-0 active:scale-100 max-md:w-40 max-md:h-16 max-md:text-xl"
-                                onClick={() => navigate('/speakers')}
                                 type="button"
                             >
-                                Learn More
+                                <a href="/#conference-schedule">Learn More</a>
                             </button>
                         </div>
                     </div>
