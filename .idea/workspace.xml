@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="ddae1876-7459-49d4-86a9-164361d82f3c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite-project/src/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/src/components/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vite-project/src/pages/Team.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/src/pages/Team.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -109,6 +111,8 @@
       <workItem from="1772399256895" duration="833000" />
       <workItem from="1772401429275" duration="79000" />
       <workItem from="1772475827207" duration="2556000" />
+      <workItem from="1772483854311" duration="2624000" />
+      <workItem from="1772487251991" duration="1314000" />
     </task>
     <task id="LOCAL-00001" summary="Update Footer Bg and fix sponsors page">
       <option name="closed" value="true" />
