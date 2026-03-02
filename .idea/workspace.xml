@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ddae1876-7459-49d4-86a9-164361d82f3c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/public/sponsors-images/bombay.webp" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/sponsors-images/bombay.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/src/pages/Team.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/src/pages/Team.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/src/pages/Team2.tsx" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="3ADoJITwoNkreoU8oyadTJA8MWK" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Shashvath S/Documents/dev/tedx-website-2026/vite-project/src/pages&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Shashvath S\\Documents\\dev\\tedx-website-2026\\vite-project\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Shashvath S\Documents\dev\tedx-website-2026\vite-project\src\pages" />
+      <recent name="C:\Users\Shashvath S\Documents\dev\tedx-website-2026\vite-project\public" />
+      <recent name="C:\Users\Shashvath S\Documents\dev\tedx-website-2026\vite-project\public\sponsors-images" />
+      <recent name="C:\Users\Shashvath S\Documents\dev\tedx-website-2026\vite-project\public\footer-images" />
+      <recent name="C:\Users\Shashvath S\Documents\dev\tedx-website-2026\vite-project\public\team-images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Shashvath S\Documents\dev\tedx-website-2026\vite-project\public\imprints-images" />
+      <recent name="C:\Users\Shashvath S\Documents\dev\tedx-website-2026\vite-project\public\speakers" />
+      <recent name="C:\Users\Shashvath S\Documents\dev\tedx-website-2026\vite-project" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-WS-253.31033.133" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ddae1876-7459-49d4-86a9-164361d82f3c" name="Changes" comment="" />
+      <created>1772136431683</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1772136431683</updated>
+      <workItem from="1772136432985" duration="158000" />
+      <workItem from="1772136602480" duration="122000" />
+      <workItem from="1772158172221" duration="77000" />
+      <workItem from="1772158926271" duration="6141000" />
+      <workItem from="1772206629785" duration="1873000" />
+      <workItem from="1772209689242" duration="1296000" />
+      <workItem from="1772211125842" duration="1613000" />
+      <workItem from="1772213403522" duration="222000" />
+      <workItem from="1772213647473" duration="134000" />
+      <workItem from="1772217359045" duration="176000" />
+      <workItem from="1772235156532" duration="1636000" />
+      <workItem from="1772238031301" duration="2249000" />
+      <workItem from="1772240730298" duration="4496000" />
+      <workItem from="1772245350707" duration="308000" />
+      <workItem from="1772254822396" duration="1759000" />
+      <workItem from="1772257888444" duration="222000" />
+      <workItem from="1772302909611" duration="5040000" />
+      <workItem from="1772308865149" duration="57000" />
+      <workItem from="1772309409951" duration="8000" />
+      <workItem from="1772310920681" duration="619000" />
+      <workItem from="1772311557741" duration="14000" />
+      <workItem from="1772322656725" duration="1740000" />
+      <workItem from="1772389170297" duration="2729000" />
+      <workItem from="1772392081702" duration="914000" />
+      <workItem from="1772394235016" duration="330000" />
+      <workItem from="1772399256895" duration="833000" />
+      <workItem from="1772401429275" duration="79000" />
+    </task>
+    <task id="LOCAL-00001" summary="Update Footer Bg and fix sponsors page">
+      <option name="closed" value="true" />
+      <created>1772163921924</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1772163921924</updated>
+    </task>
+    <task id="LOCAL-00002" summary="- Fix about page color to match with footer&#10;- Fix footer padding to not seem out of place&#10;- Add id's to home page portions for footer links to link&#10;- Complete Sponsors Page">
+      <option name="closed" value="true" />
+      <created>1772167017563</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1772167017563</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Edits to bg">
+      <option name="closed" value="true" />
+      <created>1772208462257</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1772208462257</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Uninstall uneeded packages">
+      <option name="closed" value="true" />
+      <created>1772208512750</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1772208512750</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Change all team images to webp for optimized loading">
+      <option name="closed" value="true" />
+      <created>1772212460067</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1772212460067</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Fix bg in About Page">
+      <option name="closed" value="true" />
+      <created>1772212740189</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1772212740189</updated>
+    </task>
+    <task id="LOCAL-00007" summary="update gitignore">
+      <option name="closed" value="true" />
+      <created>1772213623305</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1772213623305</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Optimize Speakers page for mobile and less lag">
+      <option name="closed" value="true" />
+      <created>1772240535474</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1772240535474</updated>
+    </task>
+    <task id="LOCAL-00009" summary="- Convert every image to webp, delete duplicates, minor fixes to each page">
+      <option name="closed" value="true" />
+      <created>1772245138050</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1772245138050</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Include deleted images to prevent duplicates">
+      <option name="closed" value="true" />
+      <created>1772245174134</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1772245174134</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update Footer Bg and fix sponsors page" />
+    <MESSAGE value="- Fix about page color to match with footer&#10;- Fix footer padding to not seem out of place&#10;- Add id's to home page portions for footer links to link&#10;- Complete Sponsors Page" />
+    <MESSAGE value="Edits to bg" />
+    <MESSAGE value="Uninstall uneeded packages" />
+    <MESSAGE value="Change all team images to webp for optimized loading" />
+    <MESSAGE value="Fix bg in About Page" />
+    <MESSAGE value="update gitignore" />
+    <MESSAGE value="Optimize Speakers page for mobile and less lag" />
+    <MESSAGE value="- Convert every image to webp, delete duplicates, minor fixes to each page" />
+    <MESSAGE value="Include deleted images to prevent duplicates" />
+    <option name="LAST_COMMIT_MESSAGE" value="Include deleted images to prevent duplicates" />
+  </component>
+</project>

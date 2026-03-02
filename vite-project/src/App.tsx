@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import Lenis from "lenis";
 import Header from "./components/Header";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
@@ -8,6 +10,25 @@ import About from "./pages/About";
 import Footer from "./components/Footer";
 
 function App() {
+  useEffect(() => {
+    const lenis = new Lenis({
+      smoothWheel: true,
+    });
+
+    let rafId = 0;
+    const raf = (time: number) => {
+      lenis.raf(time);
+      rafId = requestAnimationFrame(raf);
+    };
+
+    rafId = requestAnimationFrame(raf);
+
+    return () => {
+      cancelAnimationFrame(rafId);
+      lenis.destroy();
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-white text-neutral-900">
       <Header />
