@@ -40,8 +40,8 @@ const Sponsors = () => {
       sponsors: [
         { name: "Bombay Express", description: lorem, source: "bombay.webp" },
         { name: "Lune Cafe", description: lorem, source: "lune.webp" },
-          { name: "Celsius", description: lorem, source: "celsius.webp" },
-          { name: "Seattle Bouldering Project", description: lorem, source: "bouldering project.webp" },
+          { name: "Celsius", description: "We aim to inspire those who want to live fit by giving them a sustained energy source that’s specially formulated to work with your body to help you reach your goals. We support those who work overtime at everything they do and never take shortcuts. We power through the extra set, we push through the last sprint, and we hustle through the workday. CELSIUS stands out against other brands because it’s made with healthier ingredients such as ginger, guarana, green tea and 7 essential vitamins. Our drinks contain no sugar, no aspartame, no high fructose corn syrup, and no artificial colors or flavors. CELSIUS is certified gluten free, kosher, and non-GMO. We’re made with nothing but the best, so you can do your best and take on any challenge that comes your way!\n", source: "celsius.webp" },
+          { name: "Seattle Bouldering Project", description: "SBP creates fun, inspiring and inclusive climbing, movement, and community spaces.", source: "bouldering project.webp" },
           { name: "Neko Cat Cafe", description: lorem, source: "neko.webp" },
       ]
     }

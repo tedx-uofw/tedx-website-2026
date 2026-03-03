@@ -88,6 +88,8 @@ export default function Footer() {
                     url: "https://linkedin.com/company/tedxatuofw/",
                   },
                   { name: "tiktok", url: "https://www.tiktok.com/@tedxuofw" },
+                  { name: "youtube", url: "https://www.youtube.com/@tedxuofwa" },
+
                 ].map((item) => (
                   <a
                     key={item.name}
