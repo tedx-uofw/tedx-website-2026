@@ -138,7 +138,7 @@ function Home() {
 
                           <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
                               <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block">
-                                  <img className="w-full h-full object-cover" src={fingerprintSmall} />
+                                  <img className="w-full h-full object-contain" src={fingerprintSmall} />
                               </a>
                               <div className="inline-flex flex-col justify-start items-start gap-4 max-md:items-center">
                                   <div className="w-full max-w-[560px] text-gray-600 text-base font-normal font-['Inter'] leading-7">
@@ -190,7 +190,7 @@ function Home() {
 
                           <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
                               <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block">
-                                  <img className="w-full h-full object-cover" src={fingerprintSmall} />
+                                  <img className="w-full h-full object-contain" src={fingerprintSmall} />
                               </a>
                               <div className="inline-flex flex-col justify-start items-start gap-4 max-md:items-center">
                                   <div className="w-full max-w-[560px] text-gray-600 text-base font-normal font-['Inter'] leading-7">
@@ -223,7 +223,7 @@ function Home() {
 
                           <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
                               <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block">
-                                  <img className="w-full h-full object-cover" src={fingerprintSmall} />
+                                  <img className="w-full h-full object-contain" src={fingerprintSmall} />
                               </a>
                               <div className="inline-flex flex-col justify-start items-start gap-4 max-md:items-center">
                                   <div className="w-full max-w-[560px] text-gray-600 text-base font-normal font-['Inter'] leading-7">
@@ -237,7 +237,7 @@ function Home() {
 
                           <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
                               <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block">
-                                  <img className="w-full h-full object-cover" src={fingerprintSmall2} />
+                                  <img className="w-full h-full object-contain" src={fingerprintSmall2} />
                               </a>
                               <div className="inline-flex flex-col justify-start items-start gap-4 max-md:items-center">
                                   <div className="w-full max-w-[560px] text-gray-600 text-base font-normal font-['Inter'] leading-7">
@@ -251,7 +251,7 @@ function Home() {
 
                           <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
                               <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block">
-                                  <img className="w-full h-full object-cover" src={fingerprintSmall} />
+                                  <img className="w-full h-full object-contain" src={fingerprintSmall} />
                               </a>
                               <div className="inline-flex flex-col justify-start items-start gap-4 max-md:items-center">
                                   <div className="w-full max-w-[560px] text-gray-600 text-base font-normal font-['Inter'] leading-7">
@@ -303,7 +303,7 @@ function Home() {
 
                           <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
                               <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block">
-                                  <img className="w-full h-full object-cover" src={fingerprintSmall} />
+                                  <img className="w-full h-full object-contain" src={fingerprintSmall} />
                               </a>
                               <div className="inline-flex flex-col justify-start items-start gap-4 max-md:items-center">
                                   <div className="w-full max-w-[560px] text-gray-600 text-base font-normal font-['Inter'] leading-7">
@@ -317,7 +317,7 @@ function Home() {
 
                           <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
                               <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block">
-                                  <img className="w-full h-full object-cover" src={fingerprintSmall} />
+                                  <img className="w-full h-full object-contain" src={fingerprintSmall} />
                               </a>
                               <div className="inline-flex flex-col justify-start items-start gap-4 max-md:items-center">
                                   <div className="w-full max-w-[560px] text-gray-600 text-base font-normal font-['Inter'] leading-7">
@@ -350,7 +350,7 @@ function Home() {
 
                           <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
                               <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block">
-                                  <img className="w-full h-full object-cover" src={fingerprintSmall} />
+                                  <img className="w-full h-full object-contain" src={fingerprintSmall} />
                               </a>
                               <div className="inline-flex flex-col justify-start items-start gap-4 max-md:items-center">
                                   <div className="w-full max-w-[560px] text-gray-600 text-base font-normal font-['Inter'] leading-7">
