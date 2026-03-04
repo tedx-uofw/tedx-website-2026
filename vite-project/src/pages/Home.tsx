@@ -10,6 +10,9 @@ import michaelHeadshot from '/speakers/michael-b-ling.webp'
 import vitaHeadshot from '/speakers/vita-kari.webp'
 import annHeadshot from '/speakers/ann-frost.webp'
 import nanditaHeadshot from '/speakers/nandita-gupta.webp'
+import fingerprintSmall from '/landing/Frame 1 (5).png'
+import fingerprintSmall2 from '/landing/Frame 2 (3).png'
+
 
 function Home() {
   const caraCropPosition = 'center calc(50% + 30px)'
@@ -130,22 +133,71 @@ function Home() {
                       <div id="conference-schedule" className="self-stretch text-black text-4xl md:text-5xl font-semibold font-['Manrope'] leading-tight">
                           Conference Schedule
                       </div>
+                      
                       <div className="self-stretch flex flex-col justify-start items-start gap-12 md:gap-16">
+
+                          <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
+                              <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block">
+                                  <img className="w-full h-full object-cover" src={fingerprintSmall} />
+                              </a>
+                              <div className="inline-flex flex-col justify-start items-start gap-4 max-md:items-center">
+                                  <div className="w-full max-w-[560px] text-gray-600 text-base font-normal font-['Inter'] leading-7">
+                                      10:30 - 10:45 AM
+                                  </div>
+                                  <div className="w-full max-w-[960px] md:w-[760px] text-black text-3xl md:text-4xl font-normal font-['Manrope'] leading-[36px] md:leading-[42px]">Conference Opening</div>
+                                  
+                              </div>
+                          </div>
+                          <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
 
                           <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
                               <a
                                   className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block border border-black/10 shadow-[0_6px_16px_rgba(0,0,0,0.14)] transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_30px_rgba(0,0,0,0.2)] active:translate-y-0 active:scale-100 max-md:max-w-[260px] max-md:h-44"
-                                  href="https://www.linkedin.com/in/carahalealter"
+                                  href="https://www.linkedin.com/in/nandita-gupta/"
                                   rel="noreferrer"
                                   target="_blank"
                               >
-                                  <img className="w-full h-full object-cover" style={{ objectPosition: caraCropPosition }} src={caraHeadshot} alt="Cara Hale Alter headshot" />
+                                  <img className="w-full h-full object-cover" style={{ objectPosition: nanditaCropPosition }} src={nanditaHeadshot} alt="Nandita Gupta headshot" />
                               </a>
                               <div className="inline-flex flex-col justify-start items-start gap-4 max-md:items-center">
-                                  <div className="w-full max-w-[360px] md:w-72 text-black text-2xl md:text-3xl font-normal font-['Manrope'] leading-[36px] md:leading-[42px]">Cara Hale Alter</div>
                                   <div className="w-full max-w-[560px] text-gray-600 text-base font-normal font-['Inter'] leading-7">
-                                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.
+                                      10:50 - 11:05 AM
                                   </div>
+                                  <div className="w-full max-w-[960px] md:w-[760px] text-black text-3xl md:text-4xl font-normal font-['Manrope'] leading-[36px] md:leading-[42px]">Through the Accessibility Lens: How We Leave Our Mark on the World</div>
+                                  <div className="w-full max-w-[360px] md:w-72 text-gray-600 text-2xl md:text-3xl font-normal font-['Manrope'] leading-[36px] md:leading-[42px]">Nandita Gupta</div>
+                              </div>
+                          </div>
+                          <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
+
+                          <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
+                              <a
+                                  className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block border border-black/10 shadow-[0_6px_16px_rgba(0,0,0,0.14)] transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_30px_rgba(0,0,0,0.2)] active:translate-y-0 active:scale-100 max-md:max-w-[260px] max-md:h-44"
+                                  href="https://lsj.washington.edu/people/ann-frost"
+                                  rel="noreferrer"
+                                  target="_blank"
+                              >
+                                  <img className="w-full h-full object-cover" style={{ objectPosition: annCropPosition }} src={annHeadshot} alt="Ann Frost headshot" />
+                              </a>
+                              <div className="inline-flex flex-col justify-start items-start gap-4 max-md:items-center">
+                                  <div className="w-full max-w-[560px] text-gray-600 text-base font-normal font-['Inter'] leading-7">
+                                      11:10 - 11:25 AM
+                                  </div>
+                                  <div className="w-full max-w-[960px] md:w-[760px] text-black text-3xl md:text-4xl font-normal font-['Manrope'] leading-[36px] md:leading-[42px]">Inclusive Learning, a Path to Community and Compassion.</div>
+                                  <div className="w-full max-w-[360px] md:w-72 text-gray-600 text-2xl md:text-3xl font-normal font-['Manrope'] leading-[36px] md:leading-[42px]">Ann Frost</div>
+                              </div>
+                          </div>
+                          <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
+
+                          <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
+                              <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block">
+                                  <img className="w-full h-full object-cover" src={fingerprintSmall} />
+                              </a>
+                              <div className="inline-flex flex-col justify-start items-start gap-4 max-md:items-center">
+                                  <div className="w-full max-w-[560px] text-gray-600 text-base font-normal font-['Inter'] leading-7">
+                                      11:30 - 11:45 AM
+                                  </div>
+                                  <div className="w-full max-w-[960px] md:w-[760px] text-black text-3xl md:text-4xl font-normal font-['Manrope'] leading-[36px] md:leading-[42px]">The Kompany</div>
+                                  
                               </div>
                           </div>
                           <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
@@ -160,51 +212,155 @@ function Home() {
                                   <img className="w-full h-full object-cover" style={{ objectPosition: melissaCropPosition }} src={melissaHeadshot} alt="Melissa Hutchins headshot" />
                               </a>
                               <div className="inline-flex flex-col justify-start items-start gap-4 max-md:items-center">
-                                  <div className="w-full max-w-[360px] md:w-72 text-black text-2xl md:text-3xl font-normal font-['Manrope'] leading-[36px] md:leading-[42px]">Melissa Hutchins</div>
                                   <div className="w-full max-w-[560px] text-gray-600 text-base font-normal font-['Inter'] leading-7">
-                                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.
-                                  </div>
+                                        11:50 - 12:05 PM
+                                    </div>
+                                  <div className="w-full max-w-[960px] md:w-[760px] text-black text-3xl md:text-4xl font-normal font-['Manrope'] leading-[36px] md:leading-[42px]">Taking Control of Your Digital Identity in an AI World</div>
+                                  <div className="w-full max-w-[360px] md:w-72 text-gray-600 text-2xl md:text-3xl font-normal font-['Manrope'] leading-[36px] md:leading-[42px]">Melissa Hutchins</div>
                               </div>
                           </div>
                           <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
 
-                          <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap max-md:flex-col max-md:items-center max-md:text-center">
-                              <div className="w-full max-w-[360px] h-56 md:w-72 md:h-60 bg-black rounded-md max-md:max-w-[260px] max-md:h-44" />
-                              <div className="inline-flex flex-col justify-start items-start gap-3 max-md:items-center">
-                                  <div className="w-full max-w-[360px] md:w-72 text-black text-2xl md:text-3xl font-normal font-['Manrope'] leading-[36px] md:leading-[42px]">Performance Name</div>
+                          <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
+                              <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block">
+                                  <img className="w-full h-full object-cover" src={fingerprintSmall} />
+                              </a>
+                              <div className="inline-flex flex-col justify-start items-start gap-4 max-md:items-center">
                                   <div className="w-full max-w-[560px] text-gray-600 text-base font-normal font-['Inter'] leading-7">
-                                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.
+                                      12:10 - 12:15 PM
                                   </div>
+                                  <div className="w-full max-w-[960px] md:w-[760px] text-black text-3xl md:text-4xl font-normal font-['Manrope'] leading-[36px] md:leading-[42px]">Raffle Draw 1</div>
+                                  
                               </div>
                           </div>
                           <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
 
-                          {[
-                              { name: "Michael B Ling", href: "https://www.linkedin.com/in/michael-ling-1079a3391", src: michaelHeadshot, pos: michaelCropPosition },
-                              { name: "Vita Kari", href: "https://vitakari.com/", src: vitaHeadshot, pos: vitaCropPosition },
-                              { name: "Ann Frost", href: "https://lsj.washington.edu/people/ann-frost", src: annHeadshot, pos: annCropPosition },
-                              { name: "Nandita Gupta", href: "https://www.linkedin.com/in/nandita-gupta/", src: nanditaHeadshot, pos: nanditaCropPosition },
-                          ].map((speaker, i, arr) => (
-                              <>
-                                  <div key={speaker.name} className="self-stretch flex flex-col md:flex-row gap-8 items-start max-md:gap-6 max-md:items-center max-md:text-center">
-                                      <a
-                                          className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden flex-shrink-0 block border border-black/10 shadow-[0_6px_16px_rgba(0,0,0,0.14)] transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_30px_rgba(0,0,0,0.2)] active:translate-y-0 active:scale-100 max-md:max-w-[260px] max-md:h-44"
-                                          href={speaker.href}
-                                          rel="noreferrer"
-                                          target="_blank"
-                                      >
-                                          <img className="w-full h-full object-cover" style={{ objectPosition: speaker.pos }} src={speaker.src} alt={`${speaker.name} headshot`} />
-                                      </a>
-                                      <div className="flex-1 flex flex-col gap-4 max-md:items-center">
-                                          <div className="text-black text-2xl md:text-3xl font-normal font-['Manrope'] leading-[36px] md:leading-[42px]">{speaker.name}</div>
-                                          <div className="w-full max-w-[560px] text-gray-600 text-base font-normal font-['Inter'] leading-7">
-                                              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.
-                                          </div>
-                                      </div>
+                          <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
+                              <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block">
+                                  <img className="w-full h-full object-cover" src={fingerprintSmall2} />
+                              </a>
+                              <div className="inline-flex flex-col justify-start items-start gap-4 max-md:items-center">
+                                  <div className="w-full max-w-[560px] text-gray-600 text-base font-normal font-['Inter'] leading-7">
+                                      12:20 - 1:20 PM
                                   </div>
-                                  {i !== arr.length - 1 && <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />}
-                              </>
-                          ))}
+                                  <div className="w-full max-w-[960px] md:w-[760px] text-black text-3xl md:text-4xl font-normal font-['Manrope'] leading-[36px] md:leading-[42px]">Intermission</div>
+                                  
+                              </div>
+                          </div>
+                          <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
+
+                          <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
+                              <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block">
+                                  <img className="w-full h-full object-cover" src={fingerprintSmall} />
+                              </a>
+                              <div className="inline-flex flex-col justify-start items-start gap-4 max-md:items-center">
+                                  <div className="w-full max-w-[560px] text-gray-600 text-base font-normal font-['Inter'] leading-7">
+                                      1:25 - 1:40 PM
+                                  </div>
+                                  <div className="w-full max-w-[960px] md:w-[760px] text-black text-3xl md:text-4xl font-normal font-['Manrope'] leading-[36px] md:leading-[42px]">SOVO Quartet</div>
+                        
+                              </div>
+                          </div>
+                          <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
+
+                          <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
+                              <a
+                                  className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block border border-black/10 shadow-[0_6px_16px_rgba(0,0,0,0.14)] transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_30px_rgba(0,0,0,0.2)] active:translate-y-0 active:scale-100 max-md:max-w-[260px] max-md:h-44"
+                                  href="https://www.linkedin.com/in/michael-ling-1079a339"
+                                  rel="noreferrer"
+                                  target="_blank"
+                              >
+                                  <img className="w-full h-full object-cover" style={{ objectPosition: michaelCropPosition }} src={michaelHeadshot} alt="Michael B. Ling headshot" />
+                              </a>
+                              <div className="inline-flex flex-col justify-start items-start gap-4 max-md:items-center">
+                                  <div className="w-full max-w-[560px] text-gray-600 text-base font-normal font-['Inter'] leading-7">
+                                        1:45 - 2:00 PM
+                                    </div>
+                                  <div className="w-full max-w-[960px] md:w-[760px] text-black text-3xl md:text-4xl font-normal font-['Manrope'] leading-[36px] md:leading-[42px]">Forgiveness is a Journey</div>
+                                  <div className="w-full max-w-[360px] md:w-72 text-gray-600 text-2xl md:text-3xl font-normal font-['Manrope'] leading-[36px] md:leading-[42px]">Michael B. Ling</div>
+                              </div>
+                          </div>
+                          <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
+
+                          <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
+                              <a
+                                  className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block border border-black/10 shadow-[0_6px_16px_rgba(0,0,0,0.14)] transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_30px_rgba(0,0,0,0.2)] active:translate-y-0 active:scale-100 max-md:max-w-[260px] max-md:h-44"
+                                  href="https://vitakari.com/"
+                                  rel="noreferrer"
+                                  target="_blank"
+                              >
+                                  <img className="w-full h-full object-cover" style={{ objectPosition: vitaCropPosition }} src={vitaHeadshot} alt="Vita Kari headshot" />
+                              </a>
+                              <div className="inline-flex flex-col justify-start items-start gap-4 max-md:items-center">
+                                  <div className="w-full max-w-[560px] text-gray-600 text-base font-normal font-['Inter'] leading-7">
+                                        2:05 - 2:20 PM
+                                    </div>
+                                  <div className="w-full max-w-[960px] md:w-[760px] text-black text-3xl md:text-4xl font-normal font-['Manrope'] leading-[36px] md:leading-[42px]">Why Social Media Isn’t Killing Your Creativity</div>
+                                  <div className="w-full max-w-[360px] md:w-72 text-gray-600 text-2xl md:text-3xl font-normal font-['Manrope'] leading-[36px] md:leading-[42px]">Vita Kari</div>
+                              </div>
+                          </div>
+                          <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
+
+                          <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
+                              <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block">
+                                  <img className="w-full h-full object-cover" src={fingerprintSmall} />
+                              </a>
+                              <div className="inline-flex flex-col justify-start items-start gap-4 max-md:items-center">
+                                  <div className="w-full max-w-[560px] text-gray-600 text-base font-normal font-['Inter'] leading-7">
+                                      2:25 - 2:30 PM
+                                  </div>
+                                  <div className="w-full max-w-[960px] md:w-[760px] text-black text-3xl md:text-4xl font-normal font-['Manrope'] leading-[36px] md:leading-[42px]">Raffle Draw 2</div>
+                                  
+                              </div>
+                          </div>
+                          <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
+
+                          <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
+                              <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block">
+                                  <img className="w-full h-full object-cover" src={fingerprintSmall} />
+                              </a>
+                              <div className="inline-flex flex-col justify-start items-start gap-4 max-md:items-center">
+                                  <div className="w-full max-w-[560px] text-gray-600 text-base font-normal font-['Inter'] leading-7">
+                                      2:35 - 2:50 PM
+                                  </div>
+                                  <div className="w-full max-w-[960px] md:w-[760px] text-black text-3xl md:text-4xl font-normal font-['Manrope'] leading-[36px] md:leading-[42px]">UW RAAS</div>
+                        
+                              </div>
+                          </div>
+                          <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
+
+                          <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
+                              <a
+                                  className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block border border-black/10 shadow-[0_6px_16px_rgba(0,0,0,0.14)] transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_30px_rgba(0,0,0,0.2)] active:translate-y-0 active:scale-100 max-md:max-w-[260px] max-md:h-44"
+                                  href="https://www.linkedin.com/in/carahalealter"
+                                  rel="noreferrer"
+                                  target="_blank"
+                              >
+                                  <img className="w-full h-full object-cover" style={{ objectPosition: caraCropPosition }} src={caraHeadshot} alt="Cara Hale Alter headshot" />
+                              </a>
+                              <div className="inline-flex flex-col justify-start items-start gap-4 max-md:items-center">
+                                  <div className="w-full max-w-[560px] text-gray-600 text-base font-normal font-['Inter'] leading-7">
+                                      2:55 - 3:10 PM
+                                  </div>
+                                  <div className="w-full max-w-[960px] md:w-[760px] text-black text-3xl md:text-4xl font-normal font-['Manrope'] leading-[36px] md:leading-[42px]">The Power of 'Visible Credibility'</div>
+                                  <div className="w-full max-w-[360px] md:w-72 text-gray-600 text-2xl md:text-3xl font-normal font-['Manrope'] leading-[36px] md:leading-[42px]">Cara Hale Alter</div>
+                              </div>
+                          </div>
+                          <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
+
+                          <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
+                              <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block">
+                                  <img className="w-full h-full object-cover" src={fingerprintSmall} />
+                              </a>
+                              <div className="inline-flex flex-col justify-start items-start gap-4 max-md:items-center">
+                                  <div className="w-full max-w-[560px] text-gray-600 text-base font-normal font-['Inter'] leading-7">
+                                      3:15 - 3:45 PM
+                                  </div>
+                                  <div className="w-full max-w-[960px] md:w-[760px] text-black text-3xl md:text-4xl font-normal font-['Manrope'] leading-[36px] md:leading-[42px]">Speaker Panel</div>
+                        
+                              </div>
+                          </div>
+                          <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
 
                       </div>
                   </div>
