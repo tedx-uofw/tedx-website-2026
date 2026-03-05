@@ -6,10 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="ddae1876-7459-49d4-86a9-164361d82f3c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite-project/public/sponsors-images/bombay.webp" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/public/sponsors-images/bombay.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite-project/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite-project/src/pages/Team.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/src/pages/Team.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite-project/src/pages/Team2.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/postcss.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/src/pages/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/src/pages/Home.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/src/pages/Sponsors.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/src/pages/Sponsors.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +45,7 @@
     &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Shashvath S/Documents/dev/tedx-website-2026/vite-project/src/pages&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Shashvath S/Documents/dev/tedx-website-2026/vite-project/public/footer-images&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -57,10 +58,10 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Shashvath S\Documents\dev\tedx-website-2026\vite-project\public\footer-images" />
       <recent name="C:\Users\Shashvath S\Documents\dev\tedx-website-2026\vite-project\src\pages" />
       <recent name="C:\Users\Shashvath S\Documents\dev\tedx-website-2026\vite-project\public" />
       <recent name="C:\Users\Shashvath S\Documents\dev\tedx-website-2026\vite-project\public\sponsors-images" />
-      <recent name="C:\Users\Shashvath S\Documents\dev\tedx-website-2026\vite-project\public\footer-images" />
       <recent name="C:\Users\Shashvath S\Documents\dev\tedx-website-2026\vite-project\public\team-images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -110,6 +111,15 @@
       <workItem from="1772394235016" duration="330000" />
       <workItem from="1772399256895" duration="833000" />
       <workItem from="1772401429275" duration="79000" />
+      <workItem from="1772475827207" duration="2556000" />
+      <workItem from="1772483854311" duration="2624000" />
+      <workItem from="1772487251991" duration="1531000" />
+      <workItem from="1772491810079" duration="2794000" />
+      <workItem from="1772495815015" duration="2021000" />
+      <workItem from="1772505547562" duration="609000" />
+      <workItem from="1772512618264" duration="12000" />
+      <workItem from="1772735137809" duration="888000" />
+      <workItem from="1772740658099" duration="762000" />
     </task>
     <task id="LOCAL-00001" summary="Update Footer Bg and fix sponsors page">
       <option name="closed" value="true" />

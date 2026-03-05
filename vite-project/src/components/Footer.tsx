@@ -88,6 +88,8 @@ export default function Footer() {
                     url: "https://linkedin.com/company/tedxatuofw/",
                   },
                   { name: "tiktok", url: "https://www.tiktok.com/@tedxuofw" },
+                  { name: "youtube", url: "https://www.youtube.com/@tedxuofwa" },
+
                 ].map((item) => (
                   <a
                     key={item.name}
@@ -113,8 +115,8 @@ export default function Footer() {
               {/* Email */}
               <div className="flex items-center gap-2 mt-2 cursor-pointer hover:opacity-70">
                 <img src="/footer-images/mail.webp" className="w-4 h-4" />
-                <a href="mailto:info@tedx.com" className="text-black font-manrope font-light text-[16px]">
-                  info@tedx.com
+                <a href="mailto:tedxuofw@uw.edu" className="text-black font-manrope font-light text-[16px]">
+                  tedxuofw@uw.edu
                 </a>
               </div>
             </div>

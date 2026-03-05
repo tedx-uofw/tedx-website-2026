@@ -2,7 +2,6 @@ import { NavLink } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 const navLinks = [
-  { label: 'Home', to: '/' },
   { label: 'Speakers', to: '/speakers' },
   { label: 'Team', to: '/team' },
   { label: 'Sponsors', to: '/sponsors' },
@@ -69,12 +68,14 @@ const Navbar = () => {
                     </NavLink>
                 ))}
               </nav>
-              <button
+              <a
+                  href="https://forms.gle/rCTJViGfuVHJiU3D8"
+                  target="_blank"
                   className="rounded bg-black px-5 py-2 text-sm font-semibold tracking-wide text-white shadow-sm transition-colors duration-300 ease-out hover:bg-red-700 font-['Manrope']"
                   type="button"
               >
                 Get Tickets
-              </button>
+              </a>
             </div>
 
             {/* Mobile Hamburger */}
@@ -128,13 +129,15 @@ const Navbar = () => {
             {/* Bottom section */}
             <div className="pb-10 flex flex-col gap-6">
               {/* Get Tickets button */}
-              <button
-                  className="inline-block bg-black text-white px-8 py-3 rounded text-lg transition-colors hover:opacity-80 transition-opacity font-['Manrope'] font-semibold w-fit"
+              <a
+                  href="https://forms.gle/rCTJViGfuVHJiU3D8"
+                  target="_blank"
+                  className="rounded bg-black px-5 py-2 text-sm font-semibold tracking-wide text-white shadow-sm transition-colors duration-300 ease-out hover:bg-red-700 font-['Manrope'] w-fit"
                   type="button"
                   onClick={() => setMobileOpen(false)}
               >
                 Get Tickets
-              </button>
+              </a>
 
 
                 {/* Social Icons */}
@@ -153,7 +156,9 @@ const Navbar = () => {
                       name: "linkedin",
                       url: "https://linkedin.com/company/tedxatuofw/",
                     },
-                    { name: "tiktok", url: "https://www.tiktok.com/@tedxuofw" }
+                    { name: "tiktok", url: "https://www.tiktok.com/@tedxuofw" },
+                    { name: "youtube", url: "https://www.youtube.com/@tedxuofwa" },
+
                   ].map((item) => (
                       <a
                           key={item.name}
