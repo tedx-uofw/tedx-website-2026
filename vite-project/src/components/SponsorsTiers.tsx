@@ -106,7 +106,7 @@ export default function SponsorsSection() {
 
       {/* THINKER TIER */}
       <div className="flex justify-center">
-        <div className="w-full md:w-3/5 aspect-video md:aspect-[21/9] bg-amber-50/30 rounded-2xl p-12 flex items-center justify-center shadow-md transition-transform hover:-translate-y-1">
+        <div className="w-[95%] md:w-3/5 aspect-video md:aspect-[21/9] bg-white rounded-2xl p-12 flex items-center justify-center shadow-lg transition-transform hover:-translate-y-1">
           <SponsorImage
             src={`/sponsors-images/${sponsors.thinker[0].source}`}
             alt={sponsors.thinker[0].name}
@@ -116,7 +116,7 @@ export default function SponsorsSection() {
       </div>
 
       {/* FRIEND TIER */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 w-[85%] mx-auto">
         {sponsors.friend.map((sponsor, idx) => (
           <div
             key={idx}
@@ -136,7 +136,7 @@ export default function SponsorsSection() {
         {sponsors.raffle.map((sponsor, idx) => (
           <div
             key={idx}
-            className="w-full sm:w-[30%] aspect-[3/2] bg-slate-50 border border-slate-200 rounded-lg p-4 flex items-center justify-center transition-opacity hover:opacity-80"
+            className="w-full sm:w-[25%] aspect-[3/2] bg-slate-50 border border-slate-200 rounded-lg p-4 flex items-center justify-center transition-opacity hover:opacity-80"
           >
             <SponsorImage
               src={`/sponsors-images/${sponsor.source}`}

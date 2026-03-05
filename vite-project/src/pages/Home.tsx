@@ -250,8 +250,8 @@ function Home() {
 
             <div className="self-stretch flex flex-col justify-start items-start gap-12 md:gap-16">
               {/* Event 1 */}
-              <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
-                <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block">
+              <div className="self-stretch justify-start items-start gap-10 flex content-start max-md:flex-col max-md:items-center max-md:text-center">
+                <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center">
                   <ScheduleImage
                     className="w-full h-full object-contain"
                     src={fingerprintSmall}
@@ -329,8 +329,8 @@ function Home() {
               <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
 
               {/* Event 4 */}
-              <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
-                <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block">
+              <div className="self-stretch justify-start items-start gap-10 flex content-start max-md:flex-col max-md:items-center max-md:text-center">
+                <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center">
                   <ScheduleImage
                     className="w-full h-full object-contain"
                     src={fingerprintSmall}
@@ -378,8 +378,8 @@ function Home() {
               <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
 
               {/* Event 6 */}
-              <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
-                <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block">
+              <div className="self-stretch justify-start items-start gap-10 flex content-start max-md:flex-col max-md:items-center max-md:text-center">
+                <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center">
                   <ScheduleImage
                     className="w-full h-full object-contain"
                     src={fingerprintSmall}
@@ -398,8 +398,8 @@ function Home() {
               <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
 
               {/* Event 7 */}
-              <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
-                <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block">
+              <div className="self-stretch justify-start items-start gap-10 flex content-start max-md:flex-col max-md:items-center max-md:text-center">
+                <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center">
                   <ScheduleImage
                     className="w-full h-full object-contain"
                     src={fingerprintSmall2}
@@ -418,8 +418,8 @@ function Home() {
               <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
 
               {/* Event 8 */}
-              <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
-                <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block">
+              <div className="self-stretch justify-start items-start gap-10 flex content-start max-md:flex-col max-md:items-center max-md:text-center">
+                <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center">
                   <ScheduleImage
                     className="w-full h-full object-contain"
                     src={fingerprintSmall}
@@ -438,9 +438,9 @@ function Home() {
               <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
 
               {/* Event 9: Michael */}
-              <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
+              <div className="self-stretch justify-start items-start gap-10 flex content-start max-md:flex-col max-md:items-center max-md:text-center">
                 <a
-                  className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block border border-black/10 shadow-[0_6px_16px_rgba(0,0,0,0.14)] transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_30px_rgba(0,0,0,0.2)]"
+                  className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center border border-black/10 shadow-[0_6px_16px_rgba(0,0,0,0.14)] transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_30px_rgba(0,0,0,0.2)]"
                   href="https://www.linkedin.com/in/michael-ling-1079a339"
                   target="_blank"
                   rel="noreferrer"
@@ -467,9 +467,9 @@ function Home() {
               <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
 
               {/* Event 10: Vita */}
-              <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
+              <div className="self-stretch justify-start items-start gap-10 flex content-start max-md:flex-col max-md:items-center max-md:text-center">
                 <a
-                  className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block border border-black/10 shadow-[0_6px_16px_rgba(0,0,0,0.14)] transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_30px_rgba(0,0,0,0.2)]"
+                  className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center border border-black/10 shadow-[0_6px_16px_rgba(0,0,0,0.14)] transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_30px_rgba(0,0,0,0.2)]"
                   href="https://vitakari.com/"
                   target="_blank"
                   rel="noreferrer"
@@ -496,8 +496,8 @@ function Home() {
               <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
 
               {/* Event 11 */}
-              <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
-                <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block">
+              <div className="self-stretch justify-start items-start gap-10 flex content-start max-md:flex-col max-md:items-center max-md:text-center">
+                <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center">
                   <ScheduleImage
                     className="w-full h-full object-contain"
                     src={fingerprintSmall}
@@ -516,8 +516,8 @@ function Home() {
               <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
 
               {/* Event 12 */}
-              <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
-                <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block">
+              <div className="self-stretch justify-start items-start gap-10 flex content-start max-md:flex-col max-md:items-center max-md:text-center">
+                <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center">
                   <ScheduleImage
                     className="w-full h-full object-contain"
                     src={fingerprintSmall}
@@ -536,9 +536,9 @@ function Home() {
               <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
 
               {/* Event 13: Cara */}
-              <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
+              <div className="self-stretch justify-start items-start gap-10 flex content-start max-md:flex-col max-md:items-center max-md:text-center">
                 <a
-                  className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block border border-black/10 shadow-[0_6px_16px_rgba(0,0,0,0.14)] transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_30px_rgba(0,0,0,0.2)]"
+                  className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center border border-black/10 shadow-[0_6px_16px_rgba(0,0,0,0.14)] transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_30px_rgba(0,0,0,0.2)]"
                   href="https://www.linkedin.com/in/carahalealter"
                   target="_blank"
                   rel="noreferrer"
@@ -565,8 +565,8 @@ function Home() {
               <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
 
               {/* Event 14 */}
-              <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
-                <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block">
+              <div className="self-stretch justify-start items-start gap-10 flex content-start max-md:flex-col max-md:items-center max-md:text-center">
+                <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center">
                   <ScheduleImage
                     className="w-full h-full object-contain"
                     src={fingerprintSmall}
