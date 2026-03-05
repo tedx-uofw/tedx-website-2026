@@ -1,4 +1,5 @@
 import "./Footer.css";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -36,16 +37,20 @@ export default function Footer() {
                 Navigate
               </h3>
               <div className="flex flex-col gap-3 text-black font-manrope font-light text-[16px]">
-                <a href="/speakers" className="cursor-pointer hover:underline">
+                <Link to="/speakers" className="cursor-pointer hover:underline">
                   Speakers
-                </a>
-                <a href="/about" className="cursor-pointer hover:underline">
+                </Link>
+                <Link to="/about" className="cursor-pointer hover:underline">
                   About
-                </a>
-                <a href="/sponsors" className="cursor-pointer hover:underline">
+                </Link>
+                <Link to="/sponsors" className="cursor-pointer hover:underline">
                   Sponsors
-                </a>
-                <a href="/tickets" className="cursor-pointer hover:underline">
+                </Link>
+                <a
+                  href="https://forms.gle/rCTJViGfuVHJiU3D8"
+                  target="_blank"
+                  className="cursor-pointer hover:underline"
+                >
                   Get Tickets
                 </a>
               </div>
@@ -57,12 +62,15 @@ export default function Footer() {
                 Event
               </h3>
               <div className="flex flex-col gap-3 text-black font-manrope font-light text-[16px]">
-                <a href="/#conference-schedule" className="cursor-pointer hover:underline">
+                <Link
+                  to="/#conference-schedule"
+                  className="cursor-pointer hover:underline"
+                >
                   Conference Schedule
-                </a>
-                <a href="/#venue" className="cursor-pointer hover:underline">
+                </Link>
+                <Link to="/#venue" className="cursor-pointer hover:underline">
                   Venue Information
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -88,12 +96,14 @@ export default function Footer() {
                     url: "https://linkedin.com/company/tedxatuofw/",
                   },
                   { name: "tiktok", url: "https://www.tiktok.com/@tedxuofw" },
-                  { name: "youtube", url: "https://www.youtube.com/@tedxuofwa" },
-
+                  {
+                    name: "youtube",
+                    url: "https://www.youtube.com/@tedxuofwa",
+                  },
                 ].map((item) => (
-                  <a
+                  <Link
                     key={item.name}
-                    href={item.url}
+                    to={item.url}
                     className="w-10 h-10 bg-[#1a1a1a] rounded-full flex items-center justify-center cursor-pointer hover:opacity-80 transition-opacity"
                   >
                     <img
@@ -108,16 +118,19 @@ export default function Footer() {
                           : ""
                       }`}
                     />
-                  </a>
+                  </Link>
                 ))}
               </div>
 
               {/* Email */}
               <div className="flex items-center gap-2 mt-2 cursor-pointer hover:opacity-70">
                 <img src="/footer-images/mail.webp" className="w-4 h-4" />
-                <a href="mailto:tedxuofw@uw.edu" className="text-black font-manrope font-light text-[16px]">
+                <Link
+                  to="mailto:tedxuofw@uw.edu"
+                  className="text-black font-manrope font-light text-[16px]"
+                >
                   tedxuofw@uw.edu
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -131,8 +144,7 @@ export default function Footer() {
               ©TEDxUofW 2026. | Imprints
             </p>
             <p className="text-[#666] font-manrope font-light text-[14px]">
-              This independent TEDx event is operated under license
-              from TED.
+              This independent TEDx event is operated under license from TED.
             </p>
           </div>
         </div>
