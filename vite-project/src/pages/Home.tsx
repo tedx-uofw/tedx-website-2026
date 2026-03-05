@@ -41,43 +41,8 @@ function Home() {
                   className="absolute rotate-[15.905deg] right-[-17vw] mt-[0%] max-[900px]:right-[-30vw] pointer-events-none max-md:top-[6%] max-md:mt-0 max-md:w-[60%] max-md:opacity-80"
               />
 
-              {/* ── HERO SECTION ── */}
-              <div className="relative z-10 px-[63px] pt-[206px] pb-16 max-md:px-5 max-md:pt-32 max-md:pb-10">
-                  <div className="relative w-full max-w-[925px]">
-                      <img
-                          className="w-full max-w-[824px] h-auto absolute top-[-20px] left-[-28px] z-0 opacity-0 pointer-events-none max-md:hidden"
-                          src={fingerprintImage}
-                          alt=""
-                      />
-                      <img
-                          className="w-full max-w-[824px] h-auto absolute top-[-20px] left-[-28px] z-10 border-0 outline-none max-md:static max-md:mb-6"
-                          src={heroImage}
-                          alt="Hero image"
-                      />
-                      <div className="pt-[196px] max-md:pt-0">
-                          <div className="text-black text-2xl font-normal font-['Manrope'] leading-8 z-10 relative mb-10 max-md:text-base max-md:leading-7 max-md:mb-6">
-                              The memories we carry have a deep meaning, cutting deep into us. Sometimes, they leave impressions that last forever. Other times, they force us to question the impression we will one day leave, forcing questions about ourselves. This requires an exploration of our experiences with people, memories, and life.
-                          </div>
-                          <div className="inline-flex justify-start items-center gap-10 max-md:gap-6 max-md:justify-center max-md:w-full">
-                              <button
-                                  className="w-48 h-20 bg-black/80 rounded border border-black/10 shadow-[0_6px_16px_rgba(0,0,0,0.14)] text-white text-2xl font-medium font-['Manrope'] transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_30px_rgba(0,0,0,0.25)] active:translate-y-0 active:scale-100 max-md:w-40 max-md:h-16 max-md:text-xl"
-                                  type="button"
-                              >
-                                  Get Tickets
-                              </button>
-                              <button
-                                  className="w-48 h-20 bg-gray-200/80 rounded border border-black/10 shadow-[0_6px_16px_rgba(0,0,0,0.14)] text-black text-2xl font-medium font-['Manrope'] transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_30px_rgba(0,0,0,0.2)] active:translate-y-0 active:scale-100 max-md:w-40 max-md:h-16 max-md:text-xl"
-                                  type="button"
-                              >
-                                  <a href="/#conference-schedule">Learn More</a>
-                              </button>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-
-              {/* ── EVENT INFO BAR ── */}
-              <div className="relative z-10 w-full px-[63px] py-6 border-t border-black/10 max-md:px-5 max-md:py-4">
+              {/* ── EVENT INFO BAR (Moved Up) ── */}
+              <div className="relative z-10 w-full px-[63px] py-6 border-b border-black/10 max-md:px-5 max-md:py-4 pt-32 max-md:pt-24">
                   <div className="flex flex-col md:flex-row md:justify-between gap-3 md:gap-0 text-black text-base md:text-xl font-['Manrope']">
                       <div className="flex items-baseline gap-2">
                           <span className="font-medium">04.19.2026</span>
@@ -104,6 +69,44 @@ function Home() {
                           {/*</a>*/}
                       </div>
                       <div className="font-medium">Seattle, WA</div>
+                  </div>
+              </div>
+
+              {/* ── HERO SECTION ── */}
+              <div className="relative z-10 px-[63px] pt-10 pb-16 max-md:px-5 max-md:pt-10 max-md:pb-10">
+                  <div className="relative w-full max-w-[925px]">
+                      <img
+                          className="w-full max-w-[824px] h-auto absolute top-[-20px] left-[-28px] z-0 opacity-0 pointer-events-none max-md:hidden"
+                          src={fingerprintImage}
+                          alt=""
+                      />
+                      <img
+                          className="w-full max-w-[824px] h-auto absolute top-[-20px] left-[-28px] z-10 border-0 outline-none max-md:static max-md:mb-6"
+                          src={heroImage}
+                          alt="Hero image"
+                      />
+                      <div className="pt-[196px] max-md:pt-0">
+                          <div className="text-black text-2xl font-normal font-['Manrope'] leading-8 z-10 relative mb-10 max-md:text-base max-md:leading-7 max-md:mb-6">
+                              The memories we carry have a deep meaning, cutting deep into us. Sometimes, they leave impressions that last forever. Other times, they force us to question the impression we will one day leave, forcing questions about ourselves. This requires an exploration of our experiences with people, memories, and life.
+                          </div>
+                          <div className="inline-flex justify-start items-center gap-10 max-md:gap-6 max-md:justify-center max-md:w-full">
+                              <a
+                                  href="https://forms.gle/rCTJViGfuVHJiU3D8"
+                                  target="_blank"
+                                  className="w-48 h-20 bg-black rounded border border-black/10 ease-out hover:bg-red-700 shadow-[0_6px_16px_rgba(0,0,0,0.14)] text-white text-2xl font-medium font-['Manrope'] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_30px_rgba(0,0,0,0.25)] active:translate-y-0 active:scale-100 max-md:w-40 max-md:h-16 max-md:text-xl flex items-center justify-center"
+                                  type="button"
+                              >
+                                  Get Tickets
+                              </a>
+                              <a
+                                  href="/#conference-schedule"
+                                  className="w-48 h-20 bg-gray-200/80 rounded border border-black/10 shadow-[0_6px_16px_rgba(0,0,0,0.14)] text-black text-2xl font-medium font-['Manrope'] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_30px_rgba(0,0,0,0.2)] active:translate-y-0 active:scale-100 max-md:w-40 max-md:h-16 max-md:text-xl flex items-center justify-center"
+                                  type="button"
+                              >
+                                  Learn More
+                              </a>
+                          </div>
+                      </div>
                   </div>
               </div>
 
