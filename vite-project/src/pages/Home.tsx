@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./Home.css";
 import heroImage from "/imprints-images/imprinted_1.svg";
 import fingerprintImage from "/imprints-images/full_fingerprint_3.webp";
@@ -114,7 +114,7 @@ const ScheduleImage = ({
 
 // --- MAIN HOME COMPONENT ---
 function Home() {
-  const [showLoader, setShowLoader] = useState(true);
+  // const [showLoader, setShowLoader] = useState(true);
 
   const caraCropPosition = "center calc(50% + 30px)";
   const melissaCropPosition = "center calc(50% + 24px)";
