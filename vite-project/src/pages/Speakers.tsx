@@ -197,7 +197,7 @@ function Speakers() {
                           href={s.link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex z-50"
+                          className="inline-flex z-20"
                         >
                           <img
                             className={`${s.linkSize ?? "w-12 h-12"} rounded-md`}
