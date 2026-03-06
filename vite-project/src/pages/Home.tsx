@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useEffect, useRef, useState} from "react";
 import "./Home.css";
 import heroImage from "/imprints-images/imprinted_1.svg";
 import fingerprintImage from "/imprints-images/full_fingerprint_3.webp";
@@ -52,69 +52,94 @@ const ScheduleImage = ({
 };
 
 // --- 2. NEW COMPONENT: "Spreading Ridge" Loading Screen ---
-// const ThematicLoadingScreen = ({ onComplete }: { onComplete: () => void }) => {
-//   const [stage, setStage] = useState<"entering" | "cutting" | "revealing">(
-//     "entering",
-//   );
+const ThematicLoadingScreen = ({ onComplete, heroRef }) => {
+  const [stage, setStage] = useState<'playing' | 'crossfading' | 'gliding' | 'fading'>('playing');
+  const [svgStyle, setSvgStyle] = useState({});
 
-//   useEffect(() => {
-//     const timer1 = setTimeout(() => setStage("cutting"), 400); // Start text/animation
-//     const timer2 = setTimeout(() => setStage("revealing"), 1800); // Trigger fade out
-//     const timer3 = setTimeout(() => onComplete(), 2500); // Fully unmount
-//     return () => {
-//       clearTimeout(timer1);
-//       clearTimeout(timer2);
-//       clearTimeout(timer3);
-//     };
-//   }, [onComplete]);
+  useEffect(() => {
+    if (!heroRef.current) return;
+    const rect = heroRef.current.getBoundingClientRect();
 
-//   return (
-//     <div
-//       className={`fixed inset-0 z-[100] bg-black flex items-center justify-center transition-opacity duration-1000 pointer-events-none ${stage === "revealing" ? "opacity-0" : "opacity-100"}`}
-//     >
-//       {/* CSS for the smooth circle reveal */}
-//       <style>{`
-//         .clip-expand {
-//           clip-path: circle(0% at 50% 50%);
-//           animation: expand-circle 3s cubic-bezier(0.65, 0, 0.05, 1) forwards;
-//         }
-//         @keyframes expand-circle {
-//           0% { clip-path: circle(0% at 50% 50%); }
-//           100% { clip-path: circle(150% at 50% 50%); }
-//         }
-//       `}</style>
+    // 1. MATH: Calculate center of screen vs final resting place
+    const screenCX = window.innerWidth / 2;
+    const screenCY = window.innerHeight / 2;
+    const targetCX = rect.left + rect.width / 2;
+    const targetCY = rect.top + rect.height / 2;
 
-//       {/* The Fingerprint Texture (Revealed via clip-path) */}
-//       <div
-//         className={`absolute inset-0 clip-expand opacity-40 flex items-center justify-center`}
-//       >
-//         <img
-//           src={fingerprintImage}
-//           alt=""
-//           className="w-full h-full object-cover grayscale mix-blend-screen scale-110"
-//         />
-//       </div>
+    const moveX = screenCX - targetCX;
+    const moveY = (screenCY - targetCY) - 12;
 
-//       {/* Thematic Text */}
-//       {/* <div className="absolute bottom-16 left-8 md:bottom-24 md:left-24 z-20 max-w-2xl space-y-4 px-4">
-//         <p
-//           className={`text-2xl md:text-4xl font-light text-white tracking-wide transition-opacity duration-1000 ${stage === "cutting" ? "opacity-100" : "opacity-0"}`}
-//         >
-//           The memories we carry...
-//         </p>
-//         <p
-//           className={`text-2xl md:text-4xl font-light text-white tracking-wide transition-opacity duration-1000 delay-[800ms] ${stage === "cutting" ? "opacity-100" : "opacity-0"}`}
-//         >
-//           cutting deep into us.
-//         </p>
-//       </div> */}
-//     </div>
-//   );
-// };
+    // 2. SCALE: We make the static SVG massive to match the text inside your huge 175vw GIF.
+    // TWEAK THIS: Change the 1.2 up or down slightly (e.g., 1.1 or 1.3) to perfectly match the GIF text size!
+    const initScale = (window.innerWidth * 0.7) / rect.width;
+
+    // 3. INITIAL STATE: Positioned at the target, but visually scaled/moved to the center.
+    setSvgStyle({
+      position: 'fixed',
+      top: `${rect.top}px`,
+      left: `${rect.left}px`,
+      width: `${rect.width}px`,
+      height: `${rect.height}px`,
+      transform: `translate(${moveX}px, ${moveY}px) scale(${initScale})`,
+      transition: 'none', // Locked in place while the GIF plays
+      zIndex: 101
+    });
+
+    // --- The Timers ---
+    // 1. Fade GIF out, fade SVG in (They are perfectly overlapping right now)
+    const timer1 = setTimeout(() => setStage('crossfading'), 2800);
+
+    // 2. Start the glide (Removing the translate and scale so it smoothly shrinks to its real position)
+    const timer2 = setTimeout(() => {
+      setStage('gliding');
+      setSvgStyle({
+        position: 'fixed',
+        top: `${rect.top}px`,
+        left: `${rect.left}px`,
+        width: `${rect.width}px`,
+        height: `${rect.height}px`,
+        transform: `translate(0px, 0px) scale(1)`,
+        transition: 'transform 1.8s cubic-bezier(0.25, 1, 0.3, 1)', // Buttery smooth flight
+        zIndex: 101
+      });
+    }, 3900);
+
+    const timer3 = setTimeout(() => setStage('fading'), 4800);
+    const timer4 = setTimeout(() => onComplete(), 5500);
+
+    return () => { clearTimeout(timer1); clearTimeout(timer2); clearTimeout(timer3); clearTimeout(timer4); };
+  }, [onComplete, heroRef]);
+
+  return (
+      <div className={`fixed inset-0 z-[100] bg-[#F7F9FB] transition-colors duration-[2000ms] ease-in-out ${stage === 'fading' ? 'bg-transparent pointer-events-none' : ''}`}>
+
+        {/* LAYER 1: The Massive GIF */}
+        {/* It has its own flex container now so it never gets squished */}
+        <div className={`absolute inset-0 flex items-center justify-center transition-opacity duration-800 ${stage === 'playing' ? 'opacity-100' : 'opacity-0'}`}>
+          <img
+              src="/landing/imprints_animation.gif"
+              alt="Loading..."
+              className="w-[175vw] max-w-none h-auto mix-blend-multiply"
+          />
+        </div>
+
+        {/* LAYER 2: The Gliding SVG */}
+        <div style={svgStyle}>
+          <img
+              src={heroImage}
+              alt="Imprints"
+              className={`w-full h-full object-contain mix-blend-multiply transition-opacity duration-700 ${(stage === 'crossfading' || stage === 'gliding') ? 'opacity-100' : 'opacity-0'}`}
+          />
+        </div>
+
+      </div>
+  );
+};
 
 // --- MAIN HOME COMPONENT ---
 function Home() {
-  // const [showLoader, setShowLoader] = useState(true);
+  const [showLoader, setShowLoader] = useState(true);
+  const heroRef = useRef(null); // <--- ADD THIS LINE
 
   const caraCropPosition = "center calc(50% + 30px)";
   const melissaCropPosition = "center calc(50% + 24px)";
@@ -128,10 +153,8 @@ function Home() {
     <section
     //   className={`w-full ${showLoader ? "h-screen overflow-hidden" : ""}`}
     >
-      {/* Inject the Loading Screen
-      {showLoader && (
-        <ThematicLoadingScreen onComplete={() => setShowLoader(false)} />
-      )} */}
+      {/* Inject the Loading Screen */}
+    {showLoader && <ThematicLoadingScreen onComplete={() => setShowLoader(false)} heroRef={heroRef} />}
 
       <div className="w-full relative bg-linear-to-b from-white to-[#F7F9FB] overflow-hidden">
         {/* ── Background decorations ── */}
@@ -181,6 +204,7 @@ function Home() {
               alt=""
             />
             <img
+                ref={heroRef}
               className="w-full max-w-[824px] h-auto absolute top-[-20px] left-[-28px] z-10 border-0 outline-none max-md:static max-md:mb-6"
               src={heroImage}
               alt="Hero image"
