@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import "./Home.css";
 import heroImage from "/imprints-images/imprinted_1.svg";
 import fingerprintImage from "/imprints-images/full_fingerprint_3.webp";
@@ -14,7 +15,107 @@ import fingerprintSmall from "/landing/Frame 1 (5).png";
 import fingerprintSmall2 from "/landing/Frame 2 (3).png";
 import SponsorTiers from "../components/SponsorsTiers";
 
+// --- 1. NEW COMPONENT: Image Loader with Skeleton State ---
+const ScheduleImage = ({
+  src,
+  alt,
+  className,
+  style,
+}: {
+  src: string;
+  alt?: string;
+  className?: string;
+  style?: React.CSSProperties;
+}) => {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  return (
+    <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
+      {/* Skeleton Pulse (Shows until image loads) */}
+      {!isLoaded && (
+        <div className="absolute inset-0 bg-slate-200 animate-pulse flex items-center justify-center">
+          <div className="w-1/3 h-1/4 bg-slate-300 rounded opacity-50" />
+        </div>
+      )}
+      {/* Actual Image */}
+      <img
+        src={src}
+        alt={alt}
+        className={`${className} transition-opacity duration-700 ease-in-out ${isLoaded ? "opacity-100" : "opacity-0"}`}
+        style={style}
+        loading="lazy"
+        decoding="async"
+        onLoad={() => setIsLoaded(true)}
+      />
+    </div>
+  );
+};
+
+// --- 2. NEW COMPONENT: "Spreading Ridge" Loading Screen ---
+// const ThematicLoadingScreen = ({ onComplete }: { onComplete: () => void }) => {
+//   const [stage, setStage] = useState<"entering" | "cutting" | "revealing">(
+//     "entering",
+//   );
+
+//   useEffect(() => {
+//     const timer1 = setTimeout(() => setStage("cutting"), 400); // Start text/animation
+//     const timer2 = setTimeout(() => setStage("revealing"), 1800); // Trigger fade out
+//     const timer3 = setTimeout(() => onComplete(), 2500); // Fully unmount
+//     return () => {
+//       clearTimeout(timer1);
+//       clearTimeout(timer2);
+//       clearTimeout(timer3);
+//     };
+//   }, [onComplete]);
+
+//   return (
+//     <div
+//       className={`fixed inset-0 z-[100] bg-black flex items-center justify-center transition-opacity duration-1000 pointer-events-none ${stage === "revealing" ? "opacity-0" : "opacity-100"}`}
+//     >
+//       {/* CSS for the smooth circle reveal */}
+//       <style>{`
+//         .clip-expand {
+//           clip-path: circle(0% at 50% 50%);
+//           animation: expand-circle 3s cubic-bezier(0.65, 0, 0.05, 1) forwards;
+//         }
+//         @keyframes expand-circle {
+//           0% { clip-path: circle(0% at 50% 50%); }
+//           100% { clip-path: circle(150% at 50% 50%); }
+//         }
+//       `}</style>
+
+//       {/* The Fingerprint Texture (Revealed via clip-path) */}
+//       <div
+//         className={`absolute inset-0 clip-expand opacity-40 flex items-center justify-center`}
+//       >
+//         <img
+//           src={fingerprintImage}
+//           alt=""
+//           className="w-full h-full object-cover grayscale mix-blend-screen scale-110"
+//         />
+//       </div>
+
+//       {/* Thematic Text */}
+//       {/* <div className="absolute bottom-16 left-8 md:bottom-24 md:left-24 z-20 max-w-2xl space-y-4 px-4">
+//         <p
+//           className={`text-2xl md:text-4xl font-light text-white tracking-wide transition-opacity duration-1000 ${stage === "cutting" ? "opacity-100" : "opacity-0"}`}
+//         >
+//           The memories we carry...
+//         </p>
+//         <p
+//           className={`text-2xl md:text-4xl font-light text-white tracking-wide transition-opacity duration-1000 delay-[800ms] ${stage === "cutting" ? "opacity-100" : "opacity-0"}`}
+//         >
+//           cutting deep into us.
+//         </p>
+//       </div> */}
+//     </div>
+//   );
+// };
+
+// --- MAIN HOME COMPONENT ---
 function Home() {
+  // const [showLoader, setShowLoader] = useState(true);
+
   const caraCropPosition = "center calc(50% + 30px)";
   const melissaCropPosition = "center calc(50% + 24px)";
   const michaelCropPosition = "center calc(50% + 36px)";
@@ -23,9 +124,17 @@ function Home() {
   const nanditaCropPosition = "center calc(50% + 84px)";
 
   return (
-    <section className="w-full">
+    // Lock scrolling while the loader is active
+    <section
+    //   className={`w-full ${showLoader ? "h-screen overflow-hidden" : ""}`}
+    >
+      {/* Inject the Loading Screen
+      {showLoader && (
+        <ThematicLoadingScreen onComplete={() => setShowLoader(false)} />
+      )} */}
+
       <div className="w-full relative bg-linear-to-b from-white to-[#F7F9FB] overflow-hidden">
-        {/* ── Background decorations (purely visual, don't affect layout) ── */}
+        {/* ── Background decorations ── */}
         <div className="w-[1046.04px] h-[1046.04px] left-[-219.13px] top-[-49.32px] absolute origin-top-left rotate-[9.20deg] bg-[radial-gradient(ellipse_50.00%_50.00%_at_50.00%_50.00%,_#E5EEF9_0%,_white_100%)] rounded-full pointer-events-none max-md:scale-75 max-md:-left-[260px] max-md:top-[-140px]" />
 
         <img
@@ -44,7 +153,7 @@ function Home() {
           className="absolute rotate-[15.905deg] right-[-17vw] mt-[0%] max-[900px]:right-[-30vw] pointer-events-none max-md:top-[6%] max-md:mt-0 max-md:w-[60%] max-md:opacity-80"
         />
 
-        {/* ── EVENT INFO BAR (Moved Up) ── */}
+        {/* ── EVENT INFO BAR ── */}
         <div className="relative z-10 w-full px-[63px] py-6 border-b border-black/10 max-md:px-5 max-md:py-4 pt-32 max-md:pt-24">
           <div className="flex flex-col md:flex-row md:justify-between gap-3 md:gap-0 text-black text-base md:text-xl font-['Manrope']">
             <div className="flex items-baseline gap-2">
@@ -53,25 +162,11 @@ function Home() {
             </div>
             <div className="flex items-baseline gap-2">
               <span className="font-medium">10:30 AM</span>
-              {/*  <span*/}
-              {/*      // onClick={handleCalendarClick}*/}
-              {/*      className="text-gray-400 text-sm md:text-base cursor-pointer hover:text-black transition-colors"*/}
-              {/*  >*/}
-              {/*    Calendar↗*/}
-              {/*</span>*/}
             </div>
             <div className="flex items-baseline gap-2">
               <a href="/#venue" className="font-medium">
                 Kane Hall↗
               </a>
-              {/*<a*/}
-              {/*    href="https://maps.google.com/?q=4069+Spokane+Ln+NE,+Seattle,+WA+98105"*/}
-              {/*    target="_blank"*/}
-              {/*    rel="noopener noreferrer"*/}
-              {/*    className="text-gray-400 text-sm md:text-base cursor-pointer hover:text-black transition-colors"*/}
-              {/*>*/}
-              {/*    Maps↗*/}
-              {/*</a>*/}
             </div>
             <div className="font-medium">Seattle, WA</div>
           </div>
@@ -103,14 +198,12 @@ function Home() {
                   href="https://forms.gle/rCTJViGfuVHJiU3D8"
                   target="_blank"
                   className="w-48 h-20 bg-black rounded border border-black/10 ease-out hover:bg-red-700 shadow-[0_6px_16px_rgba(0,0,0,0.14)] text-white text-2xl font-medium font-['Manrope'] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_30px_rgba(0,0,0,0.25)] active:translate-y-0 active:scale-100 max-md:w-40 max-md:h-16 max-md:text-xl flex items-center justify-center"
-                  type="button"
                 >
                   Get Tickets
                 </a>
                 <a
                   href="/#conference-schedule"
                   className="w-48 h-20 bg-gray-200/80 rounded border border-black/10 shadow-[0_6px_16px_rgba(0,0,0,0.14)] text-black text-2xl font-medium font-['Manrope'] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_30px_rgba(0,0,0,0.2)] active:translate-y-0 active:scale-100 max-md:w-40 max-md:h-16 max-md:text-xl flex items-center justify-center"
-                  type="button"
                 >
                   Learn More
                 </a>
@@ -156,11 +249,13 @@ function Home() {
             </div>
 
             <div className="self-stretch flex flex-col justify-start items-start gap-12 md:gap-16">
-              <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
-                <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block">
-                  <img
+              {/* Event 1 */}
+              <div className="self-stretch justify-start items-start gap-10 flex content-start max-md:flex-col max-md:items-center max-md:text-center">
+                <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center">
+                  <ScheduleImage
                     className="w-full h-full object-contain"
                     src={fingerprintSmall}
+                    alt="Placeholder"
                   />
                 </a>
                 <div className="inline-flex flex-col justify-start items-start gap-4 max-md:items-center">
@@ -174,14 +269,15 @@ function Home() {
               </div>
               <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
 
+              {/* Event 2: Nandita */}
               <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
                 <a
-                  className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block border border-black/10 shadow-[0_6px_16px_rgba(0,0,0,0.14)] transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_30px_rgba(0,0,0,0.2)] active:translate-y-0 active:scale-100 max-md:max-w-[260px] max-md:h-44"
+                  className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block border border-black/10 shadow-[0_6px_16px_rgba(0,0,0,0.14)] transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_30px_rgba(0,0,0,0.2)]"
                   href="https://www.linkedin.com/in/nandita-gupta/"
-                  rel="noreferrer"
                   target="_blank"
+                  rel="noreferrer"
                 >
-                  <img
+                  <ScheduleImage
                     className="w-full h-full object-cover"
                     style={{ objectPosition: nanditaCropPosition }}
                     src={nanditaHeadshot}
@@ -203,14 +299,15 @@ function Home() {
               </div>
               <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
 
+              {/* Event 3: Ann */}
               <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
                 <a
-                  className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block border border-black/10 shadow-[0_6px_16px_rgba(0,0,0,0.14)] transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_30px_rgba(0,0,0,0.2)] active:translate-y-0 active:scale-100 max-md:max-w-[260px] max-md:h-44"
+                  className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block border border-black/10 shadow-[0_6px_16px_rgba(0,0,0,0.14)] transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_30px_rgba(0,0,0,0.2)]"
                   href="https://lsj.washington.edu/people/ann-frost"
-                  rel="noreferrer"
                   target="_blank"
+                  rel="noreferrer"
                 >
-                  <img
+                  <ScheduleImage
                     className="w-full h-full object-cover"
                     style={{ objectPosition: annCropPosition }}
                     src={annHeadshot}
@@ -231,11 +328,13 @@ function Home() {
               </div>
               <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
 
-              <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
-                <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block">
-                  <img
+              {/* Event 4 */}
+              <div className="self-stretch justify-start items-start gap-10 flex content-start max-md:flex-col max-md:items-center max-md:text-center">
+                <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center">
+                  <ScheduleImage
                     className="w-full h-full object-contain"
                     src={fingerprintSmall}
+                    alt="Placeholder"
                   />
                 </a>
                 <div className="inline-flex flex-col justify-start items-start gap-4 max-md:items-center">
@@ -249,14 +348,15 @@ function Home() {
               </div>
               <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
 
+              {/* Event 5: Melissa */}
               <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
                 <a
-                  className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block border border-black/10 shadow-[0_6px_16px_rgba(0,0,0,0.14)] transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_30px_rgba(0,0,0,0.2)] active:translate-y-0 active:scale-100 max-md:max-w-[260px] max-md:h-44"
+                  className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block border border-black/10 shadow-[0_6px_16px_rgba(0,0,0,0.14)] transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_30px_rgba(0,0,0,0.2)]"
                   href="https://www.linkedin.com/in/melissa-hutchins"
-                  rel="noreferrer"
                   target="_blank"
+                  rel="noreferrer"
                 >
-                  <img
+                  <ScheduleImage
                     className="w-full h-full object-cover"
                     style={{ objectPosition: melissaCropPosition }}
                     src={melissaHeadshot}
@@ -277,11 +377,13 @@ function Home() {
               </div>
               <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
 
-              <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
-                <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block">
-                  <img
+              {/* Event 6 */}
+              <div className="self-stretch justify-start items-start gap-10 flex content-start max-md:flex-col max-md:items-center max-md:text-center">
+                <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center">
+                  <ScheduleImage
                     className="w-full h-full object-contain"
                     src={fingerprintSmall}
+                    alt="Placeholder"
                   />
                 </a>
                 <div className="inline-flex flex-col justify-start items-start gap-4 max-md:items-center">
@@ -295,11 +397,13 @@ function Home() {
               </div>
               <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
 
-              <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
-                <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block">
-                  <img
+              {/* Event 7 */}
+              <div className="self-stretch justify-start items-start gap-10 flex content-start max-md:flex-col max-md:items-center max-md:text-center">
+                <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center">
+                  <ScheduleImage
                     className="w-full h-full object-contain"
                     src={fingerprintSmall2}
+                    alt="Placeholder"
                   />
                 </a>
                 <div className="inline-flex flex-col justify-start items-start gap-4 max-md:items-center">
@@ -313,11 +417,13 @@ function Home() {
               </div>
               <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
 
-              <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
-                <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block">
-                  <img
+              {/* Event 8 */}
+              <div className="self-stretch justify-start items-start gap-10 flex content-start max-md:flex-col max-md:items-center max-md:text-center">
+                <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center">
+                  <ScheduleImage
                     className="w-full h-full object-contain"
                     src={fingerprintSmall}
+                    alt="Placeholder"
                   />
                 </a>
                 <div className="inline-flex flex-col justify-start items-start gap-4 max-md:items-center">
@@ -331,14 +437,15 @@ function Home() {
               </div>
               <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
 
-              <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
+              {/* Event 9: Michael */}
+              <div className="self-stretch justify-start items-start gap-10 flex content-start max-md:flex-col max-md:items-center max-md:text-center">
                 <a
-                  className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block border border-black/10 shadow-[0_6px_16px_rgba(0,0,0,0.14)] transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_30px_rgba(0,0,0,0.2)] active:translate-y-0 active:scale-100 max-md:max-w-[260px] max-md:h-44"
+                  className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center border border-black/10 shadow-[0_6px_16px_rgba(0,0,0,0.14)] transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_30px_rgba(0,0,0,0.2)]"
                   href="https://www.linkedin.com/in/michael-ling-1079a339"
-                  rel="noreferrer"
                   target="_blank"
+                  rel="noreferrer"
                 >
-                  <img
+                  <ScheduleImage
                     className="w-full h-full object-cover"
                     style={{ objectPosition: michaelCropPosition }}
                     src={michaelHeadshot}
@@ -359,14 +466,15 @@ function Home() {
               </div>
               <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
 
-              <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
+              {/* Event 10: Vita */}
+              <div className="self-stretch justify-start items-start gap-10 flex content-start max-md:flex-col max-md:items-center max-md:text-center">
                 <a
-                  className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block border border-black/10 shadow-[0_6px_16px_rgba(0,0,0,0.14)] transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_30px_rgba(0,0,0,0.2)] active:translate-y-0 active:scale-100 max-md:max-w-[260px] max-md:h-44"
+                  className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center border border-black/10 shadow-[0_6px_16px_rgba(0,0,0,0.14)] transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_30px_rgba(0,0,0,0.2)]"
                   href="https://vitakari.com/"
-                  rel="noreferrer"
                   target="_blank"
+                  rel="noreferrer"
                 >
-                  <img
+                  <ScheduleImage
                     className="w-full h-full object-cover"
                     style={{ objectPosition: vitaCropPosition }}
                     src={vitaHeadshot}
@@ -378,7 +486,7 @@ function Home() {
                     2:05 - 2:20 PM
                   </div>
                   <div className="w-full max-w-[960px] md:w-[760px] text-black text-3xl md:text-4xl font-normal font-['Manrope'] leading-[36px] md:leading-[42px]">
-                    Why Social Media Isn’t Killing Your Creativity
+                    Does Social Media Kill Creativity?
                   </div>
                   <div className="w-full max-w-[360px] md:w-72 text-gray-600 text-2xl md:text-3xl font-normal font-['Manrope'] leading-[36px] md:leading-[42px]">
                     Vita Kari
@@ -387,11 +495,13 @@ function Home() {
               </div>
               <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
 
-              <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
-                <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block">
-                  <img
+              {/* Event 11 */}
+              <div className="self-stretch justify-start items-start gap-10 flex content-start max-md:flex-col max-md:items-center max-md:text-center">
+                <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center">
+                  <ScheduleImage
                     className="w-full h-full object-contain"
                     src={fingerprintSmall}
+                    alt="Placeholder"
                   />
                 </a>
                 <div className="inline-flex flex-col justify-start items-start gap-4 max-md:items-center">
@@ -405,11 +515,13 @@ function Home() {
               </div>
               <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
 
-              <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
-                <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block">
-                  <img
+              {/* Event 12 */}
+              <div className="self-stretch justify-start items-start gap-10 flex content-start max-md:flex-col max-md:items-center max-md:text-center">
+                <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center">
+                  <ScheduleImage
                     className="w-full h-full object-contain"
                     src={fingerprintSmall}
+                    alt="Placeholder"
                   />
                 </a>
                 <div className="inline-flex flex-col justify-start items-start gap-4 max-md:items-center">
@@ -423,14 +535,15 @@ function Home() {
               </div>
               <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
 
-              <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
+              {/* Event 13: Cara */}
+              <div className="self-stretch justify-start items-start gap-10 flex content-start max-md:flex-col max-md:items-center max-md:text-center">
                 <a
-                  className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block border border-black/10 shadow-[0_6px_16px_rgba(0,0,0,0.14)] transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_30px_rgba(0,0,0,0.2)] active:translate-y-0 active:scale-100 max-md:max-w-[260px] max-md:h-44"
+                  className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center border border-black/10 shadow-[0_6px_16px_rgba(0,0,0,0.14)] transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_30px_rgba(0,0,0,0.2)]"
                   href="https://www.linkedin.com/in/carahalealter"
-                  rel="noreferrer"
                   target="_blank"
+                  rel="noreferrer"
                 >
-                  <img
+                  <ScheduleImage
                     className="w-full h-full object-cover"
                     style={{ objectPosition: caraCropPosition }}
                     src={caraHeadshot}
@@ -451,11 +564,13 @@ function Home() {
               </div>
               <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
 
-              <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
-                <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block">
-                  <img
+              {/* Event 14 */}
+              <div className="self-stretch justify-start items-start gap-10 flex content-start max-md:flex-col max-md:items-center max-md:text-center">
+                <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center">
+                  <ScheduleImage
                     className="w-full h-full object-contain"
                     src={fingerprintSmall}
+                    alt="Placeholder"
                   />
                 </a>
                 <div className="inline-flex flex-col justify-start items-start gap-4 max-md:items-center">
@@ -523,6 +638,7 @@ function Home() {
                   <a
                     href="https://maps.google.com/?q=4069+Spokane+Ln+NE,+Seattle,+WA+98105"
                     target="_blank"
+                    rel="noreferrer"
                     className="text-center text-white text-base md:text-xl font-normal font-['Manrope'] leading-6 md:leading-7"
                   >
                     View on Map

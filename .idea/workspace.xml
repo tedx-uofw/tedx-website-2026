@@ -5,12 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ddae1876-7459-49d4-86a9-164361d82f3c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/vite-project/public/landing/fingerprints/fingerprint_frame_01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vite-project/public/landing/fingerprints/fingerprint_frame_02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vite-project/public/landing/fingerprints/fingerprint_frame_03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vite-project/public/landing/fingerprints/fingerprint_frame_04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vite-project/public/landing/fingerprints/fingerprint_frame_05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vite-project/public/landing/fingerprints/fingerprint_frame_06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vite-project/public/landing/fingerprints/fingerprint_frame_07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vite-project/public/landing/fingerprints/fingerprint_frame_08.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vite-project/public/landing/fingerprints/fingerprint_frame_09.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vite-project/public/landing/fingerprints/fingerprint_frame_10.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite-project/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite-project/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite-project/postcss.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite-project/src/pages/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/src/pages/Home.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite-project/src/pages/Sponsors.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/src/pages/Sponsors.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,33 +41,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Shashvath S/Documents/dev/tedx-website-2026/vite-project/public/footer-images&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Shashvath S\\Documents\\dev\\tedx-website-2026\\vite-project\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "git-widget-placeholder": "main",
+    "javascript.preferred.runtime.type.id": "node",
+    "last_opened_file_path": "C:/Users/Shashvath S/Documents/dev/tedx-website-2026/vite-project/public/landing/fingerprints",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "ts.external.directory.path": "C:\\Users\\Shashvath S\\Documents\\dev\\tedx-website-2026\\vite-project\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Shashvath S\Documents\dev\tedx-website-2026\vite-project\public\landing\fingerprints" />
       <recent name="C:\Users\Shashvath S\Documents\dev\tedx-website-2026\vite-project\public\footer-images" />
       <recent name="C:\Users\Shashvath S\Documents\dev\tedx-website-2026\vite-project\src\pages" />
       <recent name="C:\Users\Shashvath S\Documents\dev\tedx-website-2026\vite-project\public" />
       <recent name="C:\Users\Shashvath S\Documents\dev\tedx-website-2026\vite-project\public\sponsors-images" />
-      <recent name="C:\Users\Shashvath S\Documents\dev\tedx-website-2026\vite-project\public\team-images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Shashvath S\Documents\dev\tedx-website-2026\vite-project\public\imprints-images" />
@@ -120,6 +125,7 @@
       <workItem from="1772512618264" duration="12000" />
       <workItem from="1772735137809" duration="888000" />
       <workItem from="1772740658099" duration="762000" />
+      <workItem from="1772759250509" duration="2639000" />
     </task>
     <task id="LOCAL-00001" summary="Update Footer Bg and fix sponsors page">
       <option name="closed" value="true" />
