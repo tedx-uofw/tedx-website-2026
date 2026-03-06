@@ -133,20 +133,30 @@ function About() {
             {/* Container 1 (Left) */}
             <div className="w-full h-[350px] md:h-[450px] bg-gray-200 overflow-hidden relative">
               {/* Replace src with your image */}
-              <img
-                src="/aboutpage-images/Image1.webp"
-                alt="Gallery Top Left"
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+              <div
+                  aria-label="Gallery Top Left"
+                  role="img"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                  style={{
+                    backgroundImage: `url("/aboutpage-images/Image1.webp")`,
+                    backgroundSize: "cover",
+                    backgroundRepeat: "no-repeat",
+                  }}
               />
             </div>
 
             {/* Container 2 (Right) */}
             <div className="w-full h-[350px] md:h-[450px] bg-gray-200 overflow-hidden relative">
               {/* Replace src with your image */}
-              <img
-                src="/aboutpage-images/Image2.webp"
-                alt="Gallery Top Right"
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+              <div
+                  aria-label="Gallery Top Right"
+                  role="img"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                  style={{
+                    backgroundImage: `url("/aboutpage-images/Image2.webp")`,
+                    backgroundSize: "cover",
+                    backgroundRepeat: "no-repeat",
+                  }}
               />
             </div>
           </div>
@@ -160,10 +170,15 @@ function About() {
                 className="w-full h-[400px] md:h-[600px] bg-gray-200 overflow-hidden relative"
               >
                 {/* Replace src with your image */}
-                <img
-                  src={`/aboutpage-images/Image${index + 2}.webp`}
-                  alt={`Gallery Bottom ${index}`}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                <div
+                    aria-label={`Gallery Bottom ${index}`}
+                    role="img"
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                    style={{
+                      backgroundImage: `url("/aboutpage-images/Image${index + 2}.webp")`,
+                      backgroundSize: "cover",
+                      backgroundRepeat: "no-repeat",
+                    }}
                 />
               </div>
             ))}
