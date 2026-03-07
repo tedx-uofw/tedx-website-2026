@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from "react";
+import React, {useEffect, useState} from "react";
 import "./Home.css";
 import heroImage from "/imprints-images/imprinted_1.svg";
 import fingerprintImage from "/imprints-images/full_fingerprint_3.webp";
@@ -51,117 +51,20 @@ const ScheduleImage = ({
   );
 };
 
-// --- 2. NEW COMPONENT: "Spreading Ridge" Loading Screen ---
-const ThematicLoadingScreen = ({ onComplete, heroRef } : { onComplete: () => void, heroRef: React.RefObject<HTMLImageElement | null> }) => {
-  const [stage, setStage] = useState<'playing' | 'crossfading' | 'gliding' | 'fading'>('playing');
-  const [svgStyle, setSvgStyle] = useState({});
-
-  useEffect(() => {
-    // 1. When the loading screen mounts, lock the body scroll
-    document.body.style.overflow = 'hidden';
-
-    // 2. When the loading screen unmounts (after onComplete fires), unlock it
-    return () => {
-      document.body.style.overflow = 'auto';
-    };
-  }, []);
-
-  useEffect(() => {
-    if (!heroRef.current) return;
-    const rect = heroRef.current.getBoundingClientRect();
-
-// 1. MATH: Calculate center of screen vs final resting place
-    const screenCX = window.innerWidth / 2;
-    const screenCY = window.innerHeight / 2;
-
-    // NEW SAFEGUARD: If the image hasn't loaded yet, it prevents a 0 width/height
-    const safeWidth = rect.width > 0 ? rect.width : 824;
-    const safeHeight = rect.height > 0 ? rect.height : 200;
-
-    const targetCX = rect.left + safeWidth / 2;
-    const targetCY = rect.top + safeHeight / 2;
-
-    const moveX = (screenCX - targetCX) - 6;
-    const moveY = (screenCY - targetCY) - 12;
-
-    // 2. SCALE: Now safely uses safeWidth to prevent 'Infinity'
-    const initScale = (window.innerWidth * 0.7) / safeWidth;
-
-    // 3. INITIAL STATE: Positioned at the target, but visually scaled/moved to the center.
-    setSvgStyle({
-      position: 'fixed',
-      top: `${rect.top}px`,
-      left: `${rect.left}px`,
-      width: `${rect.width}px`,
-      height: `${rect.height}px`,
-      transform: `translate(${moveX}px, ${moveY}px) scale(${initScale})`,
-      transition: 'none', // Locked in place while the GIF plays
-      zIndex: 101
-    });
-
-    // --- The Timers ---
-    // 1. Fade GIF out, fade SVG in (They are perfectly overlapping right now)
-    const timer1 = setTimeout(() => setStage('crossfading'), 2000);
-
-    // 2. THE FLIGHT: Starts at 3300ms
-    const timer2 = setTimeout(() => {
-      setStage('gliding');
-      setSvgStyle({
-        position: 'fixed',
-        top: `${rect.top}px`,
-        left: `${rect.left}px`,
-        width: `${rect.width}px`,
-        height: `${rect.height}px`,
-        transform: `translate(0px, 0px) scale(1)`,
-        // FIX 1 (The Speed): Increased duration from 1.8s to 2.5s for a slower, floating glide
-        transition: 'transform 2.5s cubic-bezier(0.22, 1, 0.36, 1)',
-        zIndex: 101
-      });
-    }, 2700);
-
-    // 3. THE REVEAL: Pulled forward to 3800ms
-    // FIX 2 (The Lag): We now start fading the background just 500ms after the flight begins.
-    // The website will appear *behind* the logo as it flies!
-    const timer3 = setTimeout(() => setStage('fading'), 3000);
-
-    // 4. THE CLEANUP: Pushed to 6000ms
-    // Gives the 2.5s flight and the background fade plenty of time to finish smoothly.
-    const timer4 = setTimeout(() => onComplete(), 5200);
-
-    return () => { clearTimeout(timer1); clearTimeout(timer2); clearTimeout(timer3); clearTimeout(timer4); };
-  }, [onComplete, heroRef]);
-
-  return (
-      <div className={`fixed inset-0 z-[100] bg-[#F7F9FB] transition-colors duration-[2000ms] ease-in-out ${stage === 'fading' ? 'bg-transparent pointer-events-none' : ''}`}>
-
-        {/* LAYER 1: The Massive GIF */}
-        {/* It has its own flex container now so it never gets squished */}
-        <div className={`absolute inset-0 flex items-center justify-center transition-opacity duration-800 ${stage === 'playing' ? 'opacity-100' : 'opacity-0'}`}>
-          <img
-              src="/landing/imprints_animation.gif"
-              alt="Loading..."
-              className="w-[175vw] max-w-none h-auto mix-blend-multiply"
-          />
-        </div>
-
-        {/* LAYER 2: The Gliding SVG */}
-        <div style={svgStyle}>
-          <img
-              src={heroImage} // Double check that 'heroImage' is imported at the top of this file!
-              alt="Imprints"
-              /* CHANGED: Now uses stage !== 'playing' so it stays solid during the final fade */
-              className={`w-full h-full object-contain mix-blend-multiply transition-opacity duration-[1500ms] ease-in-out ${stage !== 'playing' ? 'opacity-100' : 'opacity-0'}`}
-          />
-        </div>
-
-      </div>
-  );
-};
 
 // --- MAIN HOME COMPONENT ---
 function Home() {
-  const [showLoader, setShowLoader] = useState(true);
-  const heroRef = useRef<HTMLImageElement | null>(null); // <--- ADD THIS LINE
+  // 1. Track if the GIF is playing, or if it's time to show the real logo
+  const [logoStage, setLogoStage] = useState<'playing' | 'fading'>('playing');
+
+  useEffect(() => {
+    // Wait for the GIF to finish its ink bleed, then trigger the crossfade
+    const timer = setTimeout(() => {
+      setLogoStage('fading');
+    }, 2500);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const caraCropPosition = "center calc(50% + 30px)";
   const melissaCropPosition = "center calc(50% + 24px)";
@@ -171,13 +74,7 @@ function Home() {
   const nanditaCropPosition = "center calc(50% + 84px)";
 
   return (
-    // Lock scrolling while the loader is active
-    <section
-    //   className={`w-full ${showLoader ? "h-screen overflow-hidden" : ""}`}
-    >
-      {/* Inject the Loading Screen */}
-    {showLoader && <ThematicLoadingScreen onComplete={() => setShowLoader(false)} heroRef={heroRef} />}
-
+    <section>
       <div className="w-full relative bg-linear-to-b from-white to-[#F7F9FB] overflow-hidden">
         {/* ── Background decorations ── */}
         <div className="w-[1046.04px] h-[1046.04px] left-[-219.13px] top-[-49.32px] absolute origin-top-left rotate-[9.20deg] bg-[radial-gradient(ellipse_50.00%_50.00%_at_50.00%_50.00%,_#E5EEF9_0%,_white_100%)] rounded-full pointer-events-none max-md:scale-75 max-md:-left-[260px] max-md:top-[-140px]" />
@@ -225,14 +122,30 @@ function Home() {
               src={fingerprintImage}
               alt=""
             />
-            <img
-                ref={heroRef}
-                className="w-full max-w-[824px] h-auto absolute top-[-20px] left-[-28px] z-10 border-0 outline-none max-md:static max-md:mb-6"
-                src={heroImage}
-                alt="Hero image"
-                // NEW: Hide the real logo while the fake one is flying to prevent the "Dark Multiply" flash
-                style={{ opacity: showLoader ? 0 : 1 }}
-            />
+            {/* The Wrapper uses your exact layout classes from before */}
+            <div className="w-full max-w-[824px] absolute top-[-20px] left-[-28px] z-10 max-md:static max-md:mb-6 flex items-center justify-center pointer-events-none">
+
+              {/* LAYER 1: The Oversized GIF */}
+              {/* We use scale-[2.5] to counteract the built-in whitespace of the GIF. */}
+              <img
+                  src="/landing/imprints_animation.gif"
+                  alt="Loading effect"
+                  className={`absolute contrast-125 brightness-110 mix-blend-multiply scale-[1] transition-opacity duration-700 ${
+                      logoStage === 'playing' ? 'opacity-100 blur-none' : 'opacity-0 blur-[1px]'
+                  }`}
+              />
+
+              {/* LAYER 2: The Real SVG Logo */}
+              {/* Because this is 'relative', it dictates the actual size of the wrapper div in the DOM */}
+              <img
+                  src={heroImage}
+                  alt="Hero image"
+                  className={`relative w-full h-auto mix-blend-multiply transition-opacity duration-[1000ms] ease-in-out ${
+                      logoStage === 'fading' ? 'opacity-100 pointer-events-auto' : 'opacity-0'
+                  }`}
+              />
+
+            </div>
             <div className="pt-[196px] max-md:pt-0">
               <div className="text-black text-2xl font-normal font-['Manrope'] leading-8 z-10 relative mb-10 max-md:text-base max-md:leading-7 max-md:mb-6">
                 The memories we carry have a deep meaning, cutting deep into us.
