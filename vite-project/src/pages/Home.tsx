@@ -15,33 +15,7 @@ import fingerprintSmall from "/landing/Frame 1 (5).png";
 import fingerprintSmall2 from "/landing/Frame 2 (3).png";
 import SponsorTiers from "../components/SponsorsTiers";
 
-// --- 1. NEW COMPONENT: Circular Fingerprint ---
-const Fingerprint = ({ src, alt }: { src: string; alt: string }) => {
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  return (
-    <div className="fingerprint-container">
-      {/* Skeleton Pulse (Shows until image loads) */}
-      {!isLoaded && (
-        <div className="absolute inset-0 bg-slate-200 animate-pulse flex items-center justify-center">
-          <div className="w-1/3 h-1/4 bg-slate-300 rounded opacity-50" />
-        </div>
-      )}
-      <img
-        src={src}
-        alt={alt}
-        className={`transition-opacity duration-700 ease-in-out ${
-          isLoaded ? "opacity-90" : "opacity-0"
-        }`}
-        onLoad={() => setIsLoaded(true)}
-        loading="lazy"
-        decoding="async"
-      />
-    </div>
-  );
-};
-
-// --- 2. NEW COMPONENT: Image Loader with Skeleton State ---
+// --- 1. NEW COMPONENT: Image Loader with Skeleton State ---
 const ScheduleImage = ({
   src,
   alt,
@@ -359,8 +333,8 @@ function Home() {
                 <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center">
                   <ScheduleImage
                     className="w-full h-full object-contain"
-                    src="/landing/fingerprints/fingerprint_frame_03.png"
-                    alt="Fingerprint"
+                    src={fingerprintSmall}
+                    alt="Placeholder"
                   />
                 </a>
                 <div className="inline-flex flex-col justify-start items-start gap-4 max-md:items-center">
@@ -408,8 +382,8 @@ function Home() {
                 <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center">
                   <ScheduleImage
                     className="w-full h-full object-contain"
-                    src="/landing/fingerprints/fingerprint_frame_04.png"
-                    alt="Fingerprint"
+                    src={fingerprintSmall}
+                    alt="Placeholder"
                   />
                 </a>
                 <div className="inline-flex flex-col justify-start items-start gap-4 max-md:items-center">
@@ -428,7 +402,7 @@ function Home() {
                 <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center">
                   <ScheduleImage
                     className="w-full h-full object-contain"
-                    src="/landing/fingerprints/fingerprint_frame_09.png"
+                    src={fingerprintSmall2}
                     alt="Placeholder"
                   />
                 </a>
@@ -448,7 +422,7 @@ function Home() {
                 <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center">
                   <ScheduleImage
                     className="w-full h-full object-contain"
-                    src="/landing/fingerprints/fingerprint_frame_06.png"
+                    src={fingerprintSmall}
                     alt="Placeholder"
                   />
                 </a>
@@ -526,8 +500,8 @@ function Home() {
                 <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center">
                   <ScheduleImage
                     className="w-full h-full object-contain"
-                    src="/landing/fingerprints/fingerprint_frame_01.png"
-                    alt="Fingerprint"
+                    src={fingerprintSmall}
+                    alt="Placeholder"
                   />
                 </a>
                 <div className="inline-flex flex-col justify-start items-start gap-4 max-md:items-center">
@@ -546,8 +520,8 @@ function Home() {
                 <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center">
                   <ScheduleImage
                     className="w-full h-full object-contain"
-                    src="/landing/fingerprints/fingerprint_frame_03.png"
-                    alt="Fingerprint"
+                    src={fingerprintSmall}
+                    alt="Placeholder"
                   />
                 </a>
                 <div className="inline-flex flex-col justify-start items-start gap-4 max-md:items-center">
@@ -595,7 +569,7 @@ function Home() {
                 <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center">
                   <ScheduleImage
                     className="w-full h-full object-contain"
-                    src={fingerprintSmall2}
+                    src={fingerprintSmall}
                     alt="Placeholder"
                   />
                 </a>
