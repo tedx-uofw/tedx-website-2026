@@ -52,26 +52,40 @@ const ScheduleImage = ({
 };
 
 // --- 2. NEW COMPONENT: "Spreading Ridge" Loading Screen ---
-const ThematicLoadingScreen = ({ onComplete, heroRef }) => {
+const ThematicLoadingScreen = ({ onComplete, heroRef } : { onComplete: () => void, heroRef: React.RefObject<HTMLImageElement | null> }) => {
   const [stage, setStage] = useState<'playing' | 'crossfading' | 'gliding' | 'fading'>('playing');
   const [svgStyle, setSvgStyle] = useState({});
+
+  useEffect(() => {
+    // 1. When the loading screen mounts, lock the body scroll
+    document.body.style.overflow = 'hidden';
+
+    // 2. When the loading screen unmounts (after onComplete fires), unlock it
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, []);
 
   useEffect(() => {
     if (!heroRef.current) return;
     const rect = heroRef.current.getBoundingClientRect();
 
-    // 1. MATH: Calculate center of screen vs final resting place
+// 1. MATH: Calculate center of screen vs final resting place
     const screenCX = window.innerWidth / 2;
     const screenCY = window.innerHeight / 2;
-    const targetCX = rect.left + rect.width / 2;
-    const targetCY = rect.top + rect.height / 2;
 
-    const moveX = screenCX - targetCX;
+    // NEW SAFEGUARD: If the image hasn't loaded yet, it prevents a 0 width/height
+    const safeWidth = rect.width > 0 ? rect.width : 824;
+    const safeHeight = rect.height > 0 ? rect.height : 200;
+
+    const targetCX = rect.left + safeWidth / 2;
+    const targetCY = rect.top + safeHeight / 2;
+
+    const moveX = (screenCX - targetCX) - 6;
     const moveY = (screenCY - targetCY) - 12;
 
-    // 2. SCALE: We make the static SVG massive to match the text inside your huge 175vw GIF.
-    // TWEAK THIS: Change the 1.2 up or down slightly (e.g., 1.1 or 1.3) to perfectly match the GIF text size!
-    const initScale = (window.innerWidth * 0.7) / rect.width;
+    // 2. SCALE: Now safely uses safeWidth to prevent 'Infinity'
+    const initScale = (window.innerWidth * 0.7) / safeWidth;
 
     // 3. INITIAL STATE: Positioned at the target, but visually scaled/moved to the center.
     setSvgStyle({
@@ -87,9 +101,9 @@ const ThematicLoadingScreen = ({ onComplete, heroRef }) => {
 
     // --- The Timers ---
     // 1. Fade GIF out, fade SVG in (They are perfectly overlapping right now)
-    const timer1 = setTimeout(() => setStage('crossfading'), 2800);
+    const timer1 = setTimeout(() => setStage('crossfading'), 2000);
 
-    // 2. Start the glide (Removing the translate and scale so it smoothly shrinks to its real position)
+    // 2. THE FLIGHT: Starts at 3300ms
     const timer2 = setTimeout(() => {
       setStage('gliding');
       setSvgStyle({
@@ -99,13 +113,20 @@ const ThematicLoadingScreen = ({ onComplete, heroRef }) => {
         width: `${rect.width}px`,
         height: `${rect.height}px`,
         transform: `translate(0px, 0px) scale(1)`,
-        transition: 'transform 1.8s cubic-bezier(0.25, 1, 0.3, 1)', // Buttery smooth flight
+        // FIX 1 (The Speed): Increased duration from 1.8s to 2.5s for a slower, floating glide
+        transition: 'transform 2.5s cubic-bezier(0.22, 1, 0.36, 1)',
         zIndex: 101
       });
-    }, 3900);
+    }, 2700);
 
-    const timer3 = setTimeout(() => setStage('fading'), 4800);
-    const timer4 = setTimeout(() => onComplete(), 5500);
+    // 3. THE REVEAL: Pulled forward to 3800ms
+    // FIX 2 (The Lag): We now start fading the background just 500ms after the flight begins.
+    // The website will appear *behind* the logo as it flies!
+    const timer3 = setTimeout(() => setStage('fading'), 3000);
+
+    // 4. THE CLEANUP: Pushed to 6000ms
+    // Gives the 2.5s flight and the background fade plenty of time to finish smoothly.
+    const timer4 = setTimeout(() => onComplete(), 5200);
 
     return () => { clearTimeout(timer1); clearTimeout(timer2); clearTimeout(timer3); clearTimeout(timer4); };
   }, [onComplete, heroRef]);
@@ -126,9 +147,10 @@ const ThematicLoadingScreen = ({ onComplete, heroRef }) => {
         {/* LAYER 2: The Gliding SVG */}
         <div style={svgStyle}>
           <img
-              src={heroImage}
+              src={heroImage} // Double check that 'heroImage' is imported at the top of this file!
               alt="Imprints"
-              className={`w-full h-full object-contain mix-blend-multiply transition-opacity duration-700 ${(stage === 'crossfading' || stage === 'gliding') ? 'opacity-100' : 'opacity-0'}`}
+              /* CHANGED: Now uses stage !== 'playing' so it stays solid during the final fade */
+              className={`w-full h-full object-contain mix-blend-multiply transition-opacity duration-[1500ms] ease-in-out ${stage !== 'playing' ? 'opacity-100' : 'opacity-0'}`}
           />
         </div>
 
@@ -139,7 +161,7 @@ const ThematicLoadingScreen = ({ onComplete, heroRef }) => {
 // --- MAIN HOME COMPONENT ---
 function Home() {
   const [showLoader, setShowLoader] = useState(true);
-  const heroRef = useRef(null); // <--- ADD THIS LINE
+  const heroRef = useRef<HTMLImageElement | null>(null); // <--- ADD THIS LINE
 
   const caraCropPosition = "center calc(50% + 30px)";
   const melissaCropPosition = "center calc(50% + 24px)";
@@ -205,9 +227,11 @@ function Home() {
             />
             <img
                 ref={heroRef}
-              className="w-full max-w-[824px] h-auto absolute top-[-20px] left-[-28px] z-10 border-0 outline-none max-md:static max-md:mb-6"
-              src={heroImage}
-              alt="Hero image"
+                className="w-full max-w-[824px] h-auto absolute top-[-20px] left-[-28px] z-10 border-0 outline-none max-md:static max-md:mb-6"
+                src={heroImage}
+                alt="Hero image"
+                // NEW: Hide the real logo while the fake one is flying to prevent the "Dark Multiply" flash
+                style={{ opacity: showLoader ? 0 : 1 }}
             />
             <div className="pt-[196px] max-md:pt-0">
               <div className="text-black text-2xl font-normal font-['Manrope'] leading-8 z-10 relative mb-10 max-md:text-base max-md:leading-7 max-md:mb-6">
