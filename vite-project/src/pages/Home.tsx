@@ -56,6 +56,7 @@ const ScheduleImage = ({
 function Home() {
   // 1. Track if the GIF is playing, or if it's time to show the real logo
   const [logoStage, setLogoStage] = useState<'playing' | 'fading'>('playing');
+  const [gifUrl] = useState(() => `/landing/imprints_animation.gif?v=${Date.now()}`);
 
   useEffect(() => {
     // Wait for the GIF to finish its ink bleed, then trigger the crossfade
@@ -123,12 +124,12 @@ function Home() {
               alt=""
             />
             {/* The Wrapper uses your exact layout classes from before */}
-            <div className="w-full max-w-[824px] absolute top-[-20px] left-[-28px] z-10 max-md:static max-md:mb-6 flex items-center justify-center pointer-events-none">
+            <div className="w-full max-w-[824px] absolute top-[-20px] left-[-28px] z-10 max-md:static max-md:mb-6 flex items-center justify-start md:justify-center pointer-events-none">
 
               {/* LAYER 1: The Oversized GIF */}
               {/* We use scale-[2.5] to counteract the built-in whitespace of the GIF. */}
               <img
-                  src="/landing/imprints_animation.gif"
+                  src={gifUrl}
                   alt="Loading effect"
                   className={`absolute contrast-125 brightness-110 mix-blend-multiply scale-[1] transition-opacity duration-700 ${
                       logoStage === 'playing' ? 'opacity-100 blur-none' : 'opacity-0 blur-[1px]'
@@ -146,7 +147,7 @@ function Home() {
               />
 
             </div>
-            <div className="pt-[196px] max-md:pt-0">
+            <div className="pt-49 max-md:pt-0">
               <div className="text-black text-2xl font-normal font-['Manrope'] leading-8 z-10 relative mb-10 max-md:text-base max-md:leading-7 max-md:mb-6">
                 The memories we carry have a deep meaning, cutting deep into us.
                 Sometimes, they leave impressions that last forever. Other
