@@ -51,11 +51,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Shashvath S\Documents\dev\tedx-website-2026\vite-project\public\landing" />
       <recent name="C:\Users\Shashvath S\Documents\dev\tedx-website-2026\vite-project\public\landing\fingerprints" />
       <recent name="C:\Users\Shashvath S\Documents\dev\tedx-website-2026\vite-project\public\footer-images" />
       <recent name="C:\Users\Shashvath S\Documents\dev\tedx-website-2026\vite-project\src\pages" />
       <recent name="C:\Users\Shashvath S\Documents\dev\tedx-website-2026\vite-project\public" />
-      <recent name="C:\Users\Shashvath S\Documents\dev\tedx-website-2026\vite-project\public\sponsors-images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Shashvath S\Documents\dev\tedx-website-2026\vite-project\public\imprints-images" />
@@ -113,7 +113,9 @@
       <workItem from="1772512618264" duration="12000" />
       <workItem from="1772735137809" duration="888000" />
       <workItem from="1772740658099" duration="762000" />
-      <workItem from="1772759250509" duration="2639000" />
+      <workItem from="1772759250509" duration="7024000" />
+      <workItem from="1772847702258" duration="4244000" />
+      <workItem from="1772911061247" duration="302000" />
     </task>
     <task id="LOCAL-00001" summary="Update Footer Bg and fix sponsors page">
       <option name="closed" value="true" />
@@ -195,7 +197,15 @@
       <option name="project" value="LOCAL" />
       <updated>1772245174134</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="adding animation for home page">
+      <option name="closed" value="true" />
+      <created>1772847755476</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1772847755476</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,6 +222,7 @@
     <MESSAGE value="Optimize Speakers page for mobile and less lag" />
     <MESSAGE value="- Convert every image to webp, delete duplicates, minor fixes to each page" />
     <MESSAGE value="Include deleted images to prevent duplicates" />
-    <option name="LAST_COMMIT_MESSAGE" value="Include deleted images to prevent duplicates" />
+    <MESSAGE value="adding animation for home page" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding animation for home page" />
   </component>
 </project>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import "./Home.css";
 import heroImage from "/imprints-images/imprinted_1.svg";
 import fingerprintImage from "/imprints-images/full_fingerprint_3.webp";
@@ -51,70 +51,20 @@ const ScheduleImage = ({
   );
 };
 
-// --- 2. NEW COMPONENT: "Spreading Ridge" Loading Screen ---
-// const ThematicLoadingScreen = ({ onComplete }: { onComplete: () => void }) => {
-//   const [stage, setStage] = useState<"entering" | "cutting" | "revealing">(
-//     "entering",
-//   );
-
-//   useEffect(() => {
-//     const timer1 = setTimeout(() => setStage("cutting"), 400); // Start text/animation
-//     const timer2 = setTimeout(() => setStage("revealing"), 1800); // Trigger fade out
-//     const timer3 = setTimeout(() => onComplete(), 2500); // Fully unmount
-//     return () => {
-//       clearTimeout(timer1);
-//       clearTimeout(timer2);
-//       clearTimeout(timer3);
-//     };
-//   }, [onComplete]);
-
-//   return (
-//     <div
-//       className={`fixed inset-0 z-[100] bg-black flex items-center justify-center transition-opacity duration-1000 pointer-events-none ${stage === "revealing" ? "opacity-0" : "opacity-100"}`}
-//     >
-//       {/* CSS for the smooth circle reveal */}
-//       <style>{`
-//         .clip-expand {
-//           clip-path: circle(0% at 50% 50%);
-//           animation: expand-circle 3s cubic-bezier(0.65, 0, 0.05, 1) forwards;
-//         }
-//         @keyframes expand-circle {
-//           0% { clip-path: circle(0% at 50% 50%); }
-//           100% { clip-path: circle(150% at 50% 50%); }
-//         }
-//       `}</style>
-
-//       {/* The Fingerprint Texture (Revealed via clip-path) */}
-//       <div
-//         className={`absolute inset-0 clip-expand opacity-40 flex items-center justify-center`}
-//       >
-//         <img
-//           src={fingerprintImage}
-//           alt=""
-//           className="w-full h-full object-cover grayscale mix-blend-screen scale-110"
-//         />
-//       </div>
-
-//       {/* Thematic Text */}
-//       {/* <div className="absolute bottom-16 left-8 md:bottom-24 md:left-24 z-20 max-w-2xl space-y-4 px-4">
-//         <p
-//           className={`text-2xl md:text-4xl font-light text-white tracking-wide transition-opacity duration-1000 ${stage === "cutting" ? "opacity-100" : "opacity-0"}`}
-//         >
-//           The memories we carry...
-//         </p>
-//         <p
-//           className={`text-2xl md:text-4xl font-light text-white tracking-wide transition-opacity duration-1000 delay-[800ms] ${stage === "cutting" ? "opacity-100" : "opacity-0"}`}
-//         >
-//           cutting deep into us.
-//         </p>
-//       </div> */}
-//     </div>
-//   );
-// };
 
 // --- MAIN HOME COMPONENT ---
 function Home() {
-  // const [showLoader, setShowLoader] = useState(true);
+  // 1. Track if the GIF is playing, or if it's time to show the real logo
+  const [logoStage, setLogoStage] = useState<'playing' | 'fading'>('playing');
+
+  useEffect(() => {
+    // Wait for the GIF to finish its ink bleed, then trigger the crossfade
+    const timer = setTimeout(() => {
+      setLogoStage('fading');
+    }, 2500);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const caraCropPosition = "center calc(50% + 30px)";
   const melissaCropPosition = "center calc(50% + 24px)";
@@ -124,15 +74,7 @@ function Home() {
   const nanditaCropPosition = "center calc(50% + 84px)";
 
   return (
-    // Lock scrolling while the loader is active
-    <section
-    //   className={`w-full ${showLoader ? "h-screen overflow-hidden" : ""}`}
-    >
-      {/* Inject the Loading Screen
-      {showLoader && (
-        <ThematicLoadingScreen onComplete={() => setShowLoader(false)} />
-      )} */}
-
+    <section>
       <div className="w-full relative bg-linear-to-b from-white to-[#F7F9FB] overflow-hidden">
         {/* ── Background decorations ── */}
         <div className="w-[1046.04px] h-[1046.04px] left-[-219.13px] top-[-49.32px] absolute origin-top-left rotate-[9.20deg] bg-[radial-gradient(ellipse_50.00%_50.00%_at_50.00%_50.00%,_#E5EEF9_0%,_white_100%)] rounded-full pointer-events-none max-md:scale-75 max-md:-left-[260px] max-md:top-[-140px]" />
@@ -180,11 +122,30 @@ function Home() {
               src={fingerprintImage}
               alt=""
             />
-            <img
-              className="w-full max-w-[824px] h-auto absolute top-[-20px] left-[-28px] z-10 border-0 outline-none max-md:static max-md:mb-6"
-              src={heroImage}
-              alt="Hero image"
-            />
+            {/* The Wrapper uses your exact layout classes from before */}
+            <div className="w-full max-w-[824px] absolute top-[-20px] left-[-28px] z-10 max-md:static max-md:mb-6 flex items-center justify-center pointer-events-none">
+
+              {/* LAYER 1: The Oversized GIF */}
+              {/* We use scale-[2.5] to counteract the built-in whitespace of the GIF. */}
+              <img
+                  src="/landing/imprints_animation.gif"
+                  alt="Loading effect"
+                  className={`absolute contrast-125 brightness-110 mix-blend-multiply scale-[1] transition-opacity duration-700 ${
+                      logoStage === 'playing' ? 'opacity-100 blur-none' : 'opacity-0 blur-[1px]'
+                  }`}
+              />
+
+              {/* LAYER 2: The Real SVG Logo */}
+              {/* Because this is 'relative', it dictates the actual size of the wrapper div in the DOM */}
+              <img
+                  src={heroImage}
+                  alt="Hero image"
+                  className={`relative w-full h-auto mix-blend-multiply transition-opacity duration-[1000ms] ease-in-out ${
+                      logoStage === 'fading' ? 'opacity-100 pointer-events-auto' : 'opacity-0'
+                  }`}
+              />
+
+            </div>
             <div className="pt-[196px] max-md:pt-0">
               <div className="text-black text-2xl font-normal font-['Manrope'] leading-8 z-10 relative mb-10 max-md:text-base max-md:leading-7 max-md:mb-6">
                 The memories we carry have a deep meaning, cutting deep into us.
