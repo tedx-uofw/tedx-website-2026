@@ -132,18 +132,23 @@ export default function SponsorsSection() {
       </div>
 
       {/* RAFFLE TIER */}
-      <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+      <div className="flex flex-wrap justify-center gap-4 max-w-sm md:max-w-4xl mx-auto px-6">
         {sponsors.raffle.map((sponsor, idx) => (
-          <div
-            key={idx}
-            className="w-full sm:w-[25%] aspect-[3/2] bg-slate-50 border border-slate-200 rounded-lg p-4 flex items-center justify-center transition-opacity hover:opacity-80"
-          >
-            <SponsorImage
-              src={`/sponsors-images/${sponsor.source}`}
-              alt={sponsor.name}
-              className="w-[85%] h-[85%] object-contain"
-            />
-          </div>
+            <div
+                key={idx}
+                /* Item Width:
+                   - w-[40%] on mobile (side-by-side and small)
+                   - md:w-[25%] on desktop (your original 4-column layout)
+                */
+                className="w-[40%] md:w-[25%] aspect-[3/2] bg-slate-50 border border-slate-200 rounded-lg p-4 flex items-center justify-center transition-opacity hover:opacity-80"
+            >
+              <SponsorImage
+                  src={`/sponsors-images/${sponsor.source}`}
+                  alt={sponsor.name}
+                  /* Keep the logo contained and professional */
+                  className="w-[75%] h-[75%] object-contain"
+              />
+            </div>
         ))}
       </div>
     </section>
