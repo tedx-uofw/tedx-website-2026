@@ -24,7 +24,7 @@ export default function Footer() {
             {/* COLUMN 1: Brand */}
             <div className="flex flex-col gap-4">
               <div className="w-[200px] h-[50px] flex items-center">
-                <img src="/imprints-images/tedx_logo.webp" className="w-38" />
+                <img src="/imprints-images/tedx_logo.png" className="w-38" />
               </div>
               <p className="text-black font-manrope font-light text-[16px]">
                 Ideas worth spreading
@@ -107,7 +107,7 @@ export default function Footer() {
                     className="w-10 h-10 bg-[#1a1a1a] rounded-full flex items-center justify-center cursor-pointer hover:opacity-80 transition-opacity"
                   >
                     <img
-                      src={`/footer-images/${item.name}.webp`}
+                      src={`/footer-images/${item.name}.png`}
                       className={`${
                         item.name === "facebook"
                           ? "w-6 h-6 translate-x-[1.3px] translate-y-0.5"
@@ -124,7 +124,7 @@ export default function Footer() {
 
               {/* Email */}
               <div className="flex items-center gap-2 mt-2 cursor-pointer hover:opacity-70">
-                <img src="/footer-images/mail.webp" className="w-4 h-4" />
+                <img src="/footer-images/mail.png" className="w-4 h-4" />
                 <Link
                   to="mailto:tedxuofw@uw.edu"
                   className="text-black font-manrope font-light text-[16px]"
