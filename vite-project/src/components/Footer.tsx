@@ -22,7 +22,7 @@ export default function Footer() {
         <div className="w-full max-w-[1493px] mx-auto px-[20px] md:px-[55px] flex flex-col gap-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-4">
             {/* COLUMN 1: Brand */}
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col">
               <div className="w-[200px] h-[50px] flex items-center">
                 <img src="/imprints-images/tedx_logo.png" className="w-38" />
               </div>
