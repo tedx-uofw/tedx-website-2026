@@ -163,7 +163,7 @@ const Navbar = () => {
                   className="w-10 h-10 bg-[#1a1a1a] rounded-full flex items-center justify-center cursor-pointer hover:opacity-80 transition-opacity"
                 >
                   <img
-                    src={`/footer-images/${item.name}.png`}
+                    src={`/footer-images/${item.name}.svg`}
                     alt={item.name}
                     className={`${
                       item.name === "mail-white"
