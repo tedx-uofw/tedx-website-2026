@@ -109,7 +109,7 @@ function Home() {
             </div>
             <div className="flex items-baseline gap-2">
               <a href="/#venue" className="font-medium">
-                Kane Hall↗
+                Kane Hall<span>&#x2197;&#xFE0E;</span>
               </a>
             </div>
             <div className="font-medium">Seattle, WA</div>
