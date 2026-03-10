@@ -162,7 +162,7 @@ const Sponsors = () => {
               className="text-black font-['Andada_Pro'] text-[44px] font-normal leading-[140%]
             w-[160%] max-[900px]:w-full"
             >
-              Thank you for supporting TedXUofW
+              Thank you for supporting TEDxUofW
             </h1>
           </div>
         </div>

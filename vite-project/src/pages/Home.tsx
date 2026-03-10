@@ -3,7 +3,6 @@ import "./Home.css";
 import heroImage from "/imprints-images/imprinted_1.png";
 import fingerprintImage from "/imprints-images/full_fingerprint_3.webp";
 import x2 from "/imprints-images/x_2.webp";
-import venue from "/landing/venue.webp";
 import location from "/landing/location.svg";
 import caraHeadshot from "/speakers/cara-hale-alter.webp";
 import melissaHeadshot from "/speakers/melissa-hutchins.webp";
@@ -14,6 +13,8 @@ import nanditaHeadshot from "/speakers/nandita-gupta.webp";
 import fingerprintSmall from "/landing/Frame 1 (5).png";
 import fingerprintSmall2 from "/landing/Frame 2 (3).png";
 import SponsorTiers from "../components/SponsorsTiers";
+
+const venue = "/imprints-images/kane.JPG";
 
 // --- 1. NEW COMPONENT: Image Loader with Skeleton State ---
 const ScheduleImage = ({

@@ -14,6 +14,10 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
+  const scrollToTop = () => {
+    window.dispatchEvent(new Event("tedx:scroll-to-top"));
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       if (mobileOpen) return;
@@ -43,6 +47,7 @@ const Navbar = () => {
           <NavLink
             className="text-base font-semibold tracking-wide transition-opacity duration-300 ease-out hover:opacity-60"
             to="/"
+            onClick={scrollToTop}
           >
             <img
               alt="TedxUofW Logo"
@@ -63,6 +68,7 @@ const Navbar = () => {
                     }`
                   }
                   to={link.to}
+                  onClick={scrollToTop}
                 >
                   {link.label}
                 </NavLink>
@@ -117,7 +123,10 @@ const Navbar = () => {
                   }`
                 }
                 to={link.to}
-                onClick={() => setMobileOpen(false)}
+                onClick={() => {
+                  scrollToTop();
+                  setMobileOpen(false);
+                }}
               >
                 {link.label}
                 <div className="border-b border-black/20 mt-4" />
