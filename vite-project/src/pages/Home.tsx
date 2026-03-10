@@ -69,13 +69,6 @@ function Home() {
     return () => clearTimeout(timer);
   }, []);
 
-  const caraCropPosition = "center calc(50% + 40px)";
-  const melissaCropPosition = "center calc(50% + 50px)";
-  const michaelCropPosition = "center calc(50% + 72px)";
-  const vitaCropPosition = "center calc(50% + 30px)";
-  const annCropPosition = "center calc(50% + 60px)";
-  const nanditaCropPosition = "center calc(50% + 95px)";
-
   return (
     <section>
       <div className="w-full relative bg-linear-to-b from-white to-[#F7F9FB] overflow-hidden">
@@ -216,15 +209,15 @@ function Home() {
 
             <div className="self-stretch flex flex-col justify-start items-start gap-12 md:gap-16">
               {/* Event 1 */}
-              <div className="self-stretch flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
-                <a className="w-full max-w-[560px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center max-md:mx-auto">
+              <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
+                <a className="w-full max-w-[560px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center">
                   <ScheduleImage
                     className="w-full h-full object-contain"
                     src={fingerprintSmall}
                     alt="Placeholder"
                   />
                 </a>
-                <div className="flex w-full flex-col justify-start items-start gap-4 max-md:max-w-[360px] max-md:items-center max-md:mx-auto">
+                <div className="inline-flex flex-col justify-start items-start gap-4 max-md:items-center">
                   <div className="w-full max-w-[560px] text-gray-600 text-base font-normal font-['Inter'] leading-7">
                     10:30 - 10:45 AM
                   </div>
@@ -244,8 +237,7 @@ function Home() {
                   rel="noreferrer"
                 >
                   <ScheduleImage
-                    className="w-full h-full object-cover"
-                    style={{ objectPosition: nanditaCropPosition }}
+                    className="w-full h-full object-cover schedule-headshot-nandita"
                     src={nanditaHeadshot}
                     alt="Nandita Gupta headshot"
                   />
@@ -274,8 +266,7 @@ function Home() {
                   rel="noreferrer"
                 >
                   <ScheduleImage
-                    className="w-full h-full object-cover"
-                    style={{ objectPosition: annCropPosition }}
+                    className="w-full h-full object-cover schedule-headshot-ann"
                     src={annHeadshot}
                     alt="Ann Frost headshot"
                   />
@@ -323,8 +314,7 @@ function Home() {
                   rel="noreferrer"
                 >
                   <ScheduleImage
-                    className="w-full h-full object-cover"
-                    style={{ objectPosition: melissaCropPosition }}
+                    className="w-full h-full object-cover schedule-headshot-melissa"
                     src={melissaHeadshot}
                     alt="Melissa Hutchins headshot"
                   />
@@ -412,8 +402,7 @@ function Home() {
                   rel="noreferrer"
                 >
                   <ScheduleImage
-                    className="w-full h-full object-cover"
-                    style={{ objectPosition: michaelCropPosition }}
+                    className="w-full h-full object-cover schedule-headshot-michael"
                     src={michaelHeadshot}
                     alt="Michael B. Ling headshot"
                   />
@@ -441,8 +430,7 @@ function Home() {
                   rel="noreferrer"
                 >
                   <ScheduleImage
-                    className="w-full h-full object-cover"
-                    style={{ objectPosition: vitaCropPosition }}
+                    className="w-full h-full object-cover schedule-headshot-vita"
                     src={vitaHeadshot}
                     alt="Vita Kari headshot"
                   />
@@ -510,8 +498,7 @@ function Home() {
                   rel="noreferrer"
                 >
                   <ScheduleImage
-                    className="w-full h-full object-cover"
-                    style={{ objectPosition: caraCropPosition }}
+                    className="w-full h-full object-cover schedule-headshot-cara"
                     src={caraHeadshot}
                     alt="Cara Hale Alter headshot"
                   />
