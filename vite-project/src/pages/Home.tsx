@@ -69,12 +69,12 @@ function Home() {
     return () => clearTimeout(timer);
   }, []);
 
-  const caraCropPosition = "center calc(50% + 30px)";
-  const melissaCropPosition = "center calc(50% + 24px)";
-  const michaelCropPosition = "center calc(50% + 36px)";
-  const vitaCropPosition = "center 50%";
-  const annCropPosition = "center calc(50% + 36px)";
-  const nanditaCropPosition = "center calc(50% + 84px)";
+  const caraCropPosition = "center calc(50% + 40px)";
+  const melissaCropPosition = "center calc(50% + 50px)";
+  const michaelCropPosition = "center calc(50% + 72px)";
+  const vitaCropPosition = "center calc(50% + 30px)";
+  const annCropPosition = "center calc(50% + 60px)";
+  const nanditaCropPosition = "center calc(50% + 95px)";
 
   return (
     <section>
@@ -216,15 +216,15 @@ function Home() {
 
             <div className="self-stretch flex flex-col justify-start items-start gap-12 md:gap-16">
               {/* Event 1 */}
-              <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
-                <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center">
+              <div className="self-stretch flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
+                <a className="w-full max-w-[560px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center max-md:mx-auto">
                   <ScheduleImage
                     className="w-full h-full object-contain"
                     src={fingerprintSmall}
                     alt="Placeholder"
                   />
                 </a>
-                <div className="inline-flex flex-col justify-start items-start gap-4 max-md:items-center">
+                <div className="flex w-full flex-col justify-start items-start gap-4 max-md:max-w-[360px] max-md:items-center max-md:mx-auto">
                   <div className="w-full max-w-[560px] text-gray-600 text-base font-normal font-['Inter'] leading-7">
                     10:30 - 10:45 AM
                   </div>
@@ -238,7 +238,7 @@ function Home() {
               {/* Event 2: Nandita */}
               <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
                 <a
-                  className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block border border-black/10 shadow-[0_6px_16px_rgba(0,0,0,0.14)] transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_30px_rgba(0,0,0,0.2)]"
+                  className="w-full max-w-[560px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block border border-black/10 shadow-[0_6px_16px_rgba(0,0,0,0.14)] transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_30px_rgba(0,0,0,0.2)]"
                   href="https://www.linkedin.com/in/nandita-gupta/"
                   target="_blank"
                   rel="noreferrer"
@@ -268,7 +268,7 @@ function Home() {
               {/* Event 3: Ann */}
               <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
                 <a
-                  className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block border border-black/10 shadow-[0_6px_16px_rgba(0,0,0,0.14)] transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_30px_rgba(0,0,0,0.2)]"
+                  className="w-full max-w-[560px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block border border-black/10 shadow-[0_6px_16px_rgba(0,0,0,0.14)] transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_30px_rgba(0,0,0,0.2)]"
                   href="https://lsj.washington.edu/people/ann-frost"
                   target="_blank"
                   rel="noreferrer"
@@ -296,7 +296,7 @@ function Home() {
 
               {/* Event 4 */}
               <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
-                <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center">
+                <a className="w-full max-w-[560px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center">
                   <ScheduleImage
                     className="w-full h-full object-contain"
                     src={fingerprintSmall}
@@ -317,7 +317,7 @@ function Home() {
               {/* Event 5: Melissa */}
               <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
                 <a
-                  className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block border border-black/10 shadow-[0_6px_16px_rgba(0,0,0,0.14)] transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_30px_rgba(0,0,0,0.2)]"
+                  className="w-full max-w-[560px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block border border-black/10 shadow-[0_6px_16px_rgba(0,0,0,0.14)] transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_30px_rgba(0,0,0,0.2)]"
                   href="https://www.linkedin.com/in/melissa-hutchins"
                   target="_blank"
                   rel="noreferrer"
@@ -345,7 +345,7 @@ function Home() {
 
               {/* Event 6 */}
               <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
-                <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center">
+                <a className="w-full max-w-[560px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center">
                   <ScheduleImage
                     className="w-full h-full object-contain"
                     src={fingerprintSmall}
@@ -365,7 +365,7 @@ function Home() {
 
               {/* Event 7 */}
               <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
-                <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center">
+                <a className="w-full max-w-[560px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center">
                   <ScheduleImage
                     className="w-full h-full object-contain"
                     src={fingerprintSmall2}
@@ -385,7 +385,7 @@ function Home() {
 
               {/* Event 8 */}
               <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
-                <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center">
+                <a className="w-full max-w-[560px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center">
                   <ScheduleImage
                     className="w-full h-full object-contain"
                     src={fingerprintSmall}
@@ -406,7 +406,7 @@ function Home() {
               {/* Event 9: Michael */}
               <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
                 <a
-                  className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center border border-black/10 shadow-[0_6px_16px_rgba(0,0,0,0.14)] transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_30px_rgba(0,0,0,0.2)]"
+                  className="w-full max-w-[560px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block border border-black/10 shadow-[0_6px_16px_rgba(0,0,0,0.14)] transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_30px_rgba(0,0,0,0.2)]"
                   href="https://www.linkedin.com/in/michael-ling-1079a339"
                   target="_blank"
                   rel="noreferrer"
@@ -435,7 +435,7 @@ function Home() {
               {/* Event 10: Vita */}
               <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
                 <a
-                  className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center border border-black/10 shadow-[0_6px_16px_rgba(0,0,0,0.14)] transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_30px_rgba(0,0,0,0.2)]"
+                  className="w-full max-w-[560px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center border border-black/10 shadow-[0_6px_16px_rgba(0,0,0,0.14)] transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_30px_rgba(0,0,0,0.2)]"
                   href="https://vitakari.com/"
                   target="_blank"
                   rel="noreferrer"
@@ -463,7 +463,7 @@ function Home() {
 
               {/* Event 11 */}
               <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
-                <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center">
+                <a className="w-full max-w-[560px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center">
                   <ScheduleImage
                     className="w-full h-full object-contain"
                     src={fingerprintSmall}
@@ -483,7 +483,7 @@ function Home() {
 
               {/* Event 12 */}
               <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
-                <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center">
+                <a className="w-full max-w-[560px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center">
                   <ScheduleImage
                     className="w-full h-full object-contain"
                     src={fingerprintSmall}
@@ -504,7 +504,7 @@ function Home() {
               {/* Event 13: Cara */}
               <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
                 <a
-                  className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center border border-black/10 shadow-[0_6px_16px_rgba(0,0,0,0.14)] transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_30px_rgba(0,0,0,0.2)]"
+                  className="w-full max-w-[560px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center border border-black/10 shadow-[0_6px_16px_rgba(0,0,0,0.14)] transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_30px_rgba(0,0,0,0.2)]"
                   href="https://www.linkedin.com/in/carahalealter"
                   target="_blank"
                   rel="noreferrer"
@@ -532,7 +532,7 @@ function Home() {
 
               {/* Event 14 */}
               <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
-                <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center">
+                <a className="w-full max-w-[560px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center">
                   <ScheduleImage
                     className="w-full h-full object-contain"
                     src={fingerprintSmall}
