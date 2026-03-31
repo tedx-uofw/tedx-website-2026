@@ -8,6 +8,8 @@ import Team from "./pages/Team";
 import Sponsors from "./pages/Sponsors";
 import About from "./pages/About";
 import Footer from "./components/Footer";
+import Seo from "./components/Seo";
+import { seoByPath } from "./seo";
 
 function App() {
   const lenisRef = useRef<Lenis | null>(null);
@@ -45,8 +47,12 @@ function App() {
     lenisRef.current?.scrollTo(0, { duration: 1.1 });
   }, [location.pathname]);
 
+  const seo =
+    seoByPath[location.pathname as keyof typeof seoByPath] ?? seoByPath["/"];
+
   return (
     <div className="min-h-screen bg-white text-neutral-900">
+      <Seo {...seo} />
       <Header />
       <main>
         <Routes>

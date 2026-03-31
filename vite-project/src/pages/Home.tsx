@@ -113,6 +113,9 @@ function Home() {
         {/* ── HERO SECTION ── */}
         <div className="relative z-10 px-[63px] pt-10 pb-16 max-md:px-5 max-md:pt-10 max-md:pb-10">
           <div className="relative w-full max-w-[925px]">
+            <h1 className="sr-only">
+              TEDxUofW 2026 Imprints at the University of Washington
+            </h1>
             <img
               className="w-full max-w-[824px] h-auto absolute top-[-20px] left-[-28px] z-0 opacity-0 pointer-events-none max-md:hidden"
               src={fingerprintImage}
