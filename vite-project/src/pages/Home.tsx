@@ -128,11 +128,10 @@ function Home() {
               <img
                 src={gifUrl}
                 alt="Loading effect"
-                className={`absolute contrast-125 brightness-110 mix-blend-multiply scale-[1] transition-opacity duration-700 ${
-                  logoStage === "playing"
+                className={`absolute contrast-125 brightness-110 mix-blend-multiply scale-[1] transition-opacity duration-700 ${logoStage === "playing"
                     ? "opacity-100 blur-none"
                     : "opacity-0 blur-[1px]"
-                }`}
+                  }`}
               />
 
               {/* LAYER 2: The Real SVG Logo */}
@@ -140,11 +139,10 @@ function Home() {
               <img
                 src={heroImage}
                 alt="Hero image"
-                className={`relative w-full h-auto mix-blend-multiply transition-opacity duration-[1000ms] ease-in-out ${
-                  logoStage === "fading"
+                className={`relative w-full h-auto mix-blend-multiply transition-opacity duration-[1000ms] ease-in-out ${logoStage === "fading"
                     ? "opacity-100 pointer-events-auto"
                     : "opacity-0"
-                }`}
+                  }`}
               />
             </div>
             <div className="pt-49 max-md:pt-0">
@@ -288,26 +286,6 @@ function Home() {
               </div>
               <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
 
-              {/* Event 4 */}
-              <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
-                <a className="w-full max-w-[560px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center">
-                  <ScheduleImage
-                    className="w-full h-full object-contain"
-                    src={fingerprintSmall}
-                    alt="Placeholder"
-                  />
-                </a>
-                <div className="inline-flex flex-col justify-start items-start gap-4 max-md:items-center">
-                  <div className="w-full max-w-[560px] text-gray-600 text-base font-normal font-['Inter'] leading-7">
-                    11:30 - 11:45 AM
-                  </div>
-                  <div className="w-full max-w-[960px] md:w-[760px] text-black text-3xl md:text-4xl font-normal font-['Manrope'] leading-[36px] md:leading-[42px]">
-                    The Kompany
-                  </div>
-                </div>
-              </div>
-              <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
-
               {/* Event 5: Melissa */}
               <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
                 <a
@@ -415,7 +393,7 @@ function Home() {
                     1:45 - 2:00 PM
                   </div>
                   <div className="w-full max-w-[960px] md:w-[760px] text-black text-3xl md:text-4xl font-normal font-['Manrope'] leading-[36px] md:leading-[42px]">
-                      Forgiveness is a Journey
+                    Forgiveness is a Journey
                   </div>
                   <div className="w-full max-w-[360px] md:w-72 text-gray-600 text-2xl md:text-3xl font-normal font-['Manrope'] leading-[36px] md:leading-[42px]">
                     Michael B. Ling
