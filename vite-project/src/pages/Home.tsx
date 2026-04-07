@@ -129,8 +129,8 @@ function Home() {
                 src={gifUrl}
                 alt="Loading effect"
                 className={`absolute contrast-125 brightness-110 mix-blend-multiply scale-[1] transition-opacity duration-700 ${logoStage === "playing"
-                    ? "opacity-100 blur-none"
-                    : "opacity-0 blur-[1px]"
+                  ? "opacity-100 blur-none"
+                  : "opacity-0 blur-[1px]"
                   }`}
               />
 
@@ -140,8 +140,8 @@ function Home() {
                 src={heroImage}
                 alt="Hero image"
                 className={`relative w-full h-auto mix-blend-multiply transition-opacity duration-[1000ms] ease-in-out ${logoStage === "fading"
-                    ? "opacity-100 pointer-events-auto"
-                    : "opacity-0"
+                  ? "opacity-100 pointer-events-auto"
+                  : "opacity-0"
                   }`}
               />
             </div>
@@ -205,7 +205,7 @@ function Home() {
               id="conference-schedule"
               className="self-stretch text-black text-4xl md:text-5xl font-semibold font-['Manrope'] leading-tight"
             >
-              Conference Schedule
+              Tentative Conference Schedule
             </div>
 
             <div className="self-stretch flex flex-col justify-start items-start gap-12 md:gap-16">
