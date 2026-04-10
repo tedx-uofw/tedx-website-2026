@@ -1,19 +1,25 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import Lenis from "lenis";
 import Header from "./components/Header";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import Speakers from "./pages/Speakers";
 import Team from "./pages/Team";
 import Sponsors from "./pages/Sponsors";
 import About from "./pages/About";
 import Footer from "./components/Footer";
+import Seo from "./components/Seo";
+import { seoByPath } from "./seo";
 
 function App() {
+  const lenisRef = useRef<Lenis | null>(null);
+  const location = useLocation();
+
   useEffect(() => {
     const lenis = new Lenis({
       smoothWheel: true,
     });
+    lenisRef.current = lenis;
 
     let rafId = 0;
     const raf = (time: number) => {
@@ -23,14 +29,30 @@ function App() {
 
     rafId = requestAnimationFrame(raf);
 
+    const handleScrollToTop = () => {
+      lenis.scrollTo(0, { duration: 0.8 });
+    };
+
+    window.addEventListener("tedx:scroll-to-top", handleScrollToTop);
+
     return () => {
+      window.removeEventListener("tedx:scroll-to-top", handleScrollToTop);
       cancelAnimationFrame(rafId);
+      lenisRef.current = null;
       lenis.destroy();
     };
   }, []);
 
+  useEffect(() => {
+    lenisRef.current?.scrollTo(0, { duration: 1.1 });
+  }, [location.pathname]);
+
+  const seo =
+    seoByPath[location.pathname as keyof typeof seoByPath] ?? seoByPath["/"];
+
   return (
     <div className="min-h-screen bg-white text-neutral-900">
+      <Seo {...seo} />
       <Header />
       <main>
         <Routes>

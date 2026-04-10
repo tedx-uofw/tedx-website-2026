@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Home.css";
-import heroImage from "/imprints-images/imprinted_1.svg";
+import heroImage from "/imprints-images/imprinted_1.png";
 import fingerprintImage from "/imprints-images/full_fingerprint_3.webp";
 import x2 from "/imprints-images/x_2.webp";
-import venue from "/landing/venue.webp";
 import location from "/landing/location.svg";
 import caraHeadshot from "/speakers/cara-hale-alter.webp";
 import melissaHeadshot from "/speakers/melissa-hutchins.webp";
@@ -15,33 +14,9 @@ import fingerprintSmall from "/landing/Frame 1 (5).png";
 import fingerprintSmall2 from "/landing/Frame 2 (3).png";
 import SponsorTiers from "../components/SponsorsTiers";
 
-// --- 1. NEW COMPONENT: Circular Fingerprint ---
-const Fingerprint = ({ src, alt }: { src: string; alt: string }) => {
-  const [isLoaded, setIsLoaded] = useState(false);
+const venue = "/imprints-images/kane.JPG";
 
-  return (
-    <div className="fingerprint-container">
-      {/* Skeleton Pulse (Shows until image loads) */}
-      {!isLoaded && (
-        <div className="absolute inset-0 bg-slate-200 animate-pulse flex items-center justify-center">
-          <div className="w-1/3 h-1/4 bg-slate-300 rounded opacity-50" />
-        </div>
-      )}
-      <img
-        src={src}
-        alt={alt}
-        className={`transition-opacity duration-700 ease-in-out ${
-          isLoaded ? "opacity-90" : "opacity-0"
-        }`}
-        onLoad={() => setIsLoaded(true)}
-        loading="lazy"
-        decoding="async"
-      />
-    </div>
-  );
-};
-
-// --- 2. NEW COMPONENT: Image Loader with Skeleton State ---
+// --- 1. NEW COMPONENT: Image Loader with Skeleton State ---
 const ScheduleImage = ({
   src,
   alt,
@@ -77,88 +52,25 @@ const ScheduleImage = ({
   );
 };
 
-// --- 2. NEW COMPONENT: "Spreading Ridge" Loading Screen ---
-// const ThematicLoadingScreen = ({ onComplete }: { onComplete: () => void }) => {
-//   const [stage, setStage] = useState<"entering" | "cutting" | "revealing">(
-//     "entering",
-//   );
-
-//   useEffect(() => {
-//     const timer1 = setTimeout(() => setStage("cutting"), 400); // Start text/animation
-//     const timer2 = setTimeout(() => setStage("revealing"), 1800); // Trigger fade out
-//     const timer3 = setTimeout(() => onComplete(), 2500); // Fully unmount
-//     return () => {
-//       clearTimeout(timer1);
-//       clearTimeout(timer2);
-//       clearTimeout(timer3);
-//     };
-//   }, [onComplete]);
-
-//   return (
-//     <div
-//       className={`fixed inset-0 z-[100] bg-black flex items-center justify-center transition-opacity duration-1000 pointer-events-none ${stage === "revealing" ? "opacity-0" : "opacity-100"}`}
-//     >
-//       {/* CSS for the smooth circle reveal */}
-//       <style>{`
-//         .clip-expand {
-//           clip-path: circle(0% at 50% 50%);
-//           animation: expand-circle 3s cubic-bezier(0.65, 0, 0.05, 1) forwards;
-//         }
-//         @keyframes expand-circle {
-//           0% { clip-path: circle(0% at 50% 50%); }
-//           100% { clip-path: circle(150% at 50% 50%); }
-//         }
-//       `}</style>
-
-//       {/* The Fingerprint Texture (Revealed via clip-path) */}
-//       <div
-//         className={`absolute inset-0 clip-expand opacity-40 flex items-center justify-center`}
-//       >
-//         <img
-//           src={fingerprintImage}
-//           alt=""
-//           className="w-full h-full object-cover grayscale mix-blend-screen scale-110"
-//         />
-//       </div>
-
-//       {/* Thematic Text */}
-//       {/* <div className="absolute bottom-16 left-8 md:bottom-24 md:left-24 z-20 max-w-2xl space-y-4 px-4">
-//         <p
-//           className={`text-2xl md:text-4xl font-light text-white tracking-wide transition-opacity duration-1000 ${stage === "cutting" ? "opacity-100" : "opacity-0"}`}
-//         >
-//           The memories we carry...
-//         </p>
-//         <p
-//           className={`text-2xl md:text-4xl font-light text-white tracking-wide transition-opacity duration-1000 delay-[800ms] ${stage === "cutting" ? "opacity-100" : "opacity-0"}`}
-//         >
-//           cutting deep into us.
-//         </p>
-//       </div> */}
-//     </div>
-//   );
-// };
-
 // --- MAIN HOME COMPONENT ---
 function Home() {
-  // const [showLoader, setShowLoader] = useState(true);
+  // 1. Track if the GIF is playing, or if it's time to show the real logo
+  const [logoStage, setLogoStage] = useState<"playing" | "fading">("playing");
+  const [gifUrl] = useState(
+    () => `/landing/imprints_animation.gif?v=${Date.now()}`,
+  );
 
-  const caraCropPosition = "center calc(50% + 30px)";
-  const melissaCropPosition = "center calc(50% + 24px)";
-  const michaelCropPosition = "center calc(50% + 36px)";
-  const vitaCropPosition = "center 50%";
-  const annCropPosition = "center calc(50% + 36px)";
-  const nanditaCropPosition = "center calc(50% + 84px)";
+  useEffect(() => {
+    // Wait for the GIF to finish its ink bleed, then trigger the crossfade
+    const timer = setTimeout(() => {
+      setLogoStage("fading");
+    }, 2500);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
-    // Lock scrolling while the loader is active
-    <section
-    //   className={`w-full ${showLoader ? "h-screen overflow-hidden" : ""}`}
-    >
-      {/* Inject the Loading Screen
-      {showLoader && (
-        <ThematicLoadingScreen onComplete={() => setShowLoader(false)} />
-      )} */}
-
+    <section>
       <div className="w-full relative bg-linear-to-b from-white to-[#F7F9FB] overflow-hidden">
         {/* ── Background decorations ── */}
         <div className="w-[1046.04px] h-[1046.04px] left-[-219.13px] top-[-49.32px] absolute origin-top-left rotate-[9.20deg] bg-[radial-gradient(ellipse_50.00%_50.00%_at_50.00%_50.00%,_#E5EEF9_0%,_white_100%)] rounded-full pointer-events-none max-md:scale-75 max-md:-left-[260px] max-md:top-[-140px]" />
@@ -191,7 +103,7 @@ function Home() {
             </div>
             <div className="flex items-baseline gap-2">
               <a href="/#venue" className="font-medium">
-                Kane Hall↗
+                Kane Hall<span>&#x2197;&#xFE0E;</span>
               </a>
             </div>
             <div className="font-medium">Seattle, WA</div>
@@ -201,17 +113,39 @@ function Home() {
         {/* ── HERO SECTION ── */}
         <div className="relative z-10 px-[63px] pt-10 pb-16 max-md:px-5 max-md:pt-10 max-md:pb-10">
           <div className="relative w-full max-w-[925px]">
+            <h1 className="sr-only">
+              TEDxUofW 2026 Imprints at the University of Washington
+            </h1>
             <img
               className="w-full max-w-[824px] h-auto absolute top-[-20px] left-[-28px] z-0 opacity-0 pointer-events-none max-md:hidden"
               src={fingerprintImage}
               alt=""
             />
-            <img
-              className="w-full max-w-[824px] h-auto absolute top-[-20px] left-[-28px] z-10 border-0 outline-none max-md:static max-md:mb-6"
-              src={heroImage}
-              alt="Hero image"
-            />
-            <div className="pt-[196px] max-md:pt-0">
+            {/* The Wrapper uses your exact layout classes from before */}
+            <div className="w-full max-w-[824px] absolute top-[-20px] left-[-28px] z-10 max-md:static max-md:mb-6 flex items-center justify-start md:justify-center pointer-events-none">
+              {/* LAYER 1: The Oversized GIF */}
+              {/* We use scale-[2.5] to counteract the built-in whitespace of the GIF. */}
+              <img
+                src={gifUrl}
+                alt="Loading effect"
+                className={`absolute contrast-125 brightness-110 mix-blend-multiply scale-[1] transition-opacity duration-700 ${logoStage === "playing"
+                  ? "opacity-100 blur-none"
+                  : "opacity-0 blur-[1px]"
+                  }`}
+              />
+
+              {/* LAYER 2: The Real SVG Logo */}
+              {/* Because this is 'relative', it dictates the actual size of the wrapper div in the DOM */}
+              <img
+                src={heroImage}
+                alt="Hero image"
+                className={`relative w-full h-auto mix-blend-multiply transition-opacity duration-[1000ms] ease-in-out ${logoStage === "fading"
+                  ? "opacity-100 pointer-events-auto"
+                  : "opacity-0"
+                  }`}
+              />
+            </div>
+            <div className="pt-49 max-md:pt-0">
               <div className="text-black text-2xl font-normal font-['Manrope'] leading-8 z-10 relative mb-10 max-md:text-base max-md:leading-7 max-md:mb-6">
                 The memories we carry have a deep meaning, cutting deep into us.
                 Sometimes, they leave impressions that last forever. Other
@@ -276,8 +210,8 @@ function Home() {
 
             <div className="self-stretch flex flex-col justify-start items-start gap-12 md:gap-16">
               {/* Event 1 */}
-              <div className="self-stretch justify-start items-start gap-10 flex content-start max-md:flex-col max-md:items-center max-md:text-center">
-                <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center">
+              <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
+                <a className="w-full max-w-[560px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center">
                   <ScheduleImage
                     className="w-full h-full object-contain"
                     src={fingerprintSmall}
@@ -298,14 +232,13 @@ function Home() {
               {/* Event 2: Nandita */}
               <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
                 <a
-                  className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block border border-black/10 shadow-[0_6px_16px_rgba(0,0,0,0.14)] transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_30px_rgba(0,0,0,0.2)]"
+                  className="w-full max-w-[390px] h-70 md:w-72 md:h-60 rounded-md overflow-hidden block border border-black/10 shadow-[0_6px_16px_rgba(0,0,0,0.14)] transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_30px_rgba(0,0,0,0.2)]"
                   href="https://www.linkedin.com/in/nandita-gupta/"
                   target="_blank"
                   rel="noreferrer"
                 >
                   <ScheduleImage
-                    className="w-full h-full object-cover"
-                    style={{ objectPosition: nanditaCropPosition }}
+                    className="w-full h-full object-cover schedule-headshot-nandita"
                     src={nanditaHeadshot}
                     alt="Nandita Gupta headshot"
                   />
@@ -328,14 +261,13 @@ function Home() {
               {/* Event 3: Ann */}
               <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
                 <a
-                  className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block border border-black/10 shadow-[0_6px_16px_rgba(0,0,0,0.14)] transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_30px_rgba(0,0,0,0.2)]"
+                  className="w-full max-w-[390px] h-70 md:w-72 md:h-60 rounded-md overflow-hidden block border border-black/10 shadow-[0_6px_16px_rgba(0,0,0,0.14)] transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_30px_rgba(0,0,0,0.2)]"
                   href="https://lsj.washington.edu/people/ann-frost"
                   target="_blank"
                   rel="noreferrer"
                 >
                   <ScheduleImage
-                    className="w-full h-full object-cover"
-                    style={{ objectPosition: annCropPosition }}
+                    className="w-full h-full object-cover schedule-headshot-ann"
                     src={annHeadshot}
                     alt="Ann Frost headshot"
                   />
@@ -354,37 +286,16 @@ function Home() {
               </div>
               <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
 
-              {/* Event 4 */}
-              <div className="self-stretch justify-start items-start gap-10 flex content-start max-md:flex-col max-md:items-center max-md:text-center">
-                <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center">
-                  <ScheduleImage
-                    className="w-full h-full object-contain"
-                    src="/landing/fingerprints/fingerprint_frame_03.png"
-                    alt="Fingerprint"
-                  />
-                </a>
-                <div className="inline-flex flex-col justify-start items-start gap-4 max-md:items-center">
-                  <div className="w-full max-w-[560px] text-gray-600 text-base font-normal font-['Inter'] leading-7">
-                    11:30 - 11:45 AM
-                  </div>
-                  <div className="w-full max-w-[960px] md:w-[760px] text-black text-3xl md:text-4xl font-normal font-['Manrope'] leading-[36px] md:leading-[42px]">
-                    The Kompany
-                  </div>
-                </div>
-              </div>
-              <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
-
               {/* Event 5: Melissa */}
               <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
                 <a
-                  className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block border border-black/10 shadow-[0_6px_16px_rgba(0,0,0,0.14)] transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_30px_rgba(0,0,0,0.2)]"
+                  className="w-full max-w-[390px] h-70 md:w-72 md:h-60 rounded-md overflow-hidden block border border-black/10 shadow-[0_6px_16px_rgba(0,0,0,0.14)] transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_30px_rgba(0,0,0,0.2)]"
                   href="https://www.linkedin.com/in/melissa-hutchins"
                   target="_blank"
                   rel="noreferrer"
                 >
                   <ScheduleImage
-                    className="w-full h-full object-cover"
-                    style={{ objectPosition: melissaCropPosition }}
+                    className="w-full h-full object-cover schedule-headshot-melissa"
                     src={melissaHeadshot}
                     alt="Melissa Hutchins headshot"
                   />
@@ -404,12 +315,12 @@ function Home() {
               <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
 
               {/* Event 6 */}
-              <div className="self-stretch justify-start items-start gap-10 flex content-start max-md:flex-col max-md:items-center max-md:text-center">
-                <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center">
+              <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
+                <a className="w-full max-w-[560px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center">
                   <ScheduleImage
                     className="w-full h-full object-contain"
-                    src="/landing/fingerprints/fingerprint_frame_04.png"
-                    alt="Fingerprint"
+                    src={fingerprintSmall}
+                    alt="Placeholder"
                   />
                 </a>
                 <div className="inline-flex flex-col justify-start items-start gap-4 max-md:items-center">
@@ -424,11 +335,11 @@ function Home() {
               <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
 
               {/* Event 7 */}
-              <div className="self-stretch justify-start items-start gap-10 flex content-start max-md:flex-col max-md:items-center max-md:text-center">
-                <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center">
+              <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
+                <a className="w-full max-w-[560px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center">
                   <ScheduleImage
                     className="w-full h-full object-contain"
-                    src="/landing/fingerprints/fingerprint_frame_09.png"
+                    src={fingerprintSmall2}
                     alt="Placeholder"
                   />
                 </a>
@@ -444,11 +355,11 @@ function Home() {
               <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
 
               {/* Event 8 */}
-              <div className="self-stretch justify-start items-start gap-10 flex content-start max-md:flex-col max-md:items-center max-md:text-center">
-                <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center">
+              <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
+                <a className="w-full max-w-[560px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center">
                   <ScheduleImage
                     className="w-full h-full object-contain"
-                    src="/landing/fingerprints/fingerprint_frame_06.png"
+                    src={fingerprintSmall}
                     alt="Placeholder"
                   />
                 </a>
@@ -464,16 +375,15 @@ function Home() {
               <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
 
               {/* Event 9: Michael */}
-              <div className="self-stretch justify-start items-start gap-10 flex content-start max-md:flex-col max-md:items-center max-md:text-center">
+              <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
                 <a
-                  className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center border border-black/10 shadow-[0_6px_16px_rgba(0,0,0,0.14)] transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_30px_rgba(0,0,0,0.2)]"
-                  href="https://www.linkedin.com/in/michael-ling-1079a339"
+                  className="w-full max-w-[390px] h-65 md:w-72 md:h-60 rounded-md overflow-hidden block items-center border border-black/10 shadow-[0_6px_16px_rgba(0,0,0,0.14)] transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_30px_rgba(0,0,0,0.2)]"
+                  href="https://michaelbling.com/"
                   target="_blank"
                   rel="noreferrer"
                 >
                   <ScheduleImage
-                    className="w-full h-full object-cover"
-                    style={{ objectPosition: michaelCropPosition }}
+                    className="w-full h-full object-cover schedule-headshot-michael"
                     src={michaelHeadshot}
                     alt="Michael B. Ling headshot"
                   />
@@ -493,16 +403,15 @@ function Home() {
               <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
 
               {/* Event 10: Vita */}
-              <div className="self-stretch justify-start items-start gap-10 flex content-start max-md:flex-col max-md:items-center max-md:text-center">
+              <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
                 <a
-                  className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center border border-black/10 shadow-[0_6px_16px_rgba(0,0,0,0.14)] transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_30px_rgba(0,0,0,0.2)]"
+                  className="w-full max-w-[390px] h-65 md:w-72 md:h-60 rounded-md overflow-hidden block items-center border border-black/10 shadow-[0_6px_16px_rgba(0,0,0,0.14)] transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_30px_rgba(0,0,0,0.2)]"
                   href="https://vitakari.com/"
                   target="_blank"
                   rel="noreferrer"
                 >
                   <ScheduleImage
-                    className="w-full h-full object-cover"
-                    style={{ objectPosition: vitaCropPosition }}
+                    className="w-full h-full object-cover schedule-headshot-vita"
                     src={vitaHeadshot}
                     alt="Vita Kari headshot"
                   />
@@ -522,12 +431,12 @@ function Home() {
               <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
 
               {/* Event 11 */}
-              <div className="self-stretch justify-start items-start gap-10 flex content-start max-md:flex-col max-md:items-center max-md:text-center">
-                <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center">
+              <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
+                <a className="w-full max-w-[560px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center">
                   <ScheduleImage
                     className="w-full h-full object-contain"
-                    src="/landing/fingerprints/fingerprint_frame_01.png"
-                    alt="Fingerprint"
+                    src={fingerprintSmall}
+                    alt="Placeholder"
                   />
                 </a>
                 <div className="inline-flex flex-col justify-start items-start gap-4 max-md:items-center">
@@ -542,12 +451,12 @@ function Home() {
               <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
 
               {/* Event 12 */}
-              <div className="self-stretch justify-start items-start gap-10 flex content-start max-md:flex-col max-md:items-center max-md:text-center">
-                <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center">
+              <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
+                <a className="w-full max-w-[560px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center">
                   <ScheduleImage
                     className="w-full h-full object-contain"
-                    src="/landing/fingerprints/fingerprint_frame_03.png"
-                    alt="Fingerprint"
+                    src={fingerprintSmall}
+                    alt="Placeholder"
                   />
                 </a>
                 <div className="inline-flex flex-col justify-start items-start gap-4 max-md:items-center">
@@ -562,16 +471,15 @@ function Home() {
               <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
 
               {/* Event 13: Cara */}
-              <div className="self-stretch justify-start items-start gap-10 flex content-start max-md:flex-col max-md:items-center max-md:text-center">
+              <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
                 <a
-                  className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center border border-black/10 shadow-[0_6px_16px_rgba(0,0,0,0.14)] transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_30px_rgba(0,0,0,0.2)]"
+                  className="w-full max-w-[390px] h-65 md:w-72 md:h-60 rounded-md overflow-hidden block items-center border border-black/10 shadow-[0_6px_16px_rgba(0,0,0,0.14)] transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_14px_30px_rgba(0,0,0,0.2)]"
                   href="https://www.linkedin.com/in/carahalealter"
                   target="_blank"
                   rel="noreferrer"
                 >
                   <ScheduleImage
-                    className="w-full h-full object-cover"
-                    style={{ objectPosition: caraCropPosition }}
+                    className="w-full h-full object-cover schedule-headshot-cara"
                     src={caraHeadshot}
                     alt="Cara Hale Alter headshot"
                   />
@@ -591,11 +499,11 @@ function Home() {
               <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
 
               {/* Event 14 */}
-              <div className="self-stretch justify-start items-start gap-10 flex content-start max-md:flex-col max-md:items-center max-md:text-center">
-                <a className="w-full max-w-[360px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center">
+              <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
+                <a className="w-full max-w-[560px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center">
                   <ScheduleImage
                     className="w-full h-full object-contain"
-                    src={fingerprintSmall2}
+                    src={fingerprintSmall}
                     alt="Placeholder"
                   />
                 </a>

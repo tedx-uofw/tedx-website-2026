@@ -69,3 +69,49 @@ img {
   border: none;
   outline: none;
 }
+
+.schedule-headshot-cara {
+  object-position: center calc(50% + 40px);
+}
+
+.schedule-headshot-melissa {
+  object-position: center calc(50% + 50px);
+}
+
+.schedule-headshot-michael {
+  object-position: center calc(50% + 72px);
+}
+
+.schedule-headshot-vita {
+  object-position: center calc(50% + 30px);
+}
+
+.schedule-headshot-ann {
+  object-position: center calc(50% + 60px);
+}
+
+.schedule-headshot-nandita {
+  object-position: center calc(50% + 95px);
+}
+
+@media (max-width: 767px) {
+  .schedule-headshot-cara {
+    object-position: center calc(50% + 64px);
+  }
+
+  .schedule-headshot-melissa {
+    object-position: center calc(50% + 74px);
+  }
+
+  .schedule-headshot-michael {
+    object-position: center calc(50% + 96px);
+  }
+
+  .schedule-headshot-ann {
+    object-position: center calc(50% + 84px);
+  }
+
+  .schedule-headshot-nandita {
+    object-position: center calc(50% + 120px);
+  }
+}

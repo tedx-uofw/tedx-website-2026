@@ -12,7 +12,7 @@ export default function Footer() {
             src="/footer-images/imprint.webp"
             alt="IMPRINTS"
             className="footer-logo-animate-scan w-full h-auto object-contain opacity-80"
-            // className="footer-logo-animate-scan w-full max-w-md mx-auto"
+          // className="footer-logo-animate-scan w-full max-w-md mx-auto"
           />
         </div>
       </div>
@@ -22,9 +22,9 @@ export default function Footer() {
         <div className="w-full max-w-[1493px] mx-auto px-[20px] md:px-[55px] flex flex-col gap-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-4">
             {/* COLUMN 1: Brand */}
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col">
               <div className="w-[200px] h-[50px] flex items-center">
-                <img src="/imprints-images/tedx_logo.webp" className="w-38" />
+                <img src="/imprints-images/tedx_logo.png" className="w-38" />
               </div>
               <p className="text-black font-manrope font-light text-[16px]">
                 Ideas worth spreading
@@ -37,19 +37,19 @@ export default function Footer() {
                 Navigate
               </h3>
               <div className="flex flex-col gap-3 text-black font-manrope font-light text-[16px]">
-                <Link to="/speakers" className="cursor-pointer hover:underline">
+                <Link to="/speakers" className="cursor-pointer hover:underline w-fit">
                   Speakers
                 </Link>
-                <Link to="/about" className="cursor-pointer hover:underline">
+                <Link to="/about" className="cursor-pointer hover:underline w-fit">
                   About
                 </Link>
-                <Link to="/sponsors" className="cursor-pointer hover:underline">
+                <Link to="/sponsors" className="cursor-pointer hover:underline w-fit">
                   Sponsors
                 </Link>
                 <a
                   href="https://forms.gle/rCTJViGfuVHJiU3D8"
                   target="_blank"
-                  className="cursor-pointer hover:underline"
+                  className="cursor-pointer hover:underline w-fit"
                 >
                   Get Tickets
                 </a>
@@ -64,11 +64,11 @@ export default function Footer() {
               <div className="flex flex-col gap-3 text-black font-manrope font-light text-[16px]">
                 <Link
                   to="/#conference-schedule"
-                  className="cursor-pointer hover:underline"
+                  className="cursor-pointer hover:underline w-fit"
                 >
                   Conference Schedule
                 </Link>
-                <Link to="/#venue" className="cursor-pointer hover:underline">
+                <Link to="/#venue" className="cursor-pointer hover:underline w-fit">
                   Venue Information
                 </Link>
               </div>
@@ -107,24 +107,22 @@ export default function Footer() {
                     className="w-10 h-10 bg-[#1a1a1a] rounded-full flex items-center justify-center cursor-pointer hover:opacity-80 transition-opacity"
                   >
                     <img
-                      src={`/footer-images/${item.name}.webp`}
-                      className={`${
-                        item.name === "facebook"
-                          ? "w-6 h-6 translate-x-[1.3px] translate-y-0.5"
-                          : ""
-                      } ${item.name === "tiktok" ? "w-5 h-5" : ""} ${
-                        item.name === "instagram" || item.name === "linkedin"
+                      src={`/footer-images/${item.name}.svg`}
+                      className={`${item.name === "facebook"
+                        ? "w-6 h-6 translate-x-[1.3px] translate-y-0.5"
+                        : ""
+                        } ${item.name === "tiktok" ? "w-5 h-5" : ""} ${item.name === "instagram" || item.name === "linkedin"
                           ? "w-4 h-4"
                           : ""
-                      }`}
+                        }`}
                     />
                   </Link>
                 ))}
               </div>
 
               {/* Email */}
-              <div className="flex items-center gap-2 mt-2 cursor-pointer hover:opacity-70">
-                <img src="/footer-images/mail.webp" className="w-4 h-4" />
+              <div className="flex items-center gap-2 mt-2 cursor-pointer hover:opacity-70 w-fit">
+                <img src="/footer-images/mail.svg" className="w-4 h-4" />
                 <Link
                   to="mailto:tedxuofw@uw.edu"
                   className="text-black font-manrope font-light text-[16px]"
