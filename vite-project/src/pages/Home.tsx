@@ -205,7 +205,7 @@ function Home() {
               id="conference-schedule"
               className="self-stretch text-black text-4xl md:text-5xl font-semibold font-['Manrope'] leading-tight"
             >
-              Tentative Conference Schedule
+              Conference Schedule
             </div>
 
             <div className="self-stretch flex flex-col justify-start items-start gap-12 md:gap-16">
