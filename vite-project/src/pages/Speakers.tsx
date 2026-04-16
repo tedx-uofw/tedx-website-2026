@@ -1,3 +1,6 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
 function Speakers() {
   const speakers = [
     {
@@ -63,6 +66,54 @@ function Speakers() {
     },
   ];
 
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash === "#coaches") {
+      const el = document.getElementById("coaches");
+      if (el) {
+        setTimeout(() => el.scrollIntoView({ behavior: "smooth" }), 100);
+      }
+    } else {
+      setTimeout(() => window.scrollTo({ top: 0, left: 0, behavior: 'instant' }), 0);
+    }
+  }, [location]);
+
+  const speakerCoaches = [
+    {
+      name: "Kimberly",
+      role: "Speaker Coach",
+      image: "/speakers/kimberly.webp",
+      desc: (
+        <span>
+          A theatre producer & story editor, speaker coach Kimberly Colburn runs Protagonist Events, specializing in fun & facilitation via professional development workshops and team-building games. Contact Protagonist now to become the hero of your own story!{" "}
+          <a
+            href="https://protagonist-events.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:text-blue-800 underline transition-colors"
+          >
+            protagonist-events.com
+          </a>
+        </span>
+      ),
+      link: "#",
+      linkIcon: "",
+      linkAlt: "LinkedIn",
+      imgClass: "object-top",
+    },
+    {
+      name: "Ro",
+      role: "Speaker Coach",
+      image: "/speakers/ro.png",
+      desc: "",
+      link: "#",
+      linkIcon: "/speakers/linkedin-logo.webp",
+      linkAlt: "LinkedIn",
+      imgClass: "object-top",
+    },
+  ];
+
   return (
     <div className="relative">
       <div
@@ -117,7 +168,7 @@ function Speakers() {
               className="text-black font-['Andada_Pro'] text-[44px] font-normal leading-[140%]
             w-[160%] max-[900px]:w-full"
             >
-              Meet our 6 speakers
+              Meet our Speakers and Coaches
             </h1>
           </div>
         </div>
@@ -180,9 +231,8 @@ function Speakers() {
                     {/* Left group: Image + Info column */}
                     <div className="flex flex-col gap-6 lg:flex-row lg:gap-[75px] items-center lg:items-start">
                       <img
-                        className={`h-72 w-72 rounded-md object-cover ${
-                          s.imgClass || ""
-                        }`}
+                        className={`h-72 w-72 rounded-md object-cover ${s.imgClass || ""
+                          }`}
                         src={s.image}
                         alt={s.name}
                       />
@@ -218,6 +268,56 @@ function Speakers() {
 
                   {/* Divider (same as outline line) */}
                   {idx !== speakers.length - 1 && (
+                    <div className="mt-24 h-0 w-full max-w-[1436px] outline outline-1 outline-offset-[-0.5px] outline-black" />
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Speaker Coaches Section */}
+          <div className="mx-auto w-full max-w-[1400px] mt-32 pb-32">
+            <h2 id="coaches" className="text-black font-['Manrope'] text-[44px] font-semibold leading-[140%] mb-24 max-[900px]:text-center">
+              Speaker Coaches
+            </h2>
+            <div className="flex flex-col gap-24">
+              {speakerCoaches.map((s, idx) => (
+                <div key={s.name} className="w-full">
+                  <div
+                    className="
+                      flex flex-col gap-8
+                      lg:flex-row lg:items-start lg:gap-0
+                      items-center
+                    "
+                  >
+                    {/* Left group: Image + Info column */}
+                    <div className="flex flex-col gap-6 lg:flex-row lg:gap-[75px] items-center lg:items-start">
+                      <img
+                        className={`h-72 w-72 rounded-md object-cover ${s.imgClass || ""
+                          }`}
+                        src={s.image}
+                        alt={s.name}
+                      />
+                      <div className="flex w-full max-w-[320px] flex-col items-center lg:items-start gap-6 text-center lg:text-left">
+                        <div className="whitespace-nowrap font-['Manrope'] text-4xl font-semibold leading-[1.15] text-black lg:text-5xl lg:leading-[67.20px]">
+                          {s.name}
+                        </div>
+                        <div className="w-full font-['Manrope'] text-2xl font-light leading-9 text-black lg:text-3xl lg:leading-10">
+                          {s.role}
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Right description column */}
+                    <div className="lg:ml-auto lg:pt-[7px] w-full lg:w-auto flex justify-center lg:block">
+                      <div className="w-full text-center lg:text-left font-['Manrope'] text-lg font-normal leading-7 text-gray-600 sm:text-xl lg:w-[569.99px]">
+                        {s.desc}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Divider (same as outline line) */}
+                  {idx !== speakerCoaches.length - 1 && (
                     <div className="mt-24 h-0 w-full max-w-[1436px] outline outline-1 outline-offset-[-0.5px] outline-black" />
                   )}
                 </div>
