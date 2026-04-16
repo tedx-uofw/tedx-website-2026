@@ -82,7 +82,7 @@ function Speakers() {
   const speakerCoaches = [
     {
       name: "Kimberly",
-      role: "Speaker Coach",
+      role: "",
       image: "/speakers/kimberly.webp",
       desc: (
         <span>
@@ -104,7 +104,7 @@ function Speakers() {
     },
     {
       name: "Ro",
-      role: "Speaker Coach",
+      role: "",
       image: "/speakers/ro.png",
       desc: "",
       link: "#",
