@@ -91,7 +91,7 @@ const Navbar = () => {
                           <NavLink
                             key={subItem.label}
                             to={subItem.to + (subItem.hash || "")}
-                            onClick={(e) => {
+                            onClick={() => {
                               setDesktopDropdownOpen(null);
                               if (subItem.hash) {
                                 if (window.location.pathname === subItem.to) {
@@ -185,7 +185,7 @@ const Navbar = () => {
                           <NavLink
                             key={subItem.label}
                             to={subItem.to + (subItem.hash || "")}
-                            onClick={(e) => {
+                            onClick={() => {
                               if (subItem.hash) {
                                 if (window.location.pathname === subItem.to) {
                                   document.querySelector(subItem.hash)?.scrollIntoView({ behavior: "smooth" });
@@ -266,8 +266,8 @@ const Navbar = () => {
                     src={`/footer-images/${item.name}.svg`}
                     alt={item.name}
                     className={`${item.name === "mail-white"
-                        ? "translate-x-[0.5px] translate-y-[0.5px]" // ← add this
-                        : ""
+                      ? "translate-x-[0.5px] translate-y-[0.5px]" // ← add this
+                      : ""
                       } ${item.name === "facebook"
                         ? "translate-x-[0.6px] translate-y-0.5"
                         : ""
