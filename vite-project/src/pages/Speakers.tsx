@@ -82,7 +82,7 @@ function Speakers() {
   const speakerCoaches = [
     {
       name: "Kimberly",
-      role: "",
+      role: "Speaker Coach",
       image: "/speakers/kimberly.webp",
       desc: (
         <span>
@@ -104,9 +104,9 @@ function Speakers() {
     },
     {
       name: "Ro",
-      role: "",
-      image: "/speakers/ro.png",
-      desc: "",
+      role: "Speaker Coach",
+      image: "/speakers/ro.jpg",
+      desc: "Ro Verdeja is an Executive Communications Specialist whose journey began at 19, singing on the streets of Germany and learning how to read any audience. With 25+ years of global experience, Ro is on a mission to help speakers connect through genuine, memorable storytelling. As a visual storyteller, he reminds clients to follow the story, not the slides. Since 2018, Ro has volunteered as the Speaker Coach for TEDxUofW, guiding speakers to deliver with clarity and heart.",
       link: "#",
       linkIcon: "/speakers/linkedin-logo.webp",
       linkAlt: "LinkedIn",
@@ -267,7 +267,7 @@ function Speakers() {
                   </div>
 
                   {/* Divider (same as outline line) */}
-                  {idx !== speakers.length - 1 && (
+                  {idx !== speakers.length && (
                     <div className="mt-24 h-0 w-full max-w-[1436px] outline outline-1 outline-offset-[-0.5px] outline-black" />
                   )}
                 </div>
@@ -276,10 +276,7 @@ function Speakers() {
           </div>
 
           {/* Speaker Coaches Section */}
-          <div className="mx-auto w-full max-w-[1400px] mt-32 pb-32">
-            <h2 id="coaches" className="text-black font-['Manrope'] text-[44px] font-semibold leading-[140%] mb-24 max-[900px]:text-center">
-              Speaker Coaches
-            </h2>
+          <div id="coaches" className="mx-auto w-full max-w-[1400px] mt-32 pb-32">
             <div className="flex flex-col gap-24">
               {speakerCoaches.map((s, idx) => (
                 <div key={s.name} className="w-full">
