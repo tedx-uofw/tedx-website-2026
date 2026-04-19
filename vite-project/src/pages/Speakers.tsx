@@ -97,8 +97,8 @@ function Speakers() {
           </a>
         </span>
       ),
-      link: "#",
-      linkIcon: "",
+      link: "https://www.linkedin.com/in/kimberly-colburn-1ba7398/",
+      linkIcon: "/speakers/linkedin-logo.webp",
       linkAlt: "LinkedIn",
       imgClass: "object-top",
     },
@@ -107,7 +107,7 @@ function Speakers() {
       role: "Speaker Coach",
       image: "/speakers/ro.jpg",
       desc: "Ro Verdeja is an Executive Communications Specialist whose journey began at 19, singing on the streets of Germany and learning how to read any audience. With 25+ years of global experience, Ro is on a mission to help speakers connect through genuine, memorable storytelling. As a visual storyteller, he reminds clients to follow the story, not the slides. Since 2018, Ro has volunteered as the Speaker Coach for TEDxUofW, guiding speakers to deliver with clarity and heart.",
-      link: "#",
+      link: "https://www.linkedin.com/in/ro-verdeja/",
       linkIcon: "/speakers/linkedin-logo.webp",
       linkAlt: "LinkedIn",
       imgClass: "object-top",
@@ -302,6 +302,18 @@ function Speakers() {
                         <div className="w-full font-['Manrope'] text-2xl font-light leading-9 text-black lg:text-3xl lg:leading-10">
                           {s.role}
                         </div>
+                        <a
+                          href={s.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex z-20"
+                        >
+                          <img
+                            className="w-12 h-12 rounded-md"
+                            src={s.linkIcon}
+                            alt={s.linkAlt}
+                          />
+                        </a>
                       </div>
                     </div>
 
