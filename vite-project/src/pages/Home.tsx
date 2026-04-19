@@ -360,7 +360,7 @@ function Home() {
                   <ScheduleImage
                     className="w-full h-full object-contain"
                     src={fingerprintSmall2}
-                    alt="Placeholder"
+                    alt="Fingerprint"
                   />
                 </a>
                 <div className="inline-flex flex-col justify-start items-start gap-4 max-md:items-center">
@@ -455,7 +455,7 @@ function Home() {
                 <a className="w-full max-w-[560px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center">
                   <ScheduleImage
                     className="w-full h-full object-contain"
-                    src={fingerprintSmall}
+                    src={fingerprintSmall2}
                     alt="Placeholder"
                   />
                 </a>
