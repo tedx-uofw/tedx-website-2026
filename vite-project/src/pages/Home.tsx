@@ -11,7 +11,6 @@ import vitaHeadshot from "/speakers/vita-kari.webp";
 import annHeadshot from "/speakers/ann-frost.webp";
 import nanditaHeadshot from "/speakers/nandita-gupta.webp";
 import fingerprintSmall from "/landing/Frame 1 (5).png";
-import fingerprintSmall2 from "/landing/Frame 2 (3).png";
 import SponsorTiers from "../components/SponsorsTiers";
 
 const venue = "/imprints-images/kane.JPG";
@@ -359,7 +358,7 @@ function Home() {
                 <a className="w-full max-w-[560px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center">
                   <ScheduleImage
                     className="w-full h-full object-contain"
-                    src={fingerprintSmall2}
+                    src={fingerprintSmall}
                     alt="Fingerprint"
                   />
                 </a>
@@ -455,7 +454,7 @@ function Home() {
                 <a className="w-full max-w-[560px] h-56 md:w-72 md:h-60 rounded-md overflow-hidden block items-center">
                   <ScheduleImage
                     className="w-full h-full object-contain"
-                    src={fingerprintSmall2}
+                    src={fingerprintSmall}
                     alt="Placeholder"
                   />
                 </a>
