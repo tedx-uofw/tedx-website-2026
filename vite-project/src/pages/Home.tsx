@@ -226,7 +226,7 @@ function Home() {
                   </div>
                 </div>
               </div>
-              <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
+              <div className="w-full border-1 border-black" />
 
               {/* Event 2: Nandita */}
               <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
@@ -255,7 +255,7 @@ function Home() {
                   </div>
                 </div>
               </div>
-              <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
+              <div className="w-full border-1 border-black" />
 
               {/* Event 3: Ann */}
               <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
@@ -283,7 +283,7 @@ function Home() {
                   </div>
                 </div>
               </div>
-              <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
+              <div className="w-full border-1 border-black" />
 
               {/* Event 4: UW RAAS */}
               <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
@@ -303,7 +303,7 @@ function Home() {
                   </div>
                 </div>
               </div>
-              <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
+              <div className="w-full border-1 border-black" />
 
               {/* Event 5: Melissa */}
               <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
@@ -331,7 +331,7 @@ function Home() {
                   </div>
                 </div>
               </div>
-              <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
+              <div className="w-full border-1 border-black" />
 
               {/* Event 6: Raffle Draw 1 */}
               <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
@@ -351,7 +351,7 @@ function Home() {
                   </div>
                 </div>
               </div>
-              <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
+              <div className="w-full border-1 border-black" />
 
               {/* Event 7 - Intermission */}
               <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
@@ -371,7 +371,7 @@ function Home() {
                   </div>
                 </div>
               </div>
-              <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
+              <div className="w-full border-1 border-black" />
 
               {/* Event 8 */}
               <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
@@ -391,7 +391,7 @@ function Home() {
                   </div>
                 </div>
               </div>
-              <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
+              <div className="w-full border-1 border-black" />
 
               {/* Event 9: Michael */}
               <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
@@ -419,7 +419,7 @@ function Home() {
                   </div>
                 </div>
               </div>
-              <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
+              <div className="w-full border-1 border-black" />
 
               {/* Event 10: Vita */}
               <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
@@ -447,7 +447,7 @@ function Home() {
                   </div>
                 </div>
               </div>
-              <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
+              <div className="w-full border-1 border-black" />
 
               {/* Event 11 */}
               <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
@@ -467,7 +467,7 @@ function Home() {
                   </div>
                 </div>
               </div>
-              <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
+              <div className="w-full border-1 border-black" />
 
               {/* Event 12: Cara */}
               <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
@@ -495,7 +495,7 @@ function Home() {
                   </div>
                 </div>
               </div>
-              <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
+              <div className="w-full border-1 border-black" />
 
               {/* Event 13 - Speaker Panel */}
               <div className="self-stretch inline-flex justify-start items-start gap-10 flex-wrap content-start max-md:flex-col max-md:items-center max-md:text-center">
@@ -515,7 +515,6 @@ function Home() {
                   </div>
                 </div>
               </div>
-              <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-black" />
             </div>
           </div>
 
